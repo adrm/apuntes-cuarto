@@ -1,6 +1,4 @@
-
 # 1. Introducción a los protocolos de red
-
 
 ## 1.1 ¿Qué es un protocolo?
 
@@ -24,15 +22,15 @@ La organización natural de esos protocolos es por capas: cada capa tiene su niv
 
 Hay que decidir las funciones de cada capa. El modelo de referencia para ello es OSI (Open Systems Interconnect), definido por la ISO:
 
-Capa | Función
--------|----------
-7 | Aplicación
-6 | Presentación
-5 | Sesión
-4 | Transporte
-3 | Red
-2 | Enlace de datos (interfaz hardware)
-1  | Conexión física
+Capa   | Función
+-------|------------------------------------
+7      | Aplicación
+6      | Presentación
+5      | Sesión
+4      | Transporte
+3      | Red
+2      | Enlace de datos (interfaz hardware)
+1      | Conexión física
 
 En la práctica, los niveles 5, 6 y 7 se agrupan en una única capa llamada "de aplicación".
 
@@ -116,27 +114,22 @@ Identifica distintas aplicaciones situadas en una máquina (puertos), proporcion
 
 ### 1.4.8 Dos fronteras importantes en el modelo TCP/IP
 
-#### Frontera de dirección de protocolo de bajo nivel.
++ Frontera de dirección de protocolo de bajo nivel: Separa el software que utiliza direcciones de bajo nivel (físicas) y el software que utiliza direcciones de alto nivel (IP). Todo el software de protocolo desde la capa de Internet hacia arriba utiliza solo direcciones IP.
 
-Separa el software que utiliza direcciones de bajo nivel (físicas) y el software que utiliza direcciones de alto nivel (IP). Todo el software de protocolo desde la capa de Internet hacia arriba utiliza solo direcciones IP.
-
-#### Frontera de dirección de protocolo de alto nivel.
-
-Separa el software que suele ser del sistema operativo del que no lo es. El software resultante de una estratificación puede ser ineficaz. Típicamente se envía hacia arriba la selección de ruta y la MTU para optimizar la transmisión de las capas superiores.
++ Frontera de dirección de protocolo de alto nivel: Separa el software que suele ser del sistema operativo del que no lo es. El software resultante de una estratificación puede ser ineficaz. Típicamente se envía hacia arriba la selección de ruta y la MTU para optimizar la transmisión de las capas superiores.
 
 
 ### 1.4.9 Capa de aplicación
 
-Contiene las aplicaciones que utilizan los servicios de Internet (aplicaciones de correo, servicio web, ftp...). Un protocolo muy útil es el Servicio de Nombres de Dominio (DNS)
+Contiene las aplicaciones que utilizan los servicios de Internet (aplicaciones de correo, servicio web, ftp...). Un protocolo muy útil es el Servicio de Nombres de Dominio (DNS).
 
 Algunos protocolos de aplicación:
 
-+ http: Intercambio de páginas web. Supera el tráfico de ftp en 1995. Permite hipertexto. Define los recursos con una URL absoluta en la red. El host puede ser una ip o a través de DNS.
-+ smtp: Envío, recepción y retransmisión de correo electrónico. Otros relacionados son pop o mime.
-+ ftp: Transferencia de ficheros.
-+ telnet: Sesiones remotas de trabajo en una máquina conectada en otro punto de la red. La versión cifrada se denomina ssh.
-+ Otros: ntp (network time protocol), nfs (network file system), etc.
-
++ `http`: Intercambio de páginas web. Supera el tráfico de ftp en 1995. Permite hipertexto. Define los recursos con una URL absoluta en la red. El host puede ser una ip o a través de DNS.
++ `smtp`: Envío, recepción y retransmisión de correo electrónico. Otros relacionados son pop o mime.
++ `ftp`: Transferencia de ficheros.
++ `telnet`: Sesiones remotas de trabajo en una máquina conectada en otro punto de la red. La versión cifrada se denomina ssh.
++ Otros: `ntp` (network time protocol), `nfs` (network file system), etc.
 
 
 # 2. La pila de protocolos TCP/IP
@@ -269,7 +262,7 @@ Especifica el tiempo en segundos que el datagrama puede estar en la red sin ser 
 + Protocolo: Especifica el protocolo de alto nivel que ha creado el mensaje.
 + Suma de verificación del encabezado: Controla la integridad del encabezado. No se verifican los datos.
 + Dirección IP fuente y destino finales: No cambian nunca.
-+ Campos dependientes del campo opciones: longitud variable según opciones elegidas. 
++ Campos dependientes del campo opciones: longitud variable según opciones elegidas.
 + Registro de ruta: permite al emisor que los routers añadan su ip a una lista.
 + Encaminamiento fuente: permite al emisor determinar la ruta a seguir a través de la red para probar una red física en particular. Estricto, si se produce un error si no es posible, o no estricto si se permite algún salto.
 + Sello de hora: Permite que cada router ponga un sello de hora en ms.
@@ -313,11 +306,11 @@ Algunos puertos bien conocidos UDP están reservados (servicios).
 
 Transporte de datos de flujo fiable. Cinco funciones básicas:
 
-1. Orientación de flujo: Se reciben los bytes en el mismo orden en que se envían.
-2. Conexión de circuito virtual: se establece una conexión, se realizan las transferencias y se libera la conexión.
-3. Transferencia con memoria intermedia: Los datos se agrupan o dividen hasta que tengan el tamaño que permita la mayor eficiencia.
-4. Flujo no estructurado: El flujo de envío y recepción de datos es continuo, por lo que no existen marcas en él. Si se necesitan hacer separaciones, deben hacerse con un protocolo propio superior.
-5. Conexión full duplex: se permite transferencia concurrente en ambas direcciones.
+1. **Orientación de flujo**: Se reciben los bytes en el mismo orden en que se envían.
+2. **Conexión de circuito virtual**: se establece una conexión, se realizan las transferencias y se libera la conexión.
+3. **Transferencia con memoria intermedia**: Los datos se agrupan o dividen hasta que tengan el tamaño que permita la mayor eficiencia.
+4. **Flujo no estructurado**: El flujo de envío y recepción de datos es continuo, por lo que no existen marcas en él. Si se necesitan hacer separaciones, deben hacerse con un protocolo propio superior.
+5. **Conexión full duplex**: se permite transferencia concurrente en ambas direcciones.
 
 TCP es un protocolo de transmisión que especifica el formato de los datos y acuses de recibo necesarios para una transferencia fiable, los protocolos necesarios para asegurar la llegada correcta de los datos, mecanismos que permiten establecer y liberar una conexión, sistema de puertos para distinguir entre aplicaciones de una misma máquina. Asume muy poco sobre la red subyacente para ser general- No incluye una descripción necesaria para utilizarlo, se usa POSIX con la interfaz socket.
 
@@ -331,7 +324,8 @@ Conexión TCP:
 
 SYN (seq x) --(a to b)--> SYN (seq y), ACK (seq x+1) --(b to a)--> ACK (seq y+1) --(a to b)--> Conexión confirmada.
 
-Desconexión.
+Desconexión:
+
 Envío de FIN, responde con ACK. Después, la otra máquina hace lo mismo.
 
 
@@ -361,9 +355,9 @@ Puede ser que un servidor sea cliente de otro servidor.
 
 Un servidor puede contestar simultáneamente ya sea conmutando o con multiprocesamiento real. El cliente no necesita mucha concurrencia.
 
-El proceso es la unidad fundamental de computación. En unix hay concurrencia con fork(), que divide un proceso en dos que se ejecutan sobre el mismo código. fork() devuelve un valor diferente para cada copia del proceso (0 para los hijos, en el padre devuelve el id del hijo), y de esta forma se puede hacer que cada proceso haga algo distinto.
+El proceso es la unidad fundamental de computación. En unix hay concurrencia con `fork()`, que divide un proceso en dos que se ejecutan sobre el mismo código. `fork()` devuelve un valor diferente para cada copia del proceso (0 para los hijos, en el padre devuelve el id del hijo), y de esta forma se puede hacer que cada proceso haga algo distinto.
 
-Se puede reemplazar al hijo por nuevo código con execve(nombre del fichero de código ejecutable, puntero a parámetros, puntero a variables de entorno). Se debe llamar primero a fork() y después a execve().
+Se puede reemplazar al hijo por nuevo código con execve(nombre del fichero de código ejecutable, puntero a parámetros, puntero a variables de entorno). Se debe llamar primero a `fork()` y después a `execve()`.
 
 
 ## 3.2 Consideraciones de diseño de clientes
@@ -381,5 +375,3 @@ Para localizar un servidor a través de su dirección IP y su número de protoco
 
 
 ## 3.4 Diseño e implementación de un sistema cliente-servidor
-
-

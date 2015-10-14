@@ -133,9 +133,6 @@ Un proceso define quién hace qué, cuando y cómo para alcanzar cierto objetivo
 
 
 
-
-
-
 # Tema 2
 
 
@@ -151,21 +148,16 @@ Gestión del tiempo de proyecto (Planificación): Incluye todos los procesos nec
 + Control de la planificación: Controlar los cambios que se produzcan respecto a la planificación.
 
 
-
 ## Ideas sobre PERT y CPM
-
 
 
 ## Holguras en CPM y PERT
 
 
-
 ## Gestión de recursos
 
 
-
 ## Gestión de personas
-
 
 
 ## Riesgos en desarrollo de software

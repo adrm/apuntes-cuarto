@@ -89,7 +89,7 @@ También hay riesgos: No hay control sobre todas las partes del sistema, el rend
 + Lenguajes de Descripción de Arquitectura de software.
 + SOA (service-oriented architecture).
 
-Servicios web: procedimiento de conexión interpretado, no compilado. Es más flexible pues no hay que recompilar. Usa un protocolo (http) independiente de middlewares. Los puntos de conexión se describen con XML, JSON. El procedimiento de conexión es la interpretación de SOAP/WSDL o REST. 
+Servicios web: procedimiento de conexión interpretado, no compilado. Es más flexible pues no hay que recompilar. Usa un protocolo (http) independiente de middlewares. Los puntos de conexión se describen con XML, JSON. El procedimiento de conexión es la interpretación de SOAP/WSDL o REST.
 
 
 ### 1.2.2 Mercado y estándares
@@ -181,7 +181,7 @@ Estos problemas se resuelven con el modelo de componentes. Un modelo de componen
 
 OLE (Object Linking and Embedding) fue precursor de COM. OLE 2.0 da origen a COM y ActiveX. Después, DCOM y COM+.
 
-Estructura de COM: Se separa la interfaz de la implementación. Se da una interfaz pública como tabla de métodos o clases. 
+Estructura de COM: Se separa la interfaz de la implementación. Se da una interfaz pública como tabla de métodos o clases.
 
 Para utilizar un cierto componente, solo es preciso recuperar un puntero a alguna de sus interfaces. Un objeto COM tiene que implementar siempre la interfaz IUnknown para controlar el ciclo de vida y la resolución de interfaces.
 
@@ -195,7 +195,7 @@ Para poner en marcha un componente en DLL: `system32> regsvr32 C:\comp\pDLL.dll`
 
 Funciones básicas: se invoca `CoInitialize()` y luego `CoCreateInstance()` facilitando el CLSID. La asociación de CLSID y servidor está en el Registro de Windows. Si el servidor es una DLL, usa la clave `InprocServer32`. También puede ser `LocalServer32` o `RemoteServer32`.
 
-Al guardarse la ubicación de los componentes en el registro de windows, solo puede haber una versión de cada componente. Si varias aplicaciones requieren versiones distintas, no pueden satisfacerse todos los requisitos: DLL Hell.
+Al guardarse la ubicación de los componentes en el registro de windows, solo puede haber una versión de cada componente. Si varias aplicaciones requieren versiones distintas, no pueden satisfacerse todos los requisitos: **DLL Hell**.
 
 Windows XP introduce un nuevo modo de registro. Las aplicaciones que necesiten componentes COM almacenan toda la información del registro en un directorio propio en lugar del registro global, pero no se puede hacer para EXE, COM o servidores como MDAC, MSXML, DirectX o Internet Explorer.
 
@@ -331,13 +331,6 @@ Cloud Computing es usar un software o hardware remoto ofrecido como servicio. Sa
 
 Al usar clusters, es mucho más escalable, económico y redundante que los servidores normales. Con pocos operadores se pueden administrar miles de servidores.
 
-IaaS: Hardware virtualizado en red. Networking, balanceo de carga, acceso a la red... Se paga por el HW que se necesita en cada momento. Supone ahorro.
-
-PaaS: Añade algún software como bases de datos o plataformas de desarrollo restando flexibilidad.
-
-SaaS: Software en un host remoto accedido a través de internet. Pago por uso o con publicidad, etc. Infraestructura local mínima. Siempre actualizado. MS Office 365, juegos, FB, etc.
-
-
-
-3. asdf
-========
++ IaaS: Hardware virtualizado en red. Networking, balanceo de carga, acceso a la red... Se paga por el HW que se necesita en cada momento. Supone ahorro.
++ PaaS: Añade algún software como bases de datos o plataformas de desarrollo restando flexibilidad.
++ SaaS: Software en un host remoto accedido a través de internet. Pago por uso o con publicidad, etc. Infraestructura local mínima. Siempre actualizado. MS Office 365, juegos, FB, etc.

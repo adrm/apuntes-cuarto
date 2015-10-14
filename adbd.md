@@ -26,7 +26,7 @@ La gestión de datos involucra: almacenamiento, extracción, modificación, borr
 
 Puede usarse un **modelo relacional en el que los datos se describen como tablas relacionadas**. Hay más modelos, cada uno con sus ventajas e inconvenientes.
 
-Existe una excesiva orientación hacia el almacenamiento. _(¿Qué quiere decir con esto?)_
+Existe una excesiva orientación hacia el almacenamiento. <!-- ¿Qué quiere decir con esto? -->
 
 
 1.4. Almacenamiento vs BD
@@ -71,7 +71,7 @@ Seguridad: Directivas de seguridad para distintos accesos.
 1.6. Sistemas de BDs
 --------------------
 
-Las BDs dan respuesta completa y eficaz a los problemas descritos anteriormente.. 
+Las BDs dan respuesta completa y eficaz a los problemas descritos anteriormente..
 
 1. Independencia lógica-física:
      + El usuario trata los datos a nivel lógico-conceptual, e internamente se puede cambiar el nivel físico. El usuario vería los datos igual, manteniendo intactas las aplicaciones.

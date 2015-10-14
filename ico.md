@@ -17,7 +17,7 @@ Entidad que percibe su entorno a través de sensores y modifica el entorno media
 Teóricamente la **función de agente**, que consiste en, dada una secuencia de percepciones, ejecutar una serie de acciones.
 
 ### 0.1.5 Mundo del aspirador
-Fila de casillas (2). El agente detecta su situación y si la casilla en la que está está sucia. Sus posibles acciones son derecha, izquierda, asiparar y noop. Su función de agente es: si la casilla actual está sucia, aspirar. Si no, ir a la otra casilla.
+Fila de dos casillas. El agente detecta su situación y si la casilla en la que está está sucia. Sus posibles acciones son derecha, izquierda, asiparar y noop. Su función de agente es: si la casilla actual está sucia, aspirar. Si no, ir a la otra casilla.
 
 Tenemos pues secuencias de percepciones, acciones y una función de agente que las relaciona, pero también tenemos un entorno. El entorno puede ser:
 
@@ -47,6 +47,7 @@ Según Rusell y Norvig:
 
 ¿El agente aspirador es racional? Depende.
 Supone que:
+
 + el entorno tiene una geometría conocida y una distribución inicial de suciedad desconocida,
 + aspirar limpia una casilla y ésta permanece limpia,
 + derecha e izquierda mueven al agente a la derecha y a la izquierda sin errores, salvo si le sacan del entorno, que permanece en su casilla,
@@ -66,12 +67,15 @@ Excepto para entornos sencillos e invariables, el conocimiento inicial del agent
 
 La racionalidad normalmente requiere aprendizaje para proporcionar autonomía al agente.
 
-### 0.1.9 Ejemplos de agentes y descripción REAS (Medida de **r**endimiento, **e**ntorno, **a**ctuadores y **s**ensores)
+### 0.1.9 Ejemplos de agentes y descripción REAS (Medida de Rendimiento, Entorno, Actuadores y Sensores)
+
+<!-- ¿ToDo? -->
 
 ### 0.1.10 Estructura de agente
 La función de agente no se implementa, pues no se suele conocer. Se implementa el **programa de agente**, que usa solo la percepción actual del entorno y el conocimiento y memoria que pueda tener para seleccionar la acción actual.
 
 La mayor parte de los principios subyacentes a los sistemas inteligentes se pueden describir con 5 tipos básicos de programas de agente:
+
 + Agente reactivo simple
 + Agente reactivo basado en modelos
 + Agente basado en metas
@@ -85,4 +89,3 @@ La mayor parte de los principios subyacentes a los sistemas inteligentes se pued
 
 0.3. Áreas de aplicación y ejemplos
 -----------------------------------
-
