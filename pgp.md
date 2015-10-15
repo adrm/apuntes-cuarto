@@ -164,7 +164,7 @@ Los cinco grupos de procesos son:
 # Tema 2
 
 
-## Planificación
+## Planificación ([PDF](https://gitlab.com/adrm/apuntes-cuarto/uploads/8f6d441d95e3de45ec146259b99dec06/PGP_plan_proye_1516_2.pdf))
 
 Gestión del tiempo de proyecto (Planificación): Incluye todos los procesos necesarios para que se pueda garantizar la finalización del proyecto en el tiempo estipulado:
 
@@ -205,3 +205,4 @@ Entradas:
 
 
 ## Riesgos en desarrollo de software
+
