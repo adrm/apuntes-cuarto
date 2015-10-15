@@ -96,7 +96,6 @@ PDFs originales
 
 [Introduccion_Ingenieria_Conocimiento_-_Grado_Informatica.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/0e5b0b24bbe2365ed9e7fb426979f78f/Introduccion_Ingenieria_Conocimiento_-_Grado_Informatica.pdf)
 
-
 [LogicaProposicional_1_.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/f65016fa387c5bc4d8dc78e150bc0eef/LogicaProposicional_1_.pdf)
 
 [LogicaPredicados.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/9dc3f7f9f52f7efd0620c5c12ed91501/LogicaPredicados.pdf)
