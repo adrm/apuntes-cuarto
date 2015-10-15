@@ -127,9 +127,37 @@ Los problemas más comunes en planificación y gestión de proyectos son:
 + Falta de entrenamiento
 
 Un proceso define quién hace qué, cuando y cómo para alcanzar cierto objetivo.
-<!-- diapositiva 38 -->
 
+Las áreas y procesos implicados en la gestión de proyectos de acuerdo con el PMBOK:
 
++ Gestión de integración
++ Gestión del alcance
++ Gestión del tiempo
++ Gestión del coste
++ Gestión de la calidad
++ Gestión de recursos humanos
++ Gestión de comunicaciones
++ Gestión de riesgos
++ Gestión de aprovisionamiento
+
+El objetivo de la gestión de proyectos es **finalizar un proyecto* en el tiempo estipulado, con el presupuesto definido, con la funcionalidad requerida, para satisfacción del cliente y sin agotar a los miembros del equipo. Además hay que proporcionar visibilidad sobre el progreso del proyecto.
+
+## Procesos
+
+Los proyectos están compuestos de procesos. Un proceso es un conjunto de acciones que se realizan para obtener un resultado.
+
++ **Procesos relacionados con la gestión del proyecto**: relacionados con la descripción y la organización del trabajo del proyecto.
++ **Procesos orientados al producto**: relacionados con la especificación y creación del producto resultante del proyecto.
+
+Los procesos de ambos tipos se solapan e interaccionan a lo largo del desarrollo del proyecto.
+
+Los cinco grupos de procesos son:
+
++ **Grupo de procesos de iniciación**: Define y autoriza el proyecto o una fase del mismo.
++ **Grupo de procesos de planificación**: Define y refina los objetivos, y planifica el curso de acción requerido para lograr los objetivos y el alcance del proyecto.
++ **Grupo de procesos de ejecución**: Integra a personas y otros recursos para llevar a cabo el plan de gestión para el proyecto.
++ **Grupo de procesos de seguimiento y control**: Mide y supervisa regularmente el avance, a fin de identificar las variaciones respecto del plan de gestión del proyecto, de tal forma que se tomen medidas correctivas cuando sea necedsrio para cumplir con los objetivos del proyecto.
++ **Grupo de procesos de cierre**: Formaliza la aceptación del producto, servicio o resultado, y termina ordenadamente el proyecto o una fase del mismo.
 
 
 
@@ -146,6 +174,22 @@ Gestión del tiempo de proyecto (Planificación): Incluye todos los procesos nec
 + Estimación de duración de actividades: Identificar el número de periodos de trabajo que se precisarán para finalizar cada actividad.
 + Desarrollo de la planificación: Analizar las secuencias de actividades, duración de las mismas y requisitos de recursos para llevarlo a cabo.
 + Control de la planificación: Controlar los cambios que se produzcan respecto a la planificación.
+
+
+### Definición de actividades
+
+Implica la identificación y documentación de las actividades específicas que se deben realizar para producir todo tipo de productos identificados en la estructura de descomposición del trabajo. Las actividades deben estar de acuerdo con los objetivos que se pretenden conseguir y, por lo tanto, con el alcance del proyecto.
+
+Entradas:
+
++ Factores ambientales de la empresa
++ Activos de los procesos de la organización: Existencia de pautas formales o informales en la empresa, así como información histórica. Hay que considerar que actividades se han precisado en proyectos anteriores y similares.
++ Definición del alcance del proyecto: Los productos entregables del proyecto, las restricciones[1] y las suposiciones documentadas en el enunciado del alcance del proyecto.
++ Estructura de descomposición del trabajo
++ Diccionario de la EDT (estructura de descomposición del trabajo)
++ Plan de gestión del proyecto.
+
+<!-- Página 3 de Tema 2, planificación -->
 
 
 ## Ideas sobre PERT y CPM
