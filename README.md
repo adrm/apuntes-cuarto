@@ -20,4 +20,4 @@ cambios que ya no podía clonar clonando la wiki.
 Así que sigo los apuntes en el repo normal, me olvido de la wiki. Espero no
 haber perdido datos en el proceso, aunque parece que no.
 
-## El índice está en [Home.md](/Home.md)
+## El índice está en [Home.md](/Home)
