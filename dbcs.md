@@ -1,5 +1,4 @@
 
-
 # 1. Introducción: Conceptos de desarrollo basado en componentes
 ## 1.0. La visión general
 Desarrollo basado en componentes para gestionar la complejidad: divide y vencerás. Se aplica en muchas otras disciplinas e ingenierías.
@@ -26,6 +25,7 @@ Con un software estándar disminuye el riesgo ya que el vendedor disminuye los p
 El reto es construir software rápidamente adaptable a los cambios y gestionar la cada vez mayor complejidad. Para ello usamos encapsulamiento, estándares, interacción entre aplicaciones o sus partes, desarrollo de un mercado industrial... en resumen, reutilización del software.
 
 La reutilización de software tiene ventajas...
+
 - Reducción de costes totales.
 - Incremento de la fiabilidad.
 - Reducción del riesgo del proces.
@@ -34,6 +34,7 @@ La reutilización de software tiene ventajas...
 - Desarrollo acelerado.
 
 ...pero también desventajas:
+
 - Incremento inicial de costes de creación.
 - Faltan herramientas.
 - Síndromes de "reinventar la rueda" y "no hecho aquí".
@@ -72,6 +73,7 @@ Al ser binarios, se evita revelar algoritmos, alterar el código fuente de forma
 También hay riesgos: No hay control sobre todas las partes del sistema, el rendimiento es menor debido a la mayor cantidad de capas de abstracción, a veces puede fallar la integración del sistema si algún componente no respeta los estándares, es más complicado dirimir responsabilidades si algo falla.
 
 ### 1.2.1. Evolución de la tecnología de componentes
+
 - Sistemas modulares procedimentales: En lenguajes como C o Pascal. Se llamaba al módulo y se esperaba el retorno.
 - Tecnología orientada a objetos: El componente era un objeto instancia de una clase, tiene un estado y es extensible por herencia.
 - Filtros y tuberías de Unix: Componentes desconocidos entre sí con dos puntos de conexión (stdin/stdout). Filtros como sed o awk. Lenguaje de composición: shell de unix.
@@ -143,6 +145,7 @@ Una clase o componente implementa una interfaz proporcionando sus servicios. Una
 Los componentes pueden ser sustituidos si el nuevo componente implementa al menos las mismas interfaces que el componente antiguo, y la interfaz del nuevo componente es un subtipo de la interfaz del componente antiguo.
 
 Semántica de la especificación de contratos: Una especificación más precisa del comportamiento de un componente se puede lograr mediante:
+
 - Invariantes: Expresión sobre el estado de la interfaz que se cumple siempre.
 - Pre-condición: Afirmación que el componente asume que debe cumplirse antes de invocar la operación. En general, es una expresión con los parámetros de entrada de la operación y su estado.
 - Post-condición: Es una afirmación de lo que el componente garantiza que se cumplirá después de que la operación haya sido invocada siempre que las condiciones previas fueran ciertas. Es una expresión con los parámetros de entrada y salida, y el estado inmediatamente antes y después de la invocación.
@@ -183,6 +186,7 @@ En COM+ se da un entorno de ejecución y un conjunto de servicios que proporcion
 
 ## 2.2 .NET
 Framework compuesto de:
+
 - Máquina virtual (CLR: Common Language Runtime) multilenguaje.
 - Herramienta de desarrollo rápido (RAD) de aplicaciones de escritorio y web.
 - Conjunto de bibliotecas y frameworks para acceso a BD/XML, interfaces de usuario, etc.
@@ -208,6 +212,7 @@ Interfaz de un JavaBean: Cuatro tipo de puertos: Métodos, propiedades, eventos 
 Implementación: Suelen implementarse con una clase Java pero hay implementaciones más sofisticadas que envuelven un sistema legado o involucran varias clases.
 
 Características de los JavaBeans:
+
 - Soportan introspección
 - Propiedades personalizables
 - Se comunican mediante eventos
@@ -230,6 +235,7 @@ JavaBean es el modelo en MVC. Lanza eventos en MVC activo. El modelo 2 de JSP us
 
 ## 2.4. Componentes en Android
 Intents como forma de comunicación y 4 tipos de componentes básicos:
+
 - Activity: Suele ser una pantalla. Una aplicación suele constar de varias.
 - Service: Proceso en segundo plano sin UI. Reproductor de música, descarga de la red...
 - Broadcast Receiver: Componente que responde a Intents broadcast. Por ejemplo, llamadas, sms, avisos de batería baja...
@@ -243,6 +249,7 @@ Un componente puede tener un conjunto de filtros intent declarado en su manifies
 DLL está en el mismo proceso así que es muy rápido. EXE está en la misma máquina pero distinto proceso, no es tan rápido. En ese caso se comunican a través de Windows. Ambas alternativas se pueden crear a partir del mismo código.
 
 Se busca la interoperabilidad:
+
 - Transparencia de lenguajes: interoperabilidad de programas en la misma plataforma con distintos lenguajes.
 - Transparencia de ubicación: interoperabilidad de los programas en distintas máquinas con mismo lenguaje.
 - Heterogeneidad general: cualquier ubicación y cualquier lenguaje.
@@ -250,6 +257,7 @@ Se busca la interoperabilidad:
 Para ello hay que tener en cuenta llamadas (procedimientos, mensajes...), paso de parámetros (por valor, referencia...), tipos y representación de datos (valores, referencias, matrices, clases...) y características del entorno de ejecución (gestión de memoria, recolección de basura).
 
 Microsoft soluciona la transparencia de lenguajes con .NET y CLR usando estándar CORBA:
+
 - Llamadas estándar RPC.
 - Paso de parámetros usando un lenguaje estándar si se usa .NET o CORBA para cada lenguaje.
 - Tipos y representación de datos: Sistema de tipos de .NET o traducción de CORBA para cdad lenguaje. Representación en lenguajes estándar o formatos de intercambio (XML).
@@ -259,6 +267,7 @@ Para la transparencia de ubicación se usa una variante del patrón Proxy: DCOM 
 
 ## 2.6. Sistemas distribuidos y middleware
 Arquitecturas de un sistema distribuido:
+
 - Maestro-esclavo: sistemas de control y tiempo real.
 - Peer to peer.
 - Cliente-servidor de dos o más capas: Servidor centralizado.
@@ -270,6 +279,7 @@ Cliente servidor de tres capas: persistencia <-> lógica de negocio (con middlew
 Middleware es el software que gestiona y apoya los diferentes componentes de un sistema distribuido, está en el centro del sistema. P.ej: se pide una web desde un navegador, el middleware determina la ubicación y envía una petición a esa página; el servidor interpreta la petición, envía la página al middleware y la envía como respuesta al navegador.
 
 Tipos de middleware:
+
 - Controladores de comunicación
 - Convertidores de datos
 - Monitores de transacciones
@@ -286,6 +296,7 @@ Arquitecturas orientadas a servicios (SOA): Registro de servicios donde los prov
 Cloud Computing es usar un software o hardware remoto ofrecido como servicio. SaaS es una de las posibilidades. Es el paso del sector secundario al terciario. Explota las economías de escala.
 
 Al usar clusters, es mucho más escalable, económico y redundante que los servidores normales. Con pocos operadores se pueden administrar miles de servidores.
+
 - IaaS: Hardware virtualizado en red. Networking, balanceo de carga, acceso a la red... Se paga por el HW que se necesita en cada momento. Supone ahorro.
 - PaaS: Añade algún software como bases de datos o plataformas de desarrollo restando flexibilidad.
 - SaaS: Software en un host remoto accedido a través de internet. Pago por uso o con publicidad, etc. Infraestructura local mínima. Siempre actualizado. MS Office 365, juegos, FB, etc.
