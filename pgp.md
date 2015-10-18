@@ -1,4 +1,3 @@
-
 # Tema 1
 ## Conceptos generales
 Proyecto: Actividad planificada. Conjunto de actividades relacionadas y coordinadas para alcanzar unos objetivos dentro de unos límites de presupuesto, calidad y tiempo.
@@ -518,6 +517,90 @@ Cómo debe actuar un gestor de proyecto para evitar estos problemas:
 - Realice un análisis de los resultados: Hay que aprender de las experiencias en proyectos anteriores.
 
 El coste del cambio en desarrollo es entre 1.5 y 6 veces mayor que en la definición del proyecto, y después de la entrega es de 60 a 100 veces mayor que en la definición.
+
+### Competencias que necesita conocer cada gestor de proyectos de software
+
+Producto:
+
+- Valorar procesos.
+- Conocimiento de procesos tipo.
+- Definir el producto.
+- Evaluar modelos de proceso alternativos.
+- Gestionar los requisitos.
+- Gestionar a los subcontratistas.
+- Realizar una valoración inicial.
+- Seleccionar métodos y herramientas.
+- Elaborar procesos.
+- Seguir la calidad del producto.
+- Comprender las actividades de desarrollo.
+
+Proyecto:
+
+- Construir estructuras de descomposición del trabajo.
+- Documentar los planes.
+- Estimar costes.
+- Estimar esfuerzo.
+- Gestionar riesgos.
+- Monitorizar el desarrollo.
+- Planificar.
+- Seleccionar medidas.
+- Seleccionar herramientas de gestión de proceso.
+- Seguimiento del proceso.
+- Seguimiento del progreso del proyecto.
+
+Personal:
+
+- Evaluar equipos para mejorar las prestaciones.
+- Considerar la propiedad intelectual.
+- Realizar reuniones efectivas.
+- Interacción y documentación.
+- Liderazgo.
+- Gestionar los cambios.
+- Negociar con éxito.
+- Planificar la progresión del personal.
+- Presentar el proyecto y los resultados de forma efectiva.
+- Seleccionar y entrevistar personas.
+- Seleccionar equipo.
+- Construir un equipo formando, dirigiendo y manteniéndolo.
+
+### Funciones del gestor de proyectos
+
+- Arranque y tareas administrativas.
+- Crea un plan de proyecto y una planificación.
+    - Definir los objetivos del proyecto.
+    - Identificar un proceso estándar adecuado para la ejecución del proyecto.
+    - Ajustar el proceso estándar para que coincida con los requisitos.
+    - Definir un proceso para gestionar los cambios en los requisitos.
+    - Estimar el esfuerzo.
+    - Planificar los recursos humanos y la organización del equipo.
+    - Definir los hitos y crear una planificación temporal.
+    - Realizar un plan de prevención de defectos.
+    - Identificar o mitigar su efecto.
+    - Definir un plan de medidas para el proyecto.
+    - Definir un plan de formación para el proyecto.
+    - Definir procedimientos de seguimiento del proyecto.
+- Realizar una revisión del plan del proyecto y su planificación temporal.
+- Obtener autorización del director del departamento.
+- Definir y revisar un plan de configuraciones.
+- Orientar al equipo del proyecto para el plan de gestión del proyecto.
+
+- Ejecutar el proyecto como está establecido en el plan.
+- Monitorizar el estado del proyecto.
+- Revisar el estado del proyecto con un gestor senior de proyectos.
+- Monitorizar el cumplimiento con el proceso del proyecto definido.
+- Analizar los defectos y realizar actividades de prevención de defectos.
+- Monitorizar las prestaciones a nivel de programa.
+- Realizar revisiones de hitos y replanificar si es necesario.
+
+
+La gestión de proyectos tradicional:
+
+- No reconoce la existencia de iteraciones.
+- Es inflexible, cambiar el plan se considera un fallo.
+- No piensa en los proyectos en un sentido probabilístico.
+- Es rehén del software existente de gestión de proyectos.
+- Funciona en modo reactivo, no considera los avisos tempranos en el sistema.
+
 <!-- Página 51 de Tema 2, planificación -->
 
 ## Ideas sobre PERT y CPM
