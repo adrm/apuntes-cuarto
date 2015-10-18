@@ -6,6 +6,7 @@ Proyecto: Actividad planificada. Conjunto de actividades relacionadas y coordina
 PMBOK (Project Management Body Of Knowledge): Proyecto es esfuerzo temporal que se lleva a cabo para crear un producto, servicio o resultado único con una elaboración gradual.
 
 ## Características de los proyectos
+
 - Tareas no rutinarias.
 - Se precisa una planificación.
 - Requiere objetivos específicos o un producto especificado a crear.
@@ -16,11 +17,13 @@ PMBOK (Project Management Body Of Knowledge): Proyecto es esfuerzo temporal que 
 - En general, un proyecto es largo o complejo.
 
 ## Etapas del desarrollo de un proyecto
+
 1. Estudio de viabilidad: Cuánto supone hacerlo.
 2. Planificación: Cómo se va a hacer.
 3. Ejecución del proyecto: Llevarlo a cabo.
 
 ## Etapas del ciclo de vida de un proyecto
+
 1. Fase de iniciación: Idea.
 2. Fase de definición: ¿Qué?
 3. Fase de diseño: ¿Cómo?
@@ -29,6 +32,7 @@ PMBOK (Project Management Body Of Knowledge): Proyecto es esfuerzo temporal que 
 6. Fase de seguimiento: Mantenimiento.
 
 ## Contenidos de un estudio de factibilidad
+
 - Introducción: Qué es el documento.
 - Descripción de la situación actual.
 - Descripción del problema.
@@ -46,6 +50,7 @@ PMBOK (Project Management Body Of Knowledge): Proyecto es esfuerzo temporal que 
 
 ## Características de los proyectos de software
 La mayor parte de las técnicas utilizadas en gestión de proyectos son aplicables a proyectos de software, pero tienen algunas características específicas:
+
 - Invisibilidad: En otras ingenierías, el progreso es visible. En informática es más complicado.
 - Complejidad: Suele ser más complicado por unidad de coste que otros proyectos.
 - Conformidad: Otros proyectos se asientan sobre leyes físicas y constantes. Los proyectos de software deben satisfacer los requisitos de los clientes, que no son constantes.
@@ -55,6 +60,7 @@ La mayor parte de las técnicas utilizadas en gestión de proyectos son aplicabl
 Aplicación de conocimiento, habilidades, herramientas y técnicas a las actividades de los proyectos con el fin de conseguir o superar las necesidades y expectativas de un proyecto. Implica equilibrio entre alcance, tiempo, coste y calidad; usuarios con necesidades y expectativas diferentes; y requisitos identificados y no identificados.
 
 ## Objetivos de la gestión
+
 - Calidad
 - Productividad
 - Reducción del riesgo
@@ -63,6 +69,7 @@ Las funciones del gestor de un proyecto son planificar, organizar, gestionar per
 
 ## La figura del gestor de proyectos
 Es la persona responsable de alcanzar los objetivos del proyecto. La gestión de un proyecto incluye:
+
 - Identificar los requisitos.
 - Establecer objetivos claros y posibles.
 - Equilibrar las demandas concurrentes de calidad, alcance, tiempo y costes.
@@ -73,6 +80,7 @@ A menudo se habla de una "triple restricción", equilibrio entre alcance, tiempo
 Un proyecto grande se puede descomponer en subproyectos con sus respectivos gestores.
 
 Las funciones de un gestor de proyectos son:
+
 - Planificar: decidir qué se va a hacer.
 - Organizar: realizar los preparativos adecuados.
 - Gestionar el personal: seleccionar la gente adecuada para cada trabajo.
@@ -83,6 +91,7 @@ Las funciones de un gestor de proyectos son:
 - Representar: Tratar con usuarios, etc.
 
 Modelos de organización:
+
 - Organización funcional: Un ejecutivo jefe del que dependen administradores funcionales que coordinan grupos de staff que realizan una función.
 - Organización por proyectos: los administradores de proyectos que dependen del ejecutivo jefe coordinan a grupos de staff divididos por proyectos. Favorece la fidelidad de los miembros al proyecto y la autoridad del gestor de proyecto. Por contra, los miembros del proyecto dejan de serlo cuando éste termina, y se pueden producir ineficiencias en el uso de los recursos.
 - Organización matricial fuerte: Del jefe ejecutivo dependen managers de funcionalidad y un manager de project managers. El proyecto se compone de un project manager y los staff necesarios de cada función.
@@ -90,6 +99,7 @@ Modelos de organización:
 En grandes organizaciones puede existir una unidad organizativa centralizada que supervisa la gestión de todos los proyectos de la organización. Esta unidad aporta la visión y objetivos de la organización a cada proyecto, y optimiza los recursos compartidos.
 
 Los problemas más comunes en planificación y gestión de proyectos son:
+
 - Estimaciones y planes no adecuados
 - Carencia de estándares y medidas de calidad
 - Carencia de orientación sobre la toma de decisiones organizativas
@@ -110,6 +120,7 @@ Los problemas más comunes en planificación y gestión de proyectos son:
 Un proceso define quién hace qué, cuando y cómo para alcanzar cierto objetivo.
 
 Las áreas y procesos implicados en la gestión de proyectos de acuerdo con el PMBOK:
+
 - Gestión de integración
 - Gestión del alcance
 - Gestión del tiempo
@@ -120,16 +131,18 @@ Las áreas y procesos implicados en la gestión de proyectos de acuerdo con el P
 - Gestión de riesgos
 - Gestión de aprovisionamiento
 
-El objetivo de la gestión de proyectos es _*finalizar un proyecto_ en el tiempo estipulado, con el presupuesto definido, con la funcionalidad requerida, para satisfacción del cliente y sin agotar a los miembros del equipo. Además hay que proporcionar visibilidad sobre el progreso del proyecto.
+El objetivo de la gestión de proyectos es _finalizar un proyecto_ en el tiempo estipulado, con el presupuesto definido, con la funcionalidad requerida, para satisfacción del cliente y sin agotar a los miembros del equipo. Además hay que proporcionar visibilidad sobre el progreso del proyecto.
 
 ## Procesos
 Los proyectos están compuestos de procesos. Un proceso es un conjunto de acciones que se realizan para obtener un resultado.
+
 - **Procesos relacionados con la gestión del proyecto**: relacionados con la descripción y la organización del trabajo del proyecto.
 - **Procesos orientados al producto**: relacionados con la especificación y creación del producto resultante del proyecto.
 
 Los procesos de ambos tipos se solapan e interaccionan a lo largo del desarrollo del proyecto.
 
 Los cinco grupos de procesos son:
+
 - **Grupo de procesos de iniciación**: Define y autoriza el proyecto o una fase del mismo.
 - **Grupo de procesos de planificación**: Define y refina los objetivos, y planifica el curso de acción requerido para lograr los objetivos y el alcance del proyecto.
 - **Grupo de procesos de ejecución**: Integra a personas y otros recursos para llevar a cabo el plan de gestión para el proyecto.
@@ -139,6 +152,7 @@ Los cinco grupos de procesos son:
 # Tema 2
 ## Planificación ([PDF](https://gitlab.com/adrm/apuntes-cuarto/uploads/8f6d441d95e3de45ec146259b99dec06/PGP_plan_proye_1516_2.pdf))
 Gestión del tiempo de proyecto (Planificación): Incluye todos los procesos necesarios para que se pueda garantizar la finalización del proyecto en el tiempo estipulado:
+
 - Definición de actividades: Identificar las actividades que se deben realizar para obtener los productos resultantes del proyecto.
 - Secuenciación de actividades: Identificar y documentar las dependencias de interacción entre actividades.
 - Estimación de recursos de las actividades: Estimar tipo y cantidades de recursos necesarios para cada actividad.
@@ -150,6 +164,7 @@ Gestión del tiempo de proyecto (Planificación): Incluye todos los procesos nec
 Implica la identificación y documentación de las actividades específicas que se deben realizar para producir todo tipo de productos identificados en la estructura de descomposición del trabajo. Las actividades deben estar de acuerdo con los objetivos que se pretenden conseguir y, por lo tanto, con el alcance del proyecto.
 
 Entradas:
+
 - Factores ambientales de la empresa
 - Activos de los procesos de la organización: Existencia de pautas formales o informales en la empresa, así como información histórica. Hay que considerar que actividades se han precisado en proyectos anteriores y similares.
 - Definición del alcance del proyecto: Los productos entregables del proyecto, las restricciones y las suposiciones documentadas en el enunciado del alcance del proyecto.
@@ -164,6 +179,7 @@ Entradas:
 Se usa para crear la lista de trabajos (tareas o actividades) a realizar. Se realiza una descomposición en árbol de los trabajos del proyecto. EDT identifica los "elementos terminales". Es el punto de partida fundamental para la planificación de un proyecto. Puede estar orientada a la actividad o al entregable. Se recomienda utilizar el método de notas adhesivas desde el principio.
 
 Recomendaciones para EDT (WBS):
+
 - No más de 100-200 elementos terminales. Si hubiera más sería recomendable usar subproyectos.
 - No más de 3-4 niveles de profundidad.
 - No más de 5-9 trabajos por nivel.
@@ -177,17 +193,20 @@ Recomendaciones para EDT (WBS):
 
 ### Definición de actividades
 Herramientas y técnicas:
+
 - Descomposición: Implica dividir los elementos del proyecto en componentes más pequeños y, por lo tanto, más manejables con el objetivo de proporcionar un mejor control de la gestión. La salida de esto son actividades (acciones a realizar), no elementos resultantes de las mismas.
 - Plantillas: Una lista de actividades o una parte de dicha lista de un proyecto anterior se utiliza, a menudo, como plantilla para el nuevo proyecto. Del mismo modo, la lista de actividades de una estructura de descomposición del trabajo se puede utilizar como plantilla para otras estructuras de descomposición semejantes.
 - Planificación gradual.
 
 Salidas:
+
 - Lista de actividades: No es solo una lista. Debe incluir una descripción más o menos detallada de cada actividad para que los miembros del equipo del proyecto entiendan correctamente cómo se debe realizar el trabajo.
 - Atributos de la actividad: Los atributos de la actividad para cada actividad del cronograma incluyen el identificador de la actividad, los códigos de la actividad, la descripción, las actividades predecesoras y sucesoras, las relaciones lógicas, adelantos y retrasos, requisitos de recursos, fechas impuestas, restricciones y suposiciones.
 - Lista de hitos: Identifica todos los hitos e indica si el hito es obligatorio (exigido por contrato) u opcional.
 - Cambios solicitados: El proceso "Definición de las Actividades" puede generar cambios solicitados que afecten al alcance del proyecto y la EDT.
 
 Factores que afectan a la estimación de tareas (actividades):
+
 - Tamaño de la tarea.
 - Complejidad.
 - Familiaridad con la tarea y el sistema completo a llevar a cabo.
@@ -200,6 +219,7 @@ Factores que afectan a la estimación de tareas (actividades):
 Implica la identificación y documentación de las dependencias de interacción entre actividades. Las actividades deben estar secuenciadas de forma precisa para poder permitir el desarrollo posterior de una planificación temporal alcanzable. Se puede realizar de modo manual o automático con herramientas adecuadas.
 
 Entradas:
+
 - Enunciado del alcance del proyecto: Incluye las características del producto que con frecuencia pueden afectar al establecimiento de la secuencia de actividades, tal como el plano físico de una planta que se va a construir o las interfaces del subsistema de un proyecto de software.
 - Lista de actividades.
 - Atributos de actividad: Identificador, actividades predecesoras, etc.
@@ -213,12 +233,14 @@ Dependencias discrecionales: Definidas por el equipo del proyecto. Por ejemplo, 
 Dependencias externas: Cuando se precisa de materiales o colaboración con agentes externos al equipo del proyecto para realizar determinadas actividades.
 
 Herramientas y técnicas:
+
 - Método de diagrama de precedencia: Tareas en los nodos.
 - Método de diagrama de flecha: Tareas en las flechas.
 - Métodos de diagramación condicionales.
 - Plantillas de red: Puede haber etapas completas de otros proyectos que se pueden incluir en el desarrollo planificado actualmente.
 
 Salidas:
+
 - Diagrama de la red del proyecto.
 - Actualizaciones de la lista de actividades.
 
@@ -226,6 +248,7 @@ Salidas:
 Implica la determinación del tipo de los recursos (personas, equipos, software) y las cantidades de cada uno de ellos se precisan para realizar las actividades del proyecto. Se debe coordinar con la estimación de costes.
 
 Entradas:
+
 - Factores ambientales de la empresa: Disponibilidad de sistemas de información de la gestión de proyectos y herramientas de software para la elaboración de cronogramas.
 - Activos de los procesos de la organización: Proporcionan las políticas de la organización ejecutante en lo que respecta al personal y al alquiler o compra de suministros y equipos que se evalúan durante la estimación de recursos de las actividades. Si estuviera disponible, se revisa la información histórica relacionada con los tipos de recursos que fueron necesarios para un trabajo similar en proyectos anteriores.
 - Lista de las actividades.
@@ -234,6 +257,7 @@ Entradas:
 - Plan de gestión del proyecto: El plan de gestión del cronograma es un componente del plan de gestión del proyecto, que se utiliza para la Estimación de Recursos de las actividades.
 
 Herramientas y técnicas:
+
 - Juicio de expertos, ya sean de otros departamentos, de consultoras, asociaciones profesionales y técnicas o grupos industriales.
 - Análisis de alternativas: Algunas actividades pueden tener diversos métodos de realización, por ejemplo desarrollo propio o subcontratación.
 - Datos de estimación publicados.
@@ -241,6 +265,7 @@ Herramientas y técnicas:
 - Estimación ascendente.
 
 Salidas:
+
 - Requisitos de recursos de las actividades: Descripción de la lista de recursos que se precisan junto con las cantidades necesarias para cada tipo de recursos de acuerdo con la estructura de descomposición del trabajo.
 - Atributos de la actividad (actualizaciones).
 - Estructura de descomposición de los recursos.
@@ -251,6 +276,7 @@ Salidas:
 Supone la valoración de las unidades de tiempo precisas para la realización de cada actividad considerada. Esta valoración debería realizarla, o al menos aprobarla, la persona o grupo con más conocimiento de las características de dicha actividad.
 
 Entradas:
+
 - Factores ambientales de la empresa.
 - Activos de los procesos de la organización.
 - Enunciado del alcance del proyecto.
@@ -261,6 +287,7 @@ Entradas:
 - Plan de gestión del proyecto: Registro de riesgos, estimaciones de costes de las actividades.
 
 Herramientas y técnicas:
+
 - Juicio de expertos.
 - Estimación análoga.
 - Estimación paramétrica.
@@ -268,6 +295,7 @@ Herramientas y técnicas:
 - Análisis de reserva.
 
 Salidas:
+
 - Estimación de la duración de todas las actividades.
 - Bases de las estimaciones.
 - Actualización de los atributos de las actividades.
@@ -302,6 +330,7 @@ Es posible representar retardos entre actividades.
 Significa determinar la fecha de comienzo y finalización de todas las actividades del proyecto.
 
 Entradas:
+
 - Diagrama de red del proyecto.
 - Estimaciones de la duración de la actividad.
 - Requisitos de recursos.
@@ -312,6 +341,7 @@ Entradas:
 - Retrasos e intervalos.
 
 Herramientas y técnicas:
+
 - Análisis matemáticos: Método del camino crítico (CPM), evaluación gráfica y técnica de revisión (GERT), y evaluación de programa y técnica de revisión (PERT).
 - Reducción de la duración.
 - Simulación.
@@ -319,12 +349,14 @@ Herramientas y técnicas:
 - Software de gestión de proyectos.
 
 Salidas:
+
 - Planificación del proyecto.
 - Detalles de apoyo: P. ej, la lista de todas las suposiciones y restricciones identificadas.
 - Plan de gestión de la planificación.
 - Actualización de las necesidades de recursos.
 
 ### Resumen de los aspectos que debe contemplar un plan de proyecto
+
 1. Definición clara del producto a elaborar.
 2. Estimación de coste y esfuerzo requeridos para la elaboración.
 3. Estudio de problemas que se pueden presentar durante la ejecución del proyecto y cómo solventarlos o minimizarlos.
@@ -336,24 +368,28 @@ Salidas:
 Significa considerar los cambios que se producen sobre lo planificado e intentar evitar situaciones críticas como consecuencia de los mismos
 
 Entradas:
+
 - Planificación del proyecto.
 - Informes de seguimiento: Qué actividades se han desarrollado en plazo y cuáles no.
 - Solicitudes de cambios.
 - Plan de gestión de la planificación.
 
 Herramientas y técnicas:
+
 - Sistema de control de cambios en la planificación.
 - Medidas de seguimiento: A veces hay que decidir si una variación en lo planificado requiere una acción correctiva.
 - Planificación adicional.
 - Software de gestión de proyectos.
 
 Salidas:
+
 - Actualizaciones del plan: A veces se precisan revisiones, que suponen cambios en las fechas de comienzo y final de las actividades planificadas.
 - Acción correctiva. Se intenta dirigir la planificación de las actividades futuras hacia lo planificado en el plan.
 - Lecciones aprendidas.
 
 ### Gestión de los costes del proyecto
 Incluye el proceso seguido para garantizar que el proyecto es finalizado con el presupuesto aprobado. Consta de las siguientes etapas:
+
 1. Estimación de los costes: Desarrollar una estimación de los costes de los recursos necesarios para finalizar las actividades.
 2. Presupuesto de los costes: Conseguir el coste total estimado para los elementos del trabajo.
 3. Control de los costes: Controlar los cambios sobre el presupuesto del proyecto.
@@ -362,18 +398,19 @@ Incluye el proceso seguido para garantizar que el proyecto es finalizado con el 
 Supone el desarrollo de una estimación de los costes de los recursos precisos para llevar a cabo las actividades del proyecto. Cuando el proyecto se realiza en el marco de un contrato hay que diferenciar coste de precio. Mientras que el coste implica una evolución cuantitativa siguiendo un método más o menos técnico, el precio es una decisión de negocio de la empresa.
 
 Costes a considerar en un proyecto:
+
 - Costes del hardware y software usados.
 - Coste de dietas, viajes y aprendizaje.
 - Coste del esfuerzo (principal factor de coste):
   - Salarios del personal involucrado en el proyecto.
   - Costes sociales y de seguros individuales.
-
 - Costes indirectos aplicados al personal del proyecto:
   - Costes de mantenimiento del edificio, luz, calefacción, etc.
   - Costes administrativos y de comunicaciones.
   - Costes sociales colectivos.
 
 Entradas:
+
 - Estructura de descomposición del trabajo.
 - Requisitos de recursos: descritos en planificación de recursos.
 - Tasas de los recursos: En caso de recursos humanos, se debe conocer el coste por unidad de tiempo de cada tipo de recurso (analista, diseñador, etc).
@@ -382,12 +419,14 @@ Entradas:
 - Gráfico de cuentas (contabilidad): A nivel de empresa, la realización de un proyecto está enmarcada en el contexto de una actividad económica, por lo que se debe conocer perfectamente su imputación contable.
 
 Herramientas y técnicas:
+
 - Estimaciones análogas.
 - Modelado paramétrico.
 - Estimaciones bottom-up.
 - Herramientas automatizadas.
 
-Salidas
+Salidas:
+
 - Estimación de los costes: Valoraciones cuantitativas de los costes de los recursos precisos para finalizar el proyecto.
 - Detalles de apoyo: Documentación básica sobre cómo se realizó la estimación. Documentación de cualquier suposición considerada al realizar la estimación. Rangos de los posibles resultados.
 - Plan de gestión del coste: Describe cómo se gestionarán las posibles variaciones del coste.
@@ -396,34 +435,41 @@ Salidas
 Implica la asignación de las estimaciones de coste totales a los elementos de trabajo individuales para establecer una línea base de coste que sirva para medir las prestaciones del proyecto.
 
 Entradas:
+
 - Estimación de costes.
 - Estructura de descomposición de tareas.
 - Planificación temporal del proyecto.
 
 Herramientas y técnicas:
+
 - Herramientas y técnicas específicas de estimación de costes.
 
 Salidas:
+
 - Línea base de costes: Valoraciones cuantitativas de los costes de los recursos precisos para finalizar el proyecto.
 
 #### Control de costes
 Entradas:
+
 - Línea base de costes.
 - Informes de seguimiento.
 - Solicitudes de cambio.
 - Plan de gestión del coste.
 
 Herramientas y técnicas:
+
 - Sistema de control de cambios en los costes.
 - Medidas de prestaciones (seguimiento).
 - Planificación adicional.
 - Herramientas informatizadas.
 
 Salidas:
+
 - Estimaciones de costes revisadas.
 
 ### Requisitos del proyecto
 Se dividen en:
+
 - Limitaciones de recursos: Lista de cuántos.
 - Objetivos de calidad: Lista de cómo.
 - Requisitos funcionales: Lista de qué.
@@ -444,12 +490,14 @@ Las soluciones solo son válidas si satisfacen los requisitos establecidos, pero
 Las actividades de gestión no son peculiares de los proyectos de software. La mayoría de las técnicas de gestión de proyectos son aplicables a proyectos informáticos. Los problemas de ingeniería complejos e innovadores tienden a sufrir los mismos problemas que los proyectos de software.
 
 Aspectos clave:
+
 - Una buena gestión es esencial para el éxito de un proyecto.
 - La naturaleza intangible del software causa problemas de gestión.
 - Las principales actividades de los gestores se centran en la planificación, estimación y control.
 - La planificación y la estimación son procesos iterativos que se realizan a lo largo de todo el proyecto.
 
 ### Señales de peligro para un proyecto de sistemas de información
+
 - El personal no entiende perfectamente las necesidades del cliente.
 - El ámbito del producto está mal definido.
 - Mala gestión de los cambios.
@@ -462,6 +510,7 @@ Aspectos clave:
 - Los gestores no utilizan las mejores prácticas y las lecciones aprendidas.
 
 Cómo debe actuar un gestor de proyecto para evitar estos problemas:
+
 - Comience con el pie derecho: Hay que entender el problema a resolver correctamente y establecer objetivos y expectativas realistas para los que están implicados en el proyecto. Se precisa conseguir el equipo adecuado y darle autonomía, autoridad y tecnología para llevar a buen término el proyecto.
 - Mantenga el ímpetu: No dejar que el proyecto se desintegre lentamente tras un buen comienzo.
 - Rastree el progreso: El progreso se sigue conforme se elaboran los productos a obtener del mismo y se aprueban mediante los mecanismos de garantía de calidad establecidos. Se pueden tomar medidas de proyecto para realizar la valoración del proyecto.
