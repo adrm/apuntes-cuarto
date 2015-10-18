@@ -1,5 +1,4 @@
 
-
 # Tema 1
 ## Conceptos generales
 Proyecto: Actividad planificada. Conjunto de actividades relacionadas y coordinadas para alcanzar unos objetivos dentro de unos límites de presupuesto, calidad y tiempo.
