@@ -52,9 +52,9 @@ Según Rusell y Norvig:
 - función de agente descrita anteriormente,
 - rendimiento medido como 10 puntos por casilla limpia por instante de tiempo.
 
-En ese caso sí es racional porque ningún otro agente obtendrá un mejor rendimiento esperado. Si el comportamiento parece defectuoso se puede definir otra medida de rendimiento, por ejemplo, suponer que no queremos al agente moviédose en un entorno limpio. Añadimos a la medida de rendimiento una penalización de 1 punto por cada movimiento.
+En ese caso **sí es racional** porque **ningún otro agente obtendrá un mejor rendimiento esperado**. Si el comportamiento parece defectuoso se puede definir otra medida de rendimiento, por ejemplo, suponer que no queremos al agente moviédose en un entorno limpio. Añadimos a la medida de rendimiento una penalización de 1 punto por cada movimiento.
 
-Para maximizar el rendimiento, añadimos a la función de agente que si la secuencia de percepciones incluye ambas casillas limpias, la acción será noop.
+Para maximizar el rendimiento, añadimos a la función de agente que si la secuencia de percepciones incluye ambas casillas limpias, la acción será `noop`.
 
 ### 0.1.8 _Racionalidad_ no es perfección y requiere aprendizaje
 Un comportamiento perfecto requiere saber por adelantado el resultado de las acciones del agente: solo se pide maximizar el rendimiento esperado.
@@ -64,7 +64,7 @@ Excepto para entornos sencillos e invariables, el conocimiento inicial del agent
 La racionalidad normalmente requiere aprendizaje para proporcionar autonomía al agente.
 
 ### 0.1.9 Ejemplos de agentes y descripción REAS (Medida de Rendimiento, Entorno, Actuadores y Sensores)
-<!-- ¿ToDo? -->
+![Ejemplos de agentes](img/ejemploAgentes.png)
 
 ### 0.1.10 Estructura de agente
 La función de agente no se implementa, pues no se suele conocer. Se implementa el **programa de agente**, que usa solo la percepción actual del entorno y el conocimiento y memoria que pueda tener para seleccionar la acción actual.
@@ -80,7 +80,7 @@ La mayor parte de los principios subyacentes a los sistemas inteligentes se pued
 ## 0.2. Paradigmas principales
 ## 0.3. Áreas de aplicación y ejemplos
 # PDFs originales
-[Introduccion_Ingenieria_Conocimiento_-_Grado_Informatica.pdf](introduccion.pdf)
+[Introduccion_Ingenieria_Conocimiento_-_Grado_Informatica.pdf](originales/introduccion.pdf)
 
 [LogicaProposicional_1_.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/f65016fa387c5bc4d8dc78e150bc0eef/LogicaProposicional_1_.pdf)
 
