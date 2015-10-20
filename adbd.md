@@ -32,7 +32,7 @@ Existe una excesiva orientación hacia el almacenamiento. <!-- ¿Qué quiere dec
   - La estructura de datos me da una forma de acceso.
   - Puedo servirme del sistema de archivos del SO.
 
-- Lógico
+3. Lógico
   - Comprensible por agrupación de columnas.
   - Tiene estructura de tabla basada en entidades, relaciones y propiedades
   - La tabla no es una estructura de datos, aunque el fichero secuencial sí que lo es.
@@ -41,7 +41,7 @@ Existe una excesiva orientación hacia el almacenamiento. <!-- ¿Qué quiere dec
 
     > Grupo repetitivo: Almacenaje de un número indeterminado de valores del mismo tipo en una sola casilla de la tabla.
 
-- Conceptual
+4. Conceptual
   - Modelado de los conceptos que describen una organización en base a los datos que gestiona.
   - Visión global de alto nivel, basada en entidades, relaciones y propiedades o en clasificadores, asociaciones y atributos.
   - No se ven las instancias de los datos.
@@ -74,4 +74,40 @@ Las BDs dan respuesta completa y eficaz a los problemas descritos anteriormente.
 5. Reducción del tiempo de desarrollo y mantenimiento de aplicaciones.
 
 ## 1.7 Niveles de abstracción
+
+1. Esquema externo: Vista (tabla) que combina datos para una presentación específica de usuario. Se define sobre el conceptual.
+2. Esquema conceptual: Incluye todas las tablas / relaciones con información sobre entidades y relaciones.
+3. Esquema interno: Esquema físico con los detalles de almacenamiento.
+
+
+## 1.8 Lenguajes de consulta
+
+- Definición de esquemas (DDL), manipulación de datos (DML), control.
+- Formalización a través de cálculo / álgebra relacional.
+- Optimización de la eficiencia.
+- Estándar SQL.
+- Lenguaje anfitrión.
+
+## 1.9 Arquitectura de un SGBD
+Compuesto de bloques que desarrollan las funciones encargadas al SGBD:
+
+- Interacción con el usuario / aplicación y el almacenamiento secundario.
+- Secuencia operativa.
+- Interdependencia.
+- Configuración para mejorar eficiencia.
+- Trabajo del administrador de la BD.
+
+# 2. Modelado de datos: Introdcción al diseño de bases de datos.
+## 2.1 Etapas del diseño
+¿Qué pasos se siguen en el diseño de bases de datos? Existen una serie de diseños que se realizan en un cierto orden.
+
+1. Análisis de requisitos: Comprender los datos a gestionar, elicitar las necesidades del cliente a través de reuniones, discusiones, documentación... Es una etapa clave que puede ser muy costosa.
+2. Diseño conceptual: Descripción de alto nivel de los datos y sus restricciones. Modelo que representa, organiza y clarifica la información. Normalmente, modelo Entidad-Relación. Es suficientemente preciso como para permitir su traducción a un modelo específico del SGBD.
+3. Diseño lógico: Esquema de la BD acorde al SGBD elegido. Traducción del esquema ER a un esquema relacional.
+4. Refinamiento de los esquemas: Reestructuración para garantizar propiedades importantes.
+5. Diseño físico: Mejora de rendimiento en base a cargas típicas. Idealmente no supone un rediseño de las etapas anteriores.
+6. Diseño de aplicaciones y seguridad: Procesos relacionados con las aplicaciones, como tareas y flujos de trabajo, y cuestiones de accesibilidad y seguridad.
+
+## 2.2 Diseño lógico o conceptual primero
+
 <!-- Hasta diapo 5 - álgebra relacional -->
