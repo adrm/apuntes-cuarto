@@ -1,5 +1,3 @@
-
-
 # 1. Introducción
 ## 1.1. Información y datos
 La información es valor que se extrae de los datos. Mucho software se dedica a gestionar datos. Esto es complicado debido a la cantidad de datos y a la complejidad de las relaciones entre estos datos.
@@ -21,6 +19,7 @@ Puede usarse un **modelo relacional en el que los datos se describen como tablas
 Existe una excesiva orientación hacia el almacenamiento. <!-- ¿Qué quiere decir con esto? -->
 
 ## 1.4. Almacenamiento vs BD
+
 1. Hardware
   - Visión demasiado hardware.
   - En último término, los datos tienen que ser almacenados así.
@@ -57,7 +56,8 @@ Programas de acceso a los datos: Complejidad de las consultas y actualizaciones.
 Seguridad: Directivas de seguridad para distintos accesos.
 
 ## 1.6. Sistemas de BDs
-Las BDs dan respuesta completa y eficaz a los problemas descritos anteriormente..
+Las BDs dan respuesta completa y eficaz a los problemas descritos anteriormente.
+
 1. Independencia lógica-física:
   - El usuario trata los datos a nivel lógico-conceptual, e internamente se puede cambiar el nivel físico. El usuario vería los datos igual, manteniendo intactas las aplicaciones.
   - La traducción la hace automáticamente el SGBD, manteniendo ocultos los detalles.
@@ -109,5 +109,6 @@ Compuesto de bloques que desarrollan las funciones encargadas al SGBD:
 6. Diseño de aplicaciones y seguridad: Procesos relacionados con las aplicaciones, como tareas y flujos de trabajo, y cuestiones de accesibilidad y seguridad.
 
 ## 2.2 Diseño lógico o conceptual primero
+
 
 <!-- Hasta diapo 5 - álgebra relacional -->
