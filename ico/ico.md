@@ -67,7 +67,9 @@ La racionalidad normalmente requiere aprendizaje para proporcionar autonomía al
 ![Ejemplos de agentes](img/ejemploAgentes.png)
 
 ### 0.1.10 Estructura de agente
-La función de agente no se implementa, pues no se suele conocer. Se implementa el **programa de agente**, que usa solo la percepción actual del entorno y el conocimiento y memoria que pueda tener para seleccionar la acción actual.
+La función de agente no se implementa, pues no se suele conocer. Se **implementa el programa de agente**, que usa solo la percepción actual del entorno y el conocimiento y memoria que pueda tener para seleccionar la acción actual.
+
+Un agente es una **entidad que percibe su entorno a través de sensores y lo modifica mediante actuadores**.
 
 La mayor parte de los principios subyacentes a los sistemas inteligentes se pueden describir con 5 tipos básicos de programas de agente:
 
@@ -76,6 +78,40 @@ La mayor parte de los principios subyacentes a los sistemas inteligentes se pued
 - Agente basado en metas
 - Agente basado en utilidad
 - Agentes que aprenden
+
+#### 0.1.10.1 Agente reactivo simple
+La entrada de los sensores se usa en una descripción del mundo contenida en el agente, que decide la acción a tomar a través de reglas condición/acción.
+
+Un agente de este tipo es suficiente si la acción actual se puede tomar a partir de la percepción actual. Es útil para muchas tareas de clasificación como por ejemplo:
+
+- Riesgo crediticio.
+- Etiquetado de imágenes.
+- Comportamiento anómalo en aeropuertos.
+- Sistemas sencillos de diagnosis de fallos, etc.
+
+Sin embargo, el agente reactivo simple es muy limitado. No es útil en entornos no totalmente observables y secuenciales. Un agente reactivo simple no puede ser racional con la función de rendimiento definida para el mundo del aspirador (10 puntos por casilla limpia por instante de tiempo, -1 punto por cada movimiento).
+
+#### 0.1.10.2 Agente reactivo basado en modelos
+Añade estado, evolución del mundo y efecto de las acciones a la descripción del mundo del modelo de agente reactivo simple.
+
+Puede generar comportamiento racional en numerosas tareas analíticas.
+
+Sistemas basados en conocimiento para tareas analíticas:
+
+- Clasificación.
+- Evaluación (Assessment).
+- Monitorización.
+- Diagnosis.
+
+También tiene limitaciones. A veces, el agente necesita considerar su meta actual para seleccionar la mejor acción. Por ejemplo, el aspirador en un edificio docente tendría dos metas: limpieza y silencio. Habría que fomentar el silencio en horas de docencia y la limpieza fuera de dicho horario.
+
+#### 0.1.10.3 Agente basado en metas / objetivos
+
+
+#### 0.1.10.4 Agente basado en utilidad
+
+#### 0.1.10.5 Agentes que aprenden
+
 
 ## 0.2. Paradigmas principales
 ## 0.3. Áreas de aplicación y ejemplos
