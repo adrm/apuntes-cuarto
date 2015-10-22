@@ -1,4 +1,3 @@
-
 # 1. Introducción: Conceptos de desarrollo basado en componentes
 ## 1.0. La visión general
 Desarrollo basado en componentes para gestionar la complejidad: divide y vencerás. Se aplica en muchas otras disciplinas e ingenierías.

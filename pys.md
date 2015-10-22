@@ -1,12 +1,12 @@
-
-
 # 1. Ámbitos y perfiles profesionales
 ## Terminología
+
 - Informática: Tratamiento de información por medio de computadoras.
 - Computación: resolución de problemas, algoritmos, procesamiento, cálculo...
 - TIC: Procesamiento, almacenamiento, transmisión de información; contenidos, servicios, aplicaciones...
 
 Puede ser impreciso. En el mundo anglosajón hay términos más precisos:
+
 - Informatics
 - Computing
 - Computer Science: fundamentos teóricos, algorítmicos.

@@ -1,5 +1,3 @@
-
-
 # 1. Introducción a los protocolos de red
 ## 1.1 ¿Qué es un protocolo?
 Problemas que pueden presentarse en la comunicación a través de una red:

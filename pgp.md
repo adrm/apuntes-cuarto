@@ -601,9 +601,80 @@ La gestión de proyectos tradicional:
 - Es rehén del software existente de gestión de proyectos.
 - Funciona en modo reactivo, no considera los avisos tempranos en el sistema.
 
-<!-- Página 51 de Tema 2, planificación -->
 
 ## Ideas sobre PERT y CPM
+
+- PERT: Program Evaluator and Review Technique.
+- CPM: Critical Path Method.
+
+Facilitan la planificación de proyectos en los que estén implicadas muchas actividades. Ambas fuerzan al gestor del proyecto a planificar con un cierto nivel de detalle. CPM añade el tema de gestión de recursos y costes. Ambas técnicas facilitan la respuesta a preguntas como:
+
+- ¿Cuándo finalizará el proyecto?
+- ¿Cuáles son las actividades críticas (las que retrasarían el proyecto si alguna de ellas se retrasa)?
+- ¿Cuáles son las actividades no críticas (las que se pueden retrasar algo sin que haya incidencia en el proyecto)?
+- ¿Cuánto se pueden retrasar las actividades sin retrasar significativamente el proyecto?
+- ¿Cómo se pueden concentrar los recursos para acelerar la finalización del proyecto?
+
+Por tanto, permiten:
+
+- detectar cuellos de botella,
+- cumplir plazos de entrega con mayor probabilidad,
+- evaluar los efectos de los cambios en el desarrollo del proyecto.
+
+### Pasos a realizar
+
+1. Definir el proyecto y todas sus actividades significativas.
+2. Determinar las relaciones de precedencia entre dichas actividades.
+3. Estimar el tiempo necesario para finalizar cada actividad.
+4. Dibujar una red que conecte todas las actividades y las etiquete con las estimaciones de tiempo.
+5. Calcular el camino crítico a través de la red.
+6. Utilizar la red para planificar, temporizar, monitorizar y controlar el proyecto.
+
+### Ficha de especificación de tarea
+Contendrá los siguientes datos:
+
+- Número.
+- Nombre.
+- Descripción.
+- Esfuerzo estimado.
+- Personas.
+- Recursos.
+- Duración.
+- Entregables.
+- Predecesoras.
+
+### Características de la red:
+Los **nodos** representan eventos (comienzo o fin de una o varias actividades). Los **arcos** representan actividades. Un **camino** es una secuencia de actividades conectadas desde el nodo de comienzo hasta el de finalización.
+
+Dos nodos no pueden estar directamente conectados por más de un arco. Cada actividad se representa con un único arco.
+
+Se pueden usar **actividades ficticias** para establecer una relación de precedencia. Es una actividad sin duración. Debe usarse para no violar las propiedades definidas anteriormente.
+
+También se pueden representar las tareas en el nodo (el nodo es un cuadrado) o en la flecha que une los nodos (el nodo es un círculo).
+
+La duración del proyecto será la longitud del camino más largo o **camino crítico**. Las **actividades críticas** son las que forman el camino crítico.
+
+### Tiempo más pronto posible para un evento.
+$E_j$ es el instante en el que se producirá el evento (Evento, no tarea) $j$ si todas las actividades precedentes han comenzado tan pronto como sea posible.
+
+- Pasada hacia adelante: Se calcula $E_j$ para cada evento $j$ comenzando en el primer nodo y avanzando hasta el evento final.
+- Regla del tiempo más pronto posible: $E_j$ es el **máximo** de las sumas $E_i + t_ij$ para cada evento inmediatamente precedente $i$ e interviniendo en la actividad $ij$.
+
+
+### Tiempo más tarde permisible.
+$L_i$ es el tiempo más tarde en el que se puede comenzar el evento $i$ sin que se produzca un retardo en el proyecto.
+
+- Pasada hacia atrás: Se calcula $L_i$ para cada evento $i$ comenzando por el último nodo y moviéndose hacia atrás.
+- Regla del tiempo más tarde permisible: $L_i$ es el **mínimo** de las diferencias $L_j - t_ij$ entre cada evento inmediatamente siguiente y la actividad $ij$
+
+
+### Holgura para una actividad
+Ventana de tiempo en la que puede comenzar dicha actividad.
+
+<!-- Diapositiva 19 -->
+
+
+
 ## Holguras en CPM y PERT
 ## Gestión de recursos
 ## Gestión de personas
