@@ -671,7 +671,17 @@ $L_i$ es el tiempo más tarde en el que se puede comenzar el evento $i$ sin que 
 ### Holgura para una actividad
 Ventana de tiempo en la que puede comenzar dicha actividad.
 
-<!-- Diapositiva 19 -->
+$ES$: Tiempo más pronto posible para la actividad. Longitud del recorrido más largo desde el nodo de inicio hasta el comienzo de la actividad.
+
+$LS$: Tiempo más tarde que puede empezar una actividad sin retrasar el proyecto.
+
+Holgura de la actividad $ij = LS - ES = (L_j - t_ij) - E_i$.
+
+Una **Actividad crítica** es la que tiene holgura 0. El camino crítico está formado por todas las actividades críticas. Si una actividad crítica se retrasa, se retrasará todo el proyecto.
+
+
+### Datos usados en PERT y CPM
+ <!-- Diapositiva 21 -->
 
 
 
