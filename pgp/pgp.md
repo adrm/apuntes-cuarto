@@ -36,14 +36,12 @@ PMBOK (Project Management Body Of Knowledge): Proyecto es esfuerzo temporal que 
 - Descripción de la situación actual.
 - Descripción del problema.
 - Desarrollo propuesto:
-  - Aspectos de negocios y financieros.
-  - Aspectos técnicos.
-  - Aspectos organizativos.
-
+    - Aspectos de negocios y financieros.
+    - Aspectos técnicos.
+    - Aspectos organizativos.
 - Costes estimados:
-  - Costes de desarrollos.
-  - Costes operativos (de explotación).
-
+    - Costes de desarrollos.
+    - Costes operativos (de explotación).
 - Beneficios previstos.
 - Recomendación
 
@@ -681,11 +679,76 @@ Una **Actividad crítica** es la que tiene holgura 0. El camino crítico está f
 
 
 ### Datos usados en PERT y CPM
- <!-- Diapositiva 21 -->
 
+- Early Start
+- Early Finish
+- Latest Start
+- Latest Finish
+
+La duración representa el tiempo necesario para llevar a cabo la actividad en el momento de planificar o  el tiempo restante cuando se hacen replanificaciones.
+
+
+### Posibles dependencias entre tareas
+
+- La tarea B no puede empezar hasta que la tarea A termine: Finish-to-start (FS).
+- La tarea B no puede empezar hasta que la tarea A empiece: Start-to-start (Ss).
+- La tarea B no puede terminar hasta que la tarea B termine: Finish-to-finish (FF).
+- La tarea B no puede terminar hasta que la tarea A termine: Start-to-finish (SF).
+
+
+### Ventajas de PERT
+
+- Fuerza a gestionar el plan.
+- Permite observar las interrelaciones entre actividades e identifica el camino crítico.
+- Expone el paralelismo que se puede dar en las actividades, lo que ayuda a la hora de exponer recursos.
+- Permite la planificación temporal y simulación de planificaciones alternativas.
+- Permite al gestor del proyecto realizar el seguimiento y control del mismo.
 
 
 ## Holguras en CPM y PERT
+
+
 ## Gestión de recursos
+
+### Introducción
+
+A lo largo del desarrollo de un proyecto se precisan distintos tipos de recursos. La idea es proporcionar pautas para la selección y adscripción de los recursos al proyecto a lo largo del tiempo. La forma de reservar los recursos puede implicar la existencia de restricciones sobre las tareas programadas y por lo tanto puede incidir en la planificación temporal considerada. Por tanto, una de las tareas del responsable del proyecto será buscar la concordancia entre las tareas planificadas y los recursos disponibles en cada momento.
+
+Productos resultantes: caracterización de actividades, de recursos y del coste.
+
+Según Pressman, los recursos pueden dividirse en:
+
+- Personal (número, capacidad, ubicación)
+- Software (componentes OTS, nuevo componentes, componentes probados, componentes de experiencia parcial)
+- Entorno (herramienta software, hardware, recursos de red)
+
+Cada recurso debe especificar: descripción, informe de disponibilidad, fecha de necesidad y tiempo durante el que se necesitará. En caso de RRHH, especificar las habilidades técnicas que requiere el recurso.
+
+Hughes y Cotterell dividen los recursos en:
+
+- Trabajo: Miembros del equipo de desarrollo, garantía de calidad, etc.
+- Equipamiento: Material informático e infraestructura física para su funcionamiento, así como mobiliario.
+- Materiales: Consumibles de informática, papel, etc.
+- Espacio: En una organización existente, ya está disponible. Hay que contar con posible personal adicional.
+- Servicios: Algunos proyectos requieren servicios especiales, como un sistema WAN u otros.
+- Tiempo: Uno de los recursos principales que, a veces, está preestablecido.
+- Dinero: Recurso secundario usado para comprar otros recursos.
+
+
+
+### Tipos de recursos
+
+### Planificación de los recursos
+
+
 ## Gestión de personas
+En general la gestión de personas y la organización de equipos de trabajo son temas que tienen incidencia en todas las etapas de la planifiación y ejecución de proyectos, pero hay algunas cuestiones que conviene tener en cuenta:
+
+- Algunos proyectos pueden incidir sobre la salud y seguridad durante la realización del mismo.
+- Aunque, en general, un responsable de proyecto tiene poco control sobre la estructura organizativa, debe conocer las implicaciones que la misma puede tener sobre el desarrollo del proyecto.
+- El alcance y la naturaleza de las actividades pueden estar planteados de una forma que mejore la motivación del personal.
+- Muchos riesgos para el éxito del proyecto están relacionados con la gestión del personal.
+- Las cualidades de los individuos deben ser tenidas en cuenta a la hora de asignar personas a las actividades.
+
+
 ## Riesgos en desarrollo de software
