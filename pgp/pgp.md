@@ -772,5 +772,71 @@ En general la gestión de personas y la organización de equipos de trabajo son 
 - Muchos riesgos para el éxito del proyecto están relacionados con la gestión del personal.
 - Las cualidades de los individuos deben ser tenidas en cuenta a la hora de asignar personas a las actividades.
 
+El desarrollo de un equipo de proyecto, según el PMBOK, mejora las competencias e interacciones de los miembros del equipo a fin de mejorar el rendimiento del proyecto. Se busca mejorar las habilidades de los miembros del equipo a fin de aumentar su capacidad de completar las actividades del proyecto y mejorar la cohesión entre los miembros del equipo buscando aumento de la productivdad a través de mayor trabajo en equipo.
+
+Un trabajo en equipo efectivo puede ser la ayuda mutua cuando la carga del trabajo no es equilibrada, una mejor comunicación interpersonal o compartir información y recursos. Los esfuerzos para el desarrollo del equipo son más beneficiosos cuando se realizan en las fases tempranas, pero deberían tener lugar durante todo el proyecto.
+
+Frederick Taylor intenta analizar la forma más productiva de realizar tareas manuales con el objetivo de seleccionar la persona más adecuada para realizar el trabajo, instruir a dicha persona en los mejores métodos y proporcionar incentivos salariales a los mejores trabajadores.
+
+En desarrollo de software, el desarrollo de métodos estructurados o el uso de herramientas CASE son un ejemplo de énfasis en mejores prácticas.
+
+Douglas McGregor plantea dos teorías contrapuestas sobre la relación de los trabajadores con el trabajo. La teoría X dice que los trabajadores solo actúan mediante amenazas y la teoría Y se basa en que la gente quiere y necesita trabajar.
+
+El PMBOK considera el plan de gestión de personal como una de las salidas de la planificación de recursos. Este plan contempla aspectos como adquisición de personal, horarios, criterios de liberación, necesidades formativas, reconocimientos y recompensas, cumplimiento de regulaciones y otras normas y seguridad si fuera aplicable.
+
+Aunque se suele considerar la ingeniería informática como un trabajo en solitario, la mayor parte trabajan en pequeños grupos, y una gran parte del tiempo de trabajo se dedica a interacciones con otros compañeros, superiores, clientes, etc.
+
+No es suficiente reunir a varias personas para formar un grupo. Un grupo se debe enfrentar a obstáculos y debe permitir el debate sano cuando hay conflictos. El grupo debe buscar la consecución de un objetivo común y debe tener relaciones armoniosas entre sus miembros. De esa forma, un grupo transforma las energías individuales en energía de grupo.
+
+La estructura del grupo puede ser muy dispar pero es recomendable que sea flexible, aunque es necesario que haya una única persona que sea el contacto con el exterior.
+
+Cinco etapas básicas del desarrollo de un equipo según Tuckman y Jensen:
+
+1. Formación. Los miembros se llegan a conocer e intentan fijar las pautas de comportamiento.
+2. Storming. Se producen conflictos cuando los miembros del equipo intentan ejercer el liderazgo y se están estableciendo los métodos de operación.
+3. Norming. Conflictos determinados, empieza a emerger un setimiento de identidad de grupo.
+4. Actuación (performing). Énfasis en la tarea a llevar a cabo.
+5. Finalización (adjourning). El grupo se disgrega.
+
+No suele funcionar juntar a la mejor gente. Se precisa un balance de roles con habilidades y roles de gestión.
+
+Problemas habituales:
+
+- Liderazgo no efectivo.
+- Fracaso a la hora de comprometese o cooperar.
+- Falta de participación.
+- Procrastinación.
+- Baja calidad.
+- Función de reptado, peloteo.
+- Evaluación inefícaz entre colegas.
+
+La satisfacción en el trabajo se puede mejorar aumentando las posibilidades de logros, reconocimiento, responsabilidad y avance en la carrera. Mejorar en supervisión, salario y condiciones laborarles puede reducir la falta de satisfacción en el trabajo.
+
+Se puede mantener la motivación proporcionando oportunidades para que los miembros estén al corriente, indicando la importancia y valor del grupo, haciendo que la gente se sienta importante, clarificando objetivos, identificando el progreso y reconociendo los logros.
+
+Hay que considerar qué tareas deben realizarse en grupo y cuáles pueden ser tareas individuales. Según Hughes y Cotterell, las tareas en grupo se pueden categorizar de esta manera:
+
+- Tareas aditivas. El trabajo de cada participante se añade para conseguir el resultado final, siendo las personas intercambiables. Existe el riesgo de que unos contribuyan más que otros.
+- Tareas compensatorias. Los esfuerzos se promedian. Por ejemplo, al hacer estimaciones.
+- Tareas disyuntivas. Solo uno tiene la respuesta correcta y el resto la acepta como tal.
+- Tareas conjuntivas. El progreso viene dado por la tasa del miembro más lento. Si cada uno desarrolla un módulo, el proyecto no está terminado hasta que todos han terminado.
+
+A la hora de asignar tareas a las personas del equipo se puede establecer este orden como heurística:
+
+1. La persona tiene la habilidad y la experiencia necesarias para hacer el trabajo y lo quiere hacer.
+2. La persona tiene la habilidad y la experiencia necesarias para hacer el trabajo y está preparada para hacerlo.
+3. La persona tiene la habilidad y la experiencia necesarias para hacer el trabajo pero no está preparada para hacerlo.
+4. La persona puede ser entrenada y formada para hacer el trabajo.
+5. La persona no puede hacer el trabajo.
+
+Competencias clave (AEIPRO) por niveles:
+
+- A. Ha dirigido con éxito la gestión del trabajo en equipo para programas o carteras importantes de una organización o unidad de una organización.
+- B. Ha dirigido con éxito situaciones de trabajo en equipo de proyectos complejos.
+- C. Ha dirigido con éxito situaciones de trabajo en equipo de proyectos de complejidad limitada.
+- D. Tiene el conocimiento requerido en relación con la dirección del trabajo en equipo de proyectos y puede aplicarlo.
+
+<!-- Diapositiva 10 de 18 -->
+
 
 ## Riesgos en desarrollo de software
