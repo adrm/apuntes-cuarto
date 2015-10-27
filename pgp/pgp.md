@@ -763,7 +763,7 @@ Se necesita maximizar el porcentaje de utilización de los recursos, es decir, r
 La planificación de recursos puede crear nuevas dependencias entre actividades incidiendo en los caminos críticos. Por ello, es mejor no añadir dependencias a la red de actividades para reflejar las restricciones de recursos. La restricción puede desaparecer durante el proyecto pero el enlace permanece.
 
 
-## Gestión de personas
+## Gestión de personas ([PDF](originales/PGP_trab_grupo_1516.pdf))
 En general la gestión de personas y la organización de equipos de trabajo son temas que tienen incidencia en todas las etapas de la planifiación y ejecución de proyectos, pero hay algunas cuestiones que conviene tener en cuenta:
 
 - Algunos proyectos pueden incidir sobre la salud y seguridad durante la realización del mismo.
@@ -836,7 +836,56 @@ Competencias clave (AEIPRO) por niveles:
 - C. Ha dirigido con éxito situaciones de trabajo en equipo de proyectos de complejidad limitada.
 - D. Tiene el conocimiento requerido en relación con la dirección del trabajo en equipo de proyectos y puede aplicarlo.
 
-<!-- Diapositiva 10 de 18 -->
+Para conseguir una participación y comunicación óptimas, cada miembro del grupo debe:
+
+- Participar tanto como emisor como receptor.
+- Dirigirse al grupo y no solo a un individuo.
+- Participar de forma positiva.
+- Participar en el liderazgo.
+- Dar pruebas de atención a los demás miembros.
+- Comunicar sentimientos e impresiones.
+
+Hay que tener encuenta el tiempo perdido por cambios de contexto. En general, trabajar en más de un proyecto genera pérdida de tiempo y favorece la disminución de la productividad. Se considera que un programador necesita entre 10 y 15 minutos para volver a un estado de concentración tras una distracción. Para evitarlas, algunos sugieren periodos de 25 minutos totalmente exentos de interrupciones.
+
+La productividad de un equipo desciende con el número de miembros. No por meter más miembros se reduce necesariamente el tiempo del proyecto. Saturar a los miembros del equipo tampoco proporciona mejores resultados. Programar con música puede hacerte menos productivo porque reduce la creatividad.
+
+### Equipos dispersos y virtuales
+Tener equipos dispersos reduce costes de habilitación de los centros de trabajo, también evitando ruidos y distracciones. Estudios afirman que el trabajo remoto puede ser más productivo. Incluso se puede contratar a gente en otros países aprovechando menores costes, contratos de corta duración, aprovechamiento de especialistas, e incluso aprovechar la diferencia horaria para que unos trabajen y otros hagan las pruebas después.
+
+Sin embargo, en los equipos dispersos hay que especificar cuidadosamente y documentar formalmente los requisitos de trabajo y los procedimientos, pues la coordinación puede ser difícil. Se puede generar falta de confianza por la falta de contacto. También hay que modificar los métodos de pago.
+
+### Liderazgo
+Hay varios estilos. Puede ser **orientado a tareas**, con foco en el trabajo que está siendo realizado, u **orientado a personas**, con foco en las relaciones.
+
+Ante la incertidumbre sobre la forma en que se va a realizar el trabajo o si el personal no tiene experiencia, es preferible la orientación a tareas, mientras que si esta incertidumbre se reduce, es mejor la orientación a personas.
+
+### Reuniones
+Las reuniones deben ser adecuadas para no generar pérdida de tiempo, frustraciones y descenso de compromiso. El trabajo no se hace en las reuniones, sino entre ellas. Una reunión constituye una etapa, sirve para coordinar, repartir tareas, informar, etc. Una gestión eficaz de las reuniones implica prepararlas, conducirlas y cerrarlas.
+
+No se deben realizar reuniones improvisadas. Se debe elegir un "animador" que es quien prepara el orden del día y estima la duración de cada punto. Cada persona tiene que preparar la reunión individualmente leyendo previamente la documentación, realizando las tareas previstas y anotando proposiciones y preguntas.
+
+Al conducir la reunión hay que recibir a los participantes reactivando la solidaridad y estrechando lazos. El moderador no decide los contenidos. Se encarga de los procesos, abre la reunión, presenta el orden del día y la duración prevista de cada punto, se asegura de que el objetivo de la reunión está claro, permite expresarse a todos, hace que el grupo tome decisiones, deja las conclusiones por escrito.
+
+Al final de la reunión hay que evitar las salidas precipitadas y un final tipo "pescadilla que se muerde la cola". Hay que resumir el trabajo realizado yendo a lo esencial (las decisiones tomadas), siendo breve, fiel y objetivo. Hay que evaluar periódicamente el funcionamiento del grupo, teniendo en cuenta la calidad de la participación, la comunicación, el desarrollo de las reuniones y de la animación.
+
+Es tan importante el contenido (de qué se habla) como la forma (cómo se habla).
+
+### Participación en el grupo
+Contribuir a la formación del grupo significa buscar, definir, perseguir y alcanzar el objetivo común. Hay que crear un clima de eficacia, evitando la apatía y la febrilidad.
+
+La participación no adecuada se produce cuando existe interacción insuficiente entre un miembro y el objetivo común, ya sea porque internamente decide no decir nada o no implicarse, es indiferente hacia el tema y no participa, tiene preocupaciones personales o somnolencia, está descontento porque se siente obligado, se opone abiertamente a las reuniones o trabajo en grupo por considerarlo ineficaz, tiene pocas habilidades sociales o no tiene suficiente competencia o información sobre el contenido de los debates.
+
+### Posiciones de participación
+En función del grado de compromiso de un miembro con relación al objetivo común del grupo, la posición puede ser:
+
+- Centro: Orienta al grupo en la búsqueda, definición o consecución del objetivo común.
+- Emisor: Aporta una contribución personal directamente relacionada con el objetivo común, dando su opinión personal sin generalizar, aportando sus comentarios en forma de acuerdo o desacuerdo, respondiendo a las preguntas y planteando preguntas relativas al tema en cuestión.
+- Receptor: Está atento y receptivo respecto a lo que pasa en el grupo según el objetivo común.
+- Satélite: No dirige su atención al objetivo común.
+- Ausente: No va a las reuniones, o llega tarde.
+
+### Autoevaluación
+Cada miembro del grupo puede preguntarse si participa, si la comunicación fue buena (buena atmósfera, sin agresividad, todo el mundo pudo hablar), si las reuniones estaban bien preparadas y organizadas, las intervenciones han sido coordinadas, se ha fomentado la comunicación entre miembors, se han alcanzado los objetivos, se han respetado las duraciones previstas, se ha cerrado la reunión eficazmente... Además, puede hacer un balance personal expresado a través de proposiciones y comentarios.
 
 
 ## Riesgos en desarrollo de software
