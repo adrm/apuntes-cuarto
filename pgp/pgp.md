@@ -716,6 +716,7 @@ A lo largo del desarrollo de un proyecto se precisan distintos tipos de recursos
 
 Productos resultantes: caracterización de actividades, de recursos y del coste.
 
+### Tipos de recursos
 Según Pressman, los recursos pueden dividirse en:
 
 - Personal (número, capacidad, ubicación)
@@ -734,11 +735,32 @@ Hughes y Cotterell dividen los recursos en:
 - Tiempo: Uno de los recursos principales que, a veces, está preestablecido.
 - Dinero: Recurso secundario usado para comprar otros recursos.
 
-
-
-### Tipos de recursos
-
 ### Planificación de los recursos
+Es útil poder ver únicamente las tareas que hay asignadas a cada recurso para comunicar a los participantes el uso de un recurso compartido, verificar que se usan de forma equilibrada o verificar que no se pretende usar ningún recurso más de lo posible. Para esto se usan el diagrama de Gantt y el de cargas.
+
+A la hora de asignar recursos a tareas hay que tener en cuenta:
+
+- Disponibilidad. Tiene que haber personas adecuadas para no alargar el proyecto.
+- Criticidad. Asignar recursos con más experiencia a actividades del camino crítico puede ayudar a reducir la duración del proyecto o disminuir el riesgo de alargamiento.
+- Riesgo. Es importante identificar tareas que plantean más riesgos y qué factores influyen en ello para asignar personal.
+- Entrenamiento. La organización se beneficia asignando personas inexpertas en tareas no críticas donde, con la holgura, podrán ir formándose.
+- Formación de equipo. La selección debe tener en cuenta las cualidades considerando las características del proyecto y que las personas deben trabajar conjuntamente.
+
+Se producen conflictos sobre recursos cuando el mismo recurso se precisa en más de un lugar al mismo tiempo. Se pueden resolver retrasando una de las actividades (aprovechando la holgura o retrasando la finalización del proyecto), moviendo un recurso desde una actividad no crítica, proporcionando recursos adicionales (aumenta el coste), dividiendo la actividad en dos para facilitar la asignación o permitiendo una sobrecarga de trabajo (también supone mayor coste).
+
+Es conveniente priorizar las tareas de forma que la asignación de los recursos se haga siguiendo un orden racional predeterminado. Existen varias formas de proporcionar prioridades a los recursos:
+
+- Prioridad por holgura total: Las tareas con menor holgura tienen la mayor prioridad a la hora de asignar recursos.
+- Prioridad por lista ordenada: Las actividades que se realizan al mismo tiempo se ordenan según un criterio sencillo. Según Burman sería:
+        - Actividad crítica más corta.
+        - Actividad crítica.
+        - Actividad no crítica más corta.
+        - Actividad no crítica con menor holgura.
+        - Actividad no crítica.
+
+Se necesita maximizar el porcentaje de utilización de los recursos, es decir, reducir periodos vacíos entre tareas. Hay que balancear costes frente a anticipar la fecha de finalización. También es necesario permitir contingencias.
+
+La planificación de recursos puede crear nuevas dependencias entre actividades incidiendo en los caminos críticos. Por ello, es mejor no añadir dependencias a la red de actividades para reflejar las restricciones de recursos. La restricción puede desaparecer durante el proyecto pero el enlace permanece.
 
 
 ## Gestión de personas
