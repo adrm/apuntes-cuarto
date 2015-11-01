@@ -399,12 +399,12 @@ Costes a considerar en un proyecto:
 - Costes del hardware y software usados.
 - Coste de dietas, viajes y aprendizaje.
 - Coste del esfuerzo (principal factor de coste):
-  - Salarios del personal involucrado en el proyecto.
-  - Costes sociales y de seguros individuales.
+        - Salarios del personal involucrado en el proyecto.
+        - Costes sociales y de seguros individuales.
 - Costes indirectos aplicados al personal del proyecto:
-  - Costes de mantenimiento del edificio, luz, calefacción, etc.
-  - Costes administrativos y de comunicaciones.
-  - Costes sociales colectivos.
+        - Costes de mantenimiento del edificio, luz, calefacción, etc.
+        - Costes administrativos y de comunicaciones.
+        - Costes sociales colectivos.
 
 Entradas:
 

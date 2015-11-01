@@ -1,4 +1,4 @@
-FLAGS=--toc
+FLAGS=--toc --smart --epub-stylesheet=epub.css
 
 all: pgp ico adbd ars dbcs pys
 

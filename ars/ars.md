@@ -1,6 +1,7 @@
 # 1. Introducción a los protocolos de red
 ## 1.1 ¿Qué es un protocolo?
 Problemas que pueden presentarse en la comunicación a través de una red:
+
 - Fallos en el hardware que deben ser detectados.
 - Congestionamiento en la red o en una máquina.
 - Paquetes retrasados o perdidos.
@@ -58,6 +59,7 @@ No tiene su origen en un comité de estándares. Consta de cuatro capas conceptu
 En la capa de transporte se usan básicamente dos protocolos: TCP y UDP
 
 ### 1.4.2 Topología: consideraciones de diseño
+
 - Se ocultará al usuario la arquitectura subyacente.
 - No se impondrá una topología de interconexión de red.
 - Los datos podrán circular a través de redes intermedias entre origen y destino.
@@ -80,6 +82,7 @@ Define una dirección unívoca para cada interfaz de red en toda Internet (direc
 Identifica distintas aplicaciones situadas en una máquina (puertos), proporcionando comunicación entre un programa de aplicación y otro, a través de flujos continuos de datos. Permite intercambiar datos sin errores y en secuencia usando mecanismos de control como el protocolo TCP.
 
 ### 1.4.8 Dos fronteras importantes en el modelo TCP/IP
+
 - Frontera de dirección de protocolo de bajo nivel: Separa el software que utiliza direcciones de bajo nivel (físicas) y el software que utiliza direcciones de alto nivel (IP). Todo el software de protocolo desde la capa de Internet hacia arriba utiliza solo direcciones IP.
 - Frontera de dirección de protocolo de alto nivel: Separa el software que suele ser del sistema operativo del que no lo es. El software resultante de una estratificación puede ser ineficaz. Típicamente se envía hacia arriba la selección de ruta y la MTU para optimizar la transmisión de las capas superiores.
 
@@ -87,6 +90,7 @@ Identifica distintas aplicaciones situadas en una máquina (puertos), proporcion
 Contiene las aplicaciones que utilizan los servicios de Internet (aplicaciones de correo, servicio web, ftp...). Un protocolo muy útil es el Servicio de Nombres de Dominio (DNS).
 
 Algunos protocolos de aplicación:
+
 - `http`: Intercambio de páginas web. Supera el tráfico de ftp en 1995. Permite hipertexto. Define los recursos con una URL absoluta en la red. El host puede ser una ip o a través de DNS.
 - `smtp`: Envío, recepción y retransmisión de correo electrónico. Otros relacionados son pop o mime.
 - `ftp`: Transferencia de ficheros.
@@ -118,6 +122,7 @@ Desde 1993 se usa un sistema más flexible que impide la saturación del espacio
 La autoridad central IANA (Internet Assigned Numbers Authority) asigna los espacios de direcciones de Internet. Solo pueden utilizarse direcciones sin permiso en caso de que se trate de una red local no conectada a Internet. Aún así es una mala práctica, con lo que se definen tres espacios de redes privadas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 y la dirección 127.0.0.1 que se reserva para loopback a la propia máquina sin generar tráfico en la red.
 
 ### Desventajas del direccionamiento IP
+
 - La IP se refiere a una conexión de red, no a una máquina. Si la máquina cambia de red, su IP debe cambiar.
 - El espacio de direcciones está saturado. Se mitiga con IP dinámica.
 - Se ha propuesto una revisión de IPv4 denominada IPv6 pero no tiene mucha implantación. No es compatible con IPv4 y necesita pasarelas de transición.
@@ -130,6 +135,7 @@ Las tarjetas de conexión a red tienen dirección física única (MAC, Media Acc
 Si los dispositivos que se comunican están en la misma subred, el origen tiene que obtener la MAC del destino. Si están en distintas subredes, el origen tiene que obtener la MAC del router, que a su vez lo reencaminará.
 
 Para ello existe ARP (Address Resolution Protocol). Su implementación depende de la tecnología física de la red. Consideramos el caso de Ethernet. Cada interfaz Ethernet tiene una MAC de 48 bits. Para que A obtenga la MAC de B:
+
 1. A transmite un mensaje de difusión que solicita a la máquina con dirección IP B que indique su dirección física MAC B.
 2. Todos reciben la solicitud pero solo B responde.
 3. Cuando A recibe la respuesta de B, utiliza MAC B para enviarle el mensaje directamente.
@@ -147,6 +153,7 @@ Puede ser que en una red existan más dispositivos que IPs. En ese caso, se asig
 
 ## 2.4 Capa de red: protocolo Internet (IP)
 Los usuarios deben concebir Internet como una única red virtual, ocultando la arquitectura. Hay tres conjuntos de servicios que lo facilitan:
+
 - Servicios de aplicación: Aplicaciones que hacen uso de la red como HTTP, FTP, etc.
 - Servicio de transporte fiable: Plataforma de alto nivel. Protocolo TCP.
 - Servicio sin conexión: Mecanismo fundamental de entrega, protocolo IP.
@@ -163,14 +170,14 @@ El protocolo IP se encarga de establecer el formato de los datos a intercambiar 
 El **datagrama** es la unidad básica de transmisión del protocolo IP. Ni el contenido ni el formato de los datagramas está condicionado por ningún tipo de hardware.
 
 ### Datagrama IP: descripción de sus campos
+
 - VERS: Versión del protocolo.
 - HLEN: Tamaño del encabezado en múltiplos de 32 bits.
 - Tipo de servicio: Especifica cómo debe manejarse el datagrama para facilitar su encaminamiento:
-  - Prioridad (1 byte)
-  - Si solicita procesamiento con retardos cortos
-  - Si solicita rapidez en el envío
-  - Si solicita fiabilidad
-
+        - Prioridad (1 byte)
+        - Si solicita procesamiento con retardos cortos
+        - Si solicita rapidez en el envío
+        - Si solicita fiabilidad
 - Longitud total del datagrama. El campo es de 16 bits así que la longitud del datagrama es como mucho 65.535 bytes.
 
 ### Datagrama IP: encapsulación, tamaño
@@ -180,6 +187,7 @@ El datagrama debe enviarse por un medio físico que puede poner restricciones al
 El software IP deberá seleccionar un tamaño inicial adecuado y permitir a los routers fragmentar o defragmentar las tramas.
 
 Campos del datagrama relacionados con la fragmentación:
+
 - Identificación: Se copia en cada fragmento para saber el datagrama al que pertenece.
 - Desplazamiento: Indica el desplazamiento de sus datos en múltiplos de 8 bytes.
 - Banderas: tres bits que controlan la fragmentación: si es el último fragmento, si ese datagrama puede fragmentarse (para depuración de redes)
@@ -190,6 +198,7 @@ Con el tamaño del datagrama original, los offests y el bit de último fragmento
 Especifica el tiempo en segundos que el datagrama puede estar en la red sin ser entregado. Se decrementa en cada router, con más o menos precisión. Si llega a cero, se desecha el datagrama y se envía un mensaje de error. Evita paquetes eternamente dando vueltas debido a tablas de encaminamiento erróneas, etc.
 
 ### Otros campos del datagrama
+
 - Protocolo: Especifica el protocolo de alto nivel que ha creado el mensaje.
 - Suma de verificación del encabezado: Controla la integridad del encabezado. No se verifican los datos.
 - Dirección IP fuente y destino finales: No cambian nunca.
@@ -202,6 +211,7 @@ Especifica el tiempo en segundos que el datagrama puede estar en la red sin ser 
 Directo si las dos máquinas están en una sola red. No necesita routers. Indirecto si no, y es necesario usar routers.
 
 ### Tipos de encaminamiento
+
 - Encaminamiento controlado por tabla: Emplea una tabla de encaminamiento IP. Las tablas pueden ser muy grandes así que se guardan las direcciones de los routers próximos.
 - Encaminamiento con salto al siguiente: Tabla con dos campos, ip de la red de destino y siguiente router a esa red. Solo se añaden routers que puedan alcanzarse directamente. No hay info sobre máquinas concretas.
 - Rutas asignadas por omisión: Muchos registros asociados a un router por omisión. Es útil si es una máquina que tiene pocas direcciones locales y pocas conexiones con el resto de Internet.
@@ -226,6 +236,7 @@ Algunos puertos bien conocidos UDP están reservados (servicios).
 
 ## 2.6 Capa de transporte: protocolo de transporte fiable (TCP)
 Transporte de datos de flujo fiable. Cinco funciones básicas:
+
 1. **Orientación de flujo**: Se reciben los bytes en el mismo orden en que se envían.
 2. **Conexión de circuito virtual**: se establece una conexión, se realizan las transferencias y se libera la conexión.
 3. **Transferencia con memoria intermedia**: Los datos se agrupan o dividen hasta que tengan el tamaño que permita la mayor eficiencia.
@@ -277,6 +288,7 @@ Se puede reemplazar al hijo por nuevo código con execve(nombre del fichero de c
 Los clientes son conceptualmente mucho más simples que los servidores porque no tienen necesidad de soportar concurrencia, no necesitan privilegios especiales para su ejecución y no requieren de una protección especial al estar protegidos por el SO.
 
 Para localizar un servidor a través de su dirección IP y su número de protocolo, hay varias opciones:
+
 - Declararlas como constantes del programa.
 - Pedirle al usuario que identifique el servidor
 

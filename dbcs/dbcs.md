@@ -27,7 +27,7 @@ La reutilización de software tiene ventajas...
 
 - Reducción de costes totales.
 - Incremento de la fiabilidad.
-- Reducción del riesgo del proces.
+- Reducción del riesgo del proceso.
 - Uso efectivo de especialistas.
 - Cumplimiento de estándares.
 - Desarrollo acelerado.
