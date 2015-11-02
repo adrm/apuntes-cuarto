@@ -106,7 +106,11 @@ Sistemas basados en conocimiento para tareas analíticas:
 También tiene limitaciones. A veces, el agente necesita considerar su meta actual para seleccionar la mejor acción. Por ejemplo, el aspirador en un edificio docente tendría dos metas: limpieza y silencio. Habría que fomentar el silencio en horas de docencia y la limpieza fuera de dicho horario.
 
 #### 0.1.10.3 Agente basado en metas / objetivos
+Entre la descripción del mundo y la acción, el agente analiza el efecto de realizar una acción teniendo en cuenta la evolución del mundo y el efecto de sus acciones para determinar la acción a tomar. Normalmente el agente considera secuencias de acciones.
 
+Se usa en problemas de búsqueda (rutas, juegos, etc) o en problemas de planificación (horarios de clase, asignación de tiempos a tareas o scheduling, etc).
+
+Sus limitaciones radican en que hay algunas metas que se contradicen y el agente tendría que razonar sobre ellas (como en el ejemplo del aspirador en el centro educativo). También está limitado cuando hay incertidumbre sobre la obtención de las metas, como por ejemplo en un juego de póker.
 
 #### 0.1.10.4 Agente basado en utilidad
 
@@ -114,4 +118,72 @@ También tiene limitaciones. A veces, el agente necesita considerar su meta actu
 
 
 ## 0.2. Paradigmas principales
+### 0.2.1 Sistemas Inteligentes basados en conocimiento (Sistema experto)
+No son solo técnicas de búsqueda, sino que incluyen conocimiento, implícito o explícito, sobre el problema a resolver. Son de interés en numerosos entornos como juegos, optimización de rutas, etc.
+
+Los sistemas expertos identifican y explotan el conocimiento humano para la resolución de problemas. Se basan en unas suposiciones básicas:
+
+- El conocimiento proviene de la experiencia.
+- Los expertos codifican el conocimiento mediante asociaciones (heurística).
+- El conocimiento se puede extraer del experto y codificar mediante un Lenguaje de Representación de Conocimiento.
+
+El conocimiento se codifica con **reglas de producción** que tienen la estructura ```SI antecedente ENTONCES consecuente```. Un ejemplo sería:
+
+```
+SI las diferencias de temperatura son anormalmente altas Y las presiones se mantienen aproximadamente constantes ENTONCES sospechar fallo en sensores de temperatura
+```
+
+Un ejemplo de sistema experto es _MYCIN_, que tomaba decisiones de diagnosis y terapia de enfermedades infecciosas. Su base de conocimiento estaba compuesta de reglas de producción como la siguiente:
+
+```
+if	(1) the stain of the organism is gram-negative
+	(2) the morphology of the organisms is coccus
+	(3) the growth configuration of the organism is chains
+then there is a suggestive evidence (0.7)
+	that the identity of the organisms is streptococcus
+```
+
+Control: encadenamiento hacia atrás, meta-reglas <!--TODO explicar esto-->
+
+Razonamiento aproximado con factores de certeza. No daba respuestas absolutas, sino probabilidades.
+
+Los sistemas expertos tienen numerosos dominios de aplicación: medicina, mecánica, electrónica, control de procesos, aeronáutica, etc. Existen numerosas tareas basadas en el conocimiento como la diagnosis, configuración, clasificación y otras.
+
+Existen numerosos sistemas expertos. Los más representativos son _MYCIN_, _INTERNIST_ o _R1/XCONF_.
+
+La aproximación de los sistemas expertos está bien establecida a través de una serie de metodologías (ingeniería del conocimiento, ontologías) y sistemas. Esta aproximación será adecuada si hay suficiente experiencia, si no hay otras fuentes de conocimiento, si hay suficientes observaciones y si el sistema permanece estable.
+
+También existen algunos inconvenientes. Sobre la experiencia, puede que sea difícil extraer el conocimiento, disponer de experiencia o expertos, y además existe dependencia del dispositivo <!--TODO no entiendo eso último-->. Sobre el método de solución, pueden darse situaciones nuevas no previstas, puede que se combinen soluciones (por ejemplo, a la hora de encontrar la causa de un fallo múltiple), y el sistema puede ser frágil. También es costosa la obtención del conocimiento, la reutilización del mismo y el mantenimiento de la consistencia de la base de conocimiento; problemas que hay que resolver desde la ingeniería de software.
+
+### 0.2.2 Razonamiento basado en casos
+Un caso es la descripción de un problema y su solución. Bajo este concepto, para solucionar un problema nuevo hay que buscar los casos con descripciones similares, adaptar las soluciones revisando el resultado, y almacenar el nuevo caso generado si el resultado es interesante.
+
+Este proceso, denominado **ciclo CBR** (case-based reasoning) se formaliza de la siguiente manera: Partimos de un problema, y lo primero es la fase de recuperación (retrieve) de los casos más parecidos. Después, reutilizamos (reuse) las soluciones de los casos recuperados para tratar de resolver el problema. Seguimos revisando (revise) la solución propuesta hasta dar con una correcta, que almacenamos (retain) como un nuevo caso.
+
+Ventajas:
+
+- No requiere representación explícita del conocimiento.
+- Tiene capacidad de aprendizaje.
+- Es adecuado si no se dispone de un modelo explícito.
+
+Inconvenientes:
+
+- Son necesarios casos previos.
+- La etapa de revisión (revise) tiene limitaciones.
+
+### 0.2.3 Aprendizaje y minería de datos
+Permiten inferir conocimiento nuevo ya sea describiendo conceptos a partir de ejemplos etiquetados (clasificación), descubriendo conceptos a partir de ejemplos no etiquetados (clustering), descubriendo regularidades en los datos o mejorando la eficiencia<!--TODO Mejorando la eficiencia de qué-->.
+
+Ventajas:
+
+- Permiten generar automáticamente conocimiento a partir de datos.
+- Es adecuado si no dispone de modelo explícito.
+
+Inconvenientes:
+
+- Es necesario disponer de datos suficientes.
+- Suele ser de utilidad solo en alguna parte del proceso de solución.
+
+### 0.2.4 Razonamiento basado en modelos
+<!-- Diapositiva 45 -->
 ## 0.3. Áreas de aplicación y ejemplos
