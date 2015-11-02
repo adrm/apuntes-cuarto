@@ -1,4 +1,4 @@
-# 0. Introducción
+# 0. Introducción ([PDF](originales/introduccion.pdf))
 ## 0.1. Caracterización y perspectiva de agente
 ### 0.1.1. Caracterización
 La IA se refiere al diseño y análisis de agentes autónomos. Son sistemas software o máquinas físicas con sensores y actuadores. Un **sistema inteligente** tiene que percibir su entorno, actuar racionalmente hacia sus tareas preasignadas, interaccionar con otros agentes y con seres humanos.
@@ -115,13 +115,3 @@ También tiene limitaciones. A veces, el agente necesita considerar su meta actu
 
 ## 0.2. Paradigmas principales
 ## 0.3. Áreas de aplicación y ejemplos
-# PDFs originales
-[Introduccion_Ingenieria_Conocimiento_-_Grado_Informatica.pdf](originales/introduccion.pdf)
-
-[LogicaProposicional_1_.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/f65016fa387c5bc4d8dc78e150bc0eef/LogicaProposicional_1_.pdf)
-
-[LogicaPredicados.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/9dc3f7f9f52f7efd0620c5c12ed91501/LogicaPredicados.pdf)
-
-[EstrategiasResolucion.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/94d45be57079e8fdd37ed88f9eae60ed/EstrategiasResolucion.pdf)
-
-[ProgramacionLogicaProlog.pdf](https://gitlab.com/adrm/apuntes-cuarto/uploads/524f88e12a22eae975780baefd34f5d6/ProgramacionLogicaProlog.pdf)
