@@ -185,5 +185,38 @@ Inconvenientes:
 - Suele ser de utilidad solo en alguna parte del proceso de solución.
 
 ### 0.2.4 Razonamiento basado en modelos
-<!-- Diapositiva 45 -->
-## 0.3. Áreas de aplicación y ejemplos
+Se tiene un modelo que predice el comportamiento del sistema real. Esta predición se compara con el comportamiento observado y deseado y con las diferencias se genera una solución.
+
+El conocimiento se codifica en modelos (estructura y comportamiento) de los componentes del sistema. El razonamiento se traduce en el proceso de manipulación de los modelos hasta obtener la solución del problema.
+
+Ventajas:
+
+- Es independiente de la experiencia, y por tanto aplicable a dispositivos nuevos. <!-- TODO A qué se refiere con dispositivos? Lo pone en más sitios -->
+- Independencia del dispositivo (Problema de las variantes<!-- TODO what-->).
+- Soluciones complejas (Por ejemplo, fallos múltiples). <!-- TODO No lo entiendo -->
+- Sólido y completo respecto a los modelos.
+- Mantenimiento y reutilización del conocimiento a través de bibliotecas de modelos que están disponibles desde el diseño.
+
+Inconvenientes:
+
+- Dificultad de obtención de los modelos. Hay procesos que son poco conocidos, sistemas con demasiados componentes, comportamientos complejos como dinámica, no linealidades, modelos con un rango de validez, etc.
+- Existe una mayor carga computacional del proceso de razonamiento, lo que limita esta técnica en aplicaciones en tiempo real.
+
+Áreas de aplicación:
+
+- Planificación y scheduling.
+- Configuración y diseño.
+- Diagnosis.
+- Control.
+- Visión.
+- Tecnologías del habla.
+- Robótica.
+- Lenguaje natural.
+- Análisis de transacciones.
+- Industria informática actual: navegadores, buscadores, gestor e-mail, reconocimiento de matrículas en aparcamientos, compras on-line...
+
+En la industria del automóvil es de gran interés en cuestiones de seguridad, medio ambiente y economía. Hay proyectos de diagnosis a bordo o en el taller, de elaboración de manuales o de diagnosis y mantenimiento preventivo.
+
+En la industria aeroespacial se usa en sistemas de monitorización de las funciones básicas de las naves espaciales (Health Management Systems) como los subsistemas de propulsión, de guiado, de sostenimiento de vida, etc. También para detección, localización y reconfiguración de satélites o lanzaderas por parte de múltiples agencias espaciales y empresas privadas.
+
+Muy útil también en la supervisión de procesos industriales, aportando una atención continuada, seguridad y una calidad homogénea.
