@@ -172,4 +172,22 @@ CREATE TABLE Estudiante (
 
 Otras restricciones son las aserciones y disipadores, que se verán más adelante.
 
-<!-- Diapositiva 16 -->
+## Diseño lógico: ER -> Relacional
+ERD
+
+ER
+
+SQL
+<!-- Diapositiva 16: Aclarar esto -->
+
+## Tipos de relación -> tablas
+Si la relación es `1-1`, comprobamos si se pueden poner en términos de una única entidad.
+
+Si la relación es `1-*`, referenciamos en el lado `*` el valor único del lado `1`.
+
+Si la relación es `*-*`, habría que representar la relación como una nueva entidad que se relaciona con los dos extremos, siendo la nueva entidad el lado `1` en las dos nuevas relaciones creadas.
+
+## Traducción de la opcionalidad
+Si la relación tiene `0` en algún extremo supone que pueden existir nulos.
+
+## Entidades débiles
