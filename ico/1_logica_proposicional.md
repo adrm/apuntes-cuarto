@@ -72,22 +72,19 @@ Una lógica es **decidible** si el problema de la satisfactibilidad es computabl
 La lógica proposicional es decidible porque siempre se puede recurrir a las tablas de verdad. Sin embargo el problema es NP y O(2^n).
 
 ## Equivalencia
-Dos FBFs son **equivalentes** (α = β) si y solo si ambas tienen los mismos valores de verdad bajo cualquier interpretación.
-
-Leyes de equivalencia:
+Dos FBFs son **equivalentes** (α = β) si y solo si ambas tienen los mismos valores de verdad bajo cualquier interpretación. Las leyes de equivalencia son las siguientes:
 
 - Eliminación del bicondicional: conjunción de condicionales.
 - Eliminación del condicional: (α ⊃ β) = (¬α ∨ β)
 - Conmutativa de la conjunción y la disyunción.
 - Asociativa de la conjunción.
 - Distributiva de disyunción respecto de conjunción.
-- Absorción:
-- Contradicción:
-- Exclusión de los medios:
-- Idempotencia:
-- Doble negación:
-- De Morgan:
-<!-- TODO Mirar bien leyes de equivalencia -->
+- Absorción: La conjunción de una FBF con otra válida es equivalente a la primera FBF. La disyunción con una inconsistente también.
+- Contradicción: La conjunción de una FBF con su opuesto o con una FBF inconsistente es equivalente a una FBF inconsistente.
+- Exclusión de los medios: La disyunción de una FBF con su opuesto o con una FBF válida es equivalente a una FBF válida.
+- Idempotencia: La conjunción o disyunción de una FBF consigo misma es equivalente a la FBF.
+- Doble negación.
+- De Morgan: Negación de la conjunción, disyunción de negaciones. Negación de la disyunción, conjunción de negaciones.
 
 ## Consecuencia lógica
 Una FBF es **consecuencia lógica** de una serie de premisas (más FBFs) si y solo si todo modelo de las premisas es modelo de la consecuencia lógica. Se denota por `α1, α2, ...  , αn |= α`.
