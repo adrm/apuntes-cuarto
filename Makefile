@@ -1,7 +1,7 @@
 FLAGS=--toc --smart --epub-stylesheet=../epub.css
 COMMAND=cd $@ && pandoc -i $(addprefix ../, $(wildcard $^)) -o epub/$@.epub $(FLAGS)
 
-all: pgp ico adbd ars dbcs pys
+all: pgp ico adbd ars dbcs pys ssee
 
 pgp: pgp/*.md; $(COMMAND)
 
@@ -14,6 +14,8 @@ ars: ars/*.md; $(COMMAND)
 dbcs: dbcs/*.md; $(COMMAND)
 
 pys: pys/*.md; $(COMMAND)
+
+ssee: ssee/*.md; $(COMMAND)
 
 clean:
 	find . -name \*.epub -type f -delete

@@ -99,4 +99,4 @@ Sean α, α1, α2, ...  ,αn FBF’s. Las siguientes expresiones son equivalente
 2. ((α1 ∧ α2 ∧ ... ∧αn) ⊃ α) es una tautología
 3. (α1 ∧ α2 ∧ ... ∧ αn ∧ ¬α) es inconsistente
 
-El interés del teorema es que 3. nos proporciona un método para comprar si una fórmula es consecuencia lógica de unas premisas. (Si la negación de una FBF produce una FBF inconsistente al ponerlo en conjunción con una conjunción de FBFs, quiere decir que la FBF es una consecuencia lógica de las otras) <!-- TODO Creo -->
+El interés del teorema es que 3. nos proporciona un método para comprar si una fórmula es consecuencia lógica de unas premisas. Si la negación de una FBF produce una FBF inconsistente al ponerlo en conjunción con una conjunción de FBFs, quiere decir que la FBF es una consecuencia lógica de las otras.
