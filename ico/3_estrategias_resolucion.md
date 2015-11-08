@@ -69,7 +69,8 @@ Una cláusula tiene **T-soporte** si dicha cláusula pertenece a un conjunto sop
 
 La **estrategia del conjunto soporte**... <!-- TODO completar -->
 
-**Teorema del conjunto soporte**... <!-- TODO completar -->
+#### Teorema del conjunto soporte
+Si tenemos una fórmula clausulada inconsistente y un conjunto soporte de ella tal que si quitamos el conjunto soporte de la fórmula clausuladoa obtenemos una fórmula clausulada consistente, se puede llegar a la cláusula vacía usando la estrategia del conjunto soporte con ese conjunto soporte.
 
 #### Resolución lineal
 Se elige una cláusula central de partida y solo permite obtener como resolventes otras cláusulas centrales que sean resolvente de la cláusula central anterior y otra distinta.
