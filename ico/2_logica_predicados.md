@@ -138,7 +138,7 @@ Dos expresiones son **variante alfabética** si y solo si se diferencian en el n
 
 La sustitución $s2$ sería **distinta** de la sustitución $s1$ si y solo si ninguna variable ligada de $s1$ ocurre en $s2$.
 
-Si $s2$ es distinta a $s1$, se denomina **composición** de $s2$ con $s1$ y se denota $s2s1$ a la sustitución obtenida aplicando $s2$ a los términos de $s1$ y añadiendo al conjunto resultante las ligaduras de $s2$
+Si $s2$ es distinta a $s1$, se denomina **composición** de $s2$ con $s1$ y se denota $s1s2$ a la sustitución obtenida aplicando $s2$ a los términos de $s1$ y añadiendo al conjunto resultante las ligaduras de $s2$
 
 ### Unificador más general
 La **particularización del conjunto finito de expresiones** `C` por la sutitución `s` se denomina `Cs` y se define como la aplicación de `s` a cada expresión de `C` eliminando las particularizaciones repetidas.
@@ -157,5 +157,5 @@ El **algoritmo de unificación** tiene como entrada un conjunto finito de expres
 1. Hacer `k = 0, Ω_k = Ω, s_k = 0`.
 2. Si `Ω_k` tiene más de un elemento, crear su conjunto de desacuerdos. En caso contrario, devolver `s_k`, que es el unificador más general del conjunto de entrada.
 3. Si no existen `v_k, t_k` en el conjunto de desacuerdos tales que `v_k` no ocurra en `t_k`, devolver fallo pues `Ω` no es unificable.
-4. Elegir `v_k, t_k` tales que `v_k` no ocurra en `t_k` y hacer `s_{k+1} = s_k·{t_k / v_k}` y `Ω_{k+1} = Ω_k · {t_k}`
+4. Elegir `v_k, t_k` tales que `v_k` no ocurra en `t_k` y hacer `s_{k+1} = s_k·{t_k / v_k}` y `Ω_{k+1} = Ω_k · {t_k / v_k}`
 5. Hacer `k = k+1` e ir a 2.
