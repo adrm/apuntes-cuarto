@@ -75,7 +75,8 @@ Si tenemos una fórmula clausulada inconsistente y un conjunto soporte de ella t
 #### Resolución lineal
 Se elige una cláusula central de partida y solo permite obtener como resolventes otras cláusulas centrales que sean resolvente de la cláusula central anterior y otra distinta.
 
-Teorema complitud resolución lineal... <!-- TODO completar -->
+##### Teorema de la complitud de la resolución lineal
+Existe una prueba de que una fórmula clausulada inconsistente puede derivar a cláusula vacía si se usa la estrategia de resolución lineal con la cláusula que hace inconsistente a la fórmula como cláusula central de partida.
 
 #### Resolución por entradas
 Las **cláusulas de entrada** son las del conjunto base. Las **resolventes de entrada** son aquellas con al menos un padre cláusula de entrada.
