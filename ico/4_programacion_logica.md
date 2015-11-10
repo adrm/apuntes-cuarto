@@ -39,7 +39,7 @@ La **refutación SLD** es la derivación SLD de la cláusula vacía.
 ## Intérprete abstrácto de un programa lógico
 Trata de unificar el átomo elegido de la meta con la cabeza de cláusulas renombradas del programa. Si alcanza la cláusula vacía, devuelve la meta con los unificadores aplicados. Si no puede unificar con ninguna cabeza, devuelve fallo.
 
-Este tipo de intérpretes tienen que elegir la regla de cómputo (el literal sobre el que se resuelve, dado por la función de selección) y la regla de búsqueda (criterio de selección de la cláusula que resuelve o reduce la meta). La regla de cómputo es arbitraria, no afecta a la terminación, como mucho al orden de las respuestas. La regla de búsqueda no es determinista y sí afecta a la terminación.
+Este tipo de intérpretes tienen que elegir la regla de cómputo (el literal sobre el que se resuelve, dado por la función de selección; por ejemplo, primer literal a la izquierda) y la regla de búsqueda (criterio de selección de la cláusula que resuelve o reduce la meta; por ejemplo, primera cláusula no utilizada o búsqueda primero en profundidad). La regla de cómputo es arbitraria, no afecta a la terminación, como mucho al orden de las respuestas. La regla de búsqueda no es determinista y sí afecta a la terminación.
 
 ### Concepto de respuesta
 Una **respuesta para `P U {G}`** es una sustitución para las variables de `G` o "No".

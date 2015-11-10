@@ -1,5 +1,5 @@
 FLAGS=--toc --smart --epub-stylesheet=../epub.css
-BASE=cd $@ && pandoc -i $(addprefix ../, $(wildcard $^)) -o
+BASE=cd $@ && pandoc $(addprefix ../, $(wildcard $^)) -o
 EPUB=$(BASE) epub/$@.epub $(FLAGS)
 PDF=$(BASE) epub/$@.pdf $(FLAGS)
 
