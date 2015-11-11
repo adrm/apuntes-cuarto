@@ -77,12 +77,74 @@ Suele utilizar y coordinar varios DAOs. Suele usar patrones como adaptador, comp
 #### Capa de despliegue
 Es específica de la arquitectura JEE. Incluye los EJBs de mensaje y sesión y/o los servicios web necesarios. Se puede tener un servicio web y un EJB para la misma capa de dominio.
 
-<!-- Diapo 46 -->
+##### Tipos de despliegue
+
+![Tipos de despliegue](img/tipoDespliegue.png)
+
+Si la clase de dominio se usa por páginas HTML dinámicas, servlets o JSP, se pueden aislar con algún tipo de despliegue en lugar de ser utilizados directamente por la capa de presentación. Suele implementarse con un **EJB de sesión**.
+
+Si la clase de dominio requiere soporte de transacciones (requiere JTA, proporcionado por contenedores JEE), se puede implementar con un **EJB de sesión "stateful"**.
+
+Si la clase de dominio recibe y procesa mensajes JMS, se implementa con un **EJB de mensaje**.
+
+Si la clase de domino es invocada desde aplicaciones no Java, se puede implementar como **servicio web**.
+
+### Capa de presentación
+Es la sección de la aplicación responsable de todo lo que los usuarios finales ven físicamente en la interfaz de usuario. JEE soporta interfaces HTML/Javascript, y produce interfaces HTML usando una combinación de páginas HTML estáticas y dinámicas, generadas por sevlets y JSP. Puede estar en una máquina distinta del contenedor JEE (interfaz remota).
+
+### Capas auxiliares
+Capas de objetos de transferencia de datos (data transfer objects). Son estructuras de datos útiles. En UML se indican con el estereotipo `<<DataType>>`. Se conoce como patron DTO.
+
+Capa de componentes arquitectónicos: componentes de terceros, utilidades comunes, etc.
 
 ### Diseño en capas
 ### Proceso de desarrollo: tareas de diseño
+Fases previas:
+
+- Casos de uso y modelo de dominio.
+- Diagramas de secuencia y máquinas de estado.
+
+Capas y clases de diseño de cada componente (arqitectura estándar JEE): de cada clase del dominio se derivan varias, una por cada capa (...Manager, ..., ...DAO, ...DTO). Se utilizan interfaces, especialmente para los EJB. Los métodos derivan de las operaciones del dominio y se incorporan a todas o parte de las clases de diseño.
+
+<!-- TODO Pistas diapo 57 -->
+
+### Arquitectura de la red
+El arquitecto es responsable de asegurarse de que las aplicaciones cumplan con la infraestructura de seguridad de la empresa, de la escalabilidad (capacidad de la aplicación de manejar un número cada vez mayor de usuarios) y de la disponibilidad (una aplicación con alta disponibilidad es aquella que está siempre disponible para su uso y tiene un mínimo tiempo de inactividad) de las aplicaciones.
+
+### Seguridad
+En la mayoría de las empresas, la seguridad está centralizada y se trata como una cuestión de infraestructura. Por tanto, hay que aprovechar la infraestructura de seguridad tanto como sea posible, y hay ue auditar el uso de identificadores genéricos por problemas de acceso a la base de datos.
+
 ## 4.3 Diseño de las capas
-### Patroles de las capas de persistencia, negocio y presentación
+### 4.3.1 Patrón DTO
+Con este patrón se diseña una de las capas transversales de la arquitectura. Resuelve el problema de cómo permitir a un cliente intercambiar datos con el servidor sin hacer múltiples llamadas de red de grano fino preguntando por cada dato.
+
+DTO lo resuelve transfiriendo un objeto ligero al cliente con todos los datos necesarios. Después, el cliente  puede hacer peticiones locales al objeto que ha recibido.
+
+Para ello, se crean clases Java que encapsulan los datos en un paquete transportable por la red (implementan `java.io.Serializable`).
+
+Una clase DTO es una clase ligera que representa una estructura de datos (`<<datatype>>` en UML) e implementa `java.io.Serializable`. Se usa en todas las capas de la aplicación. Se elige esta solución por resolver el problema de eficiencia descrito anteriormente.
+
+Es recomendable rellenar siempre todos los campos del DTO para evitar errores `NullPointerException` (puede ser mejor una cadena vacía), hacer que los DTOs sean autodescriptivos, usar arrays o colecciones de DTOs cuando sea necesario, y considerar métodos que redefinan `equals()`.
+
+Hay dos variantes. Podemos usar DTOs personalizados que representan parte de un bean o agrupan varios beans, o bien podemos usar DTOs de dominio denominados "entities". Al usar patrón fachada, una clase de dominio no es accesible directamente por el cliente. Por esa razón, se hacen copias DTO de los objetos de dominio del servidor (entities). Los clientes pueden operar sobre copias locales mejorando el rendimiento de las lecturas y actualizaciones.
+
+### 4.3.2 Patrones de la capa de acceso a datos
+Hay varias opciones. Se puede usar el patrón Active Record y eliminar la capa de acceso a datos pues la clase de dominio maneja directamente el acceso a datos.
+
+Sin embargo, conviene separar el acceso a datos en un paquete independiente. Lo más común es hacerlo a través del patrón DAO o del patrón Mapper.
+
+#### Patrón DAO
+Requiere un `DataSource` que representa una base de datos, XML, archivo, etc y un `ResultSet` que es la respuesta del `DataSource`. El DAO manipula el resultado para devolver un DTO serializable.
+
+#### Patrón DAO/JPA o Entity Access Objects (EAO)
+Con este patrón, el DTO es una clase tipo `Entity` JPA. La interfaz del EAO proporciona los métodos para crear, buscar, borrar, etc.
+
+#### Patrón fachada de acceso a datos
+Una clase `Entity` es un POJO, no un EJB. Se usa un EJB como fachada para acceder a la instancia de la clase entity desde las capas de dominio o despliegue.
+
+<!-- Diapo 86 -->
+
+### Patrones de las capas de persistencia, negocio y presentación
 ## 4.4 CBSE: Desarrollo para y con reutilización
 ## 4.5 Diseño basado en componentes
 ## 4.6 Despliegue de componentes
