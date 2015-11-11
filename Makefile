@@ -13,7 +13,7 @@ adbd: adbd/*.md; $(EPUB)
 
 ars: ars/*.md; $(EPUB)
 
-dbcs: dbcs/*.md; $(PDF)
+dbcs: dbcs/*.md; $(EPUB)
 
 pys: pys/*.md; $(EPUB)
 
