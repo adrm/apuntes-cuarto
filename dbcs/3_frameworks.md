@@ -51,7 +51,34 @@ JEE proporciona servicios para cada contenedor en forma de APIs como:
 
 Uno de los servidores JEE más típicos es GlassFish. Tiene un contenedor web, contenedor EJB y proveedor de persistencia que se comunican entre sí.
 
-## Tipos de EJB
+### Ventajas de los EJB
+Un EJB es un componente portables, reutilizable y puede ser desplegado en cualquier servidor que implemente los estándares de las APIs JEE.
+
+Permiten simplificar el desarrollo delegando algunos servicios como administración de transacciones y seguridad al contenedor.
+
+Permiten desacoplar el cliente del servidor almacenando la lógica de negocio en el EJB y no en el cliente.
+
+Pueden ser distribuidos en múltiples máquinas, residiendo en servidores distintos y siendo invocados por clientes remotos. Permite entornos multi-usuario, tanto locales como remotos.
+
+Permiten crear aplicaciones escalables.
+
+Al soportar transacciones y administración del acceso concurrente a objetos compartidos se asegura la integidad de los datos de las transacciones.
+
+## 3.2 Tipos de componentes EJB
+### 3.2.1 Session Beans
+Permiten encapsular los procesos de negocio (la interfaz de sistema en los DSS<!-- TODO Diagramas de secuencia? --> encontrada a partir de los casos de uso).
+
+Tienen una vida corta, de forma que el servidor falla si la sesión se pierde. No se comparten entre clientes. No manejan directamente la persistencia, pero pueden actualizar y crear "entities" que son persistentes.
+
+Un cliente (un Servlet o una aplicación Java) interacciona con un Session Bean a través de la invocación de sus métodos. Una invocación se denomina sesión. El cliente primero hace el lookup del Session Bean en un JNDI (Java Naming and Directory Interface) donde se registran los EJB. Una vez localizado, le envía un mensaje de creación para poder ejecutar métodos sobre una instancia del Session Bean.
+
+Un Session Bean está compuesto por una o más interfaces y una clase de implementación POJO. El cliente solo pordrá acceder al Session Bean a través de métodos definidos en la interfaz del Bean.
+
+El Session Bean puede ser invocado a través de una interfaz local, remota a través de RMI o incluso un web service. En el caso de la invocación remota, el cliente está en una JVM distinta, pero la ubicación del EJB que está usando es transparente para el cliente.
+
+Para definir una interfaz como remota, se define la interfaz anotada con `@Remote`, y se define la clase `@Stateless` o `@Stateful` que implementa dicha interfaz.
+
+<!-- Diapo 49 -->
 ### Stateless y stateful session beans
 ### Message driven beans
 ## Persistencia: JPA y entities
@@ -64,12 +91,26 @@ Una aplicación EJB debe contener:
 - Interfaces que definen los métodos que implementan los componentes.
 - Clases "helper": clases java de utilidad requeridas por los EJB (cálculos, DTOs, etc)
 
+### Despliegue: EAR, WAR y JAR
 Se empaquetan en un archivo .jar, son portables y pueden ser empaquetados a su vez en un archivo .ear, o junto con archivos web en un .war.
 
 ### Despliegue con anotaciones
 En EJB 3 se usan anotaciones para indicar las características del EJB: @Stateless, @Stateful, @MessageDriven, @Entity... Así se simplifica la definición del EJB. También se usan anotaciones como @PostConstruct, @PreDestroy, @PostActivate o @PreActivate para definir los callbacks del ciclo de vida.
 
+
+
+## Modelo Vista Controlador
+La vista es un JSP/JSF, el controlador es un servlet/JSF y el modelo está formado por EJBs y JPA.
+
+La conexión con el modelo se realiza a través de un controlador de fachada que implementa la interfaz pública del componente. El servlet llama a la fachada, que envía mensajes a los EJB, que usan los proveedores de la JPA para obtener los datos de la base de datos.
+
+### JPA (Java Persistence API)
+Es una simplificación de la persistencia gestionada por contenedor. Tiene un enfoque en POJOs/JavaBeans. Permite el uso de las entidades fuera del contenedor, por ejemplo en un contenedor web o Java SE.
+
+Esta forma de persistencia soporta modelos de dominio con herencias y polimorfismo. Guarda metadatos para el mapeo entre la representación de objeto y la relacional.
+
 ### Tecnologías de presentación: JSP y JSF
-### Despliegue: EAR, WAR y JAR
+JSF es una propuesta de Sun alternativa a JSP/Servlets.
+
 ## Microsoft DCOM, COM+ y .NET Remoting
 ## Corba Component Model (CCM)

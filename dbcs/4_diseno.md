@@ -142,7 +142,33 @@ Con este patrón, el DTO es una clase tipo `Entity` JPA. La interfaz del EAO pro
 #### Patrón fachada de acceso a datos
 Una clase `Entity` es un POJO, no un EJB. Se usa un EJB como fachada para acceder a la instancia de la clase entity desde las capas de dominio o despliegue.
 
-<!-- Diapo 86 -->
+#### Automatización con NetBeans
+NetBeans permite automatizar el patrón DAO. Genera la clase `@Entity` y un EJB de sesión con su interfaz básica CRUD de acceso a datos que actúan como fachada de acceso a datos.
+
+La alternativa es usar el **patrón Mapper OR** (Objeto-Relacional). Es una opción que ofrece una traducción más directa entre objetos y almacenamiento relacional. Permite que el EJB devuelva instancias de clases del dominio, invirtiendo la dependencia.
+
+La interfaz del mapper nos proporciona los métodos CRUD, haciendo que la clase del dominio no sea un EJB sino un POJO.
+
+### 4.3.3 Patrones de la capa de negocio
+#### Despliegue: Patrón fachada de sesión
+Los EJB de sesión pueden ser utilizados desde distintos clientes (servlets, aplicaciones cliente servidor de escritorio, etc), reduciendo el acoplamiento. <!-- TODO Diapo 93 -->
+
+En la capa de despliegue se implementa el patrón fachada de sesión, que es la interfaz para los clientes que conecta con la capa de dominio.
+
+Este patrón resuelve el problema de que un EJB ejecute todas las llamadas involucradas en un caso de uso a partir de una única petición de red desde el cliente. Esta fachada se implementa con un Session EJB.
+
+Otra alternativa es usar el patrón comando EJB, que implementa una solución más ligera y suele usarse en frameworks. En este caso, se crea una clase que representa un comando. A través de llamadas desde el servlet a una instancia de esa clase se configura el comando para después ordenar que se ejecute y una vez ejecutado, obtener los resultados.
+
+#### Dominio: Patrones Domain Model y Transaction Script
+Si necesito una transacción que involucra a varias clases, como la creación de un pedido con líneas de detalle, la lógica no puede limitarse a una única clase/EJB.
+
+En la capa de dominio se usan los patrones Domain Model o Transaction Script.
+
+Domain Model reparte el modelo de análisis entre la capa de despliegue (EJBs fachada de sesión) y la capa de dominio (clases del dominio). Es más adecuado para clases con un comportamiento complejo. Refleja directamente el modelo de análisis (las clases de análisis y los diagramas de secuencia).
+
+Transaction Script es más adecuado para clases con un comportamiento muy sencillo. El comportamiento se traslada a los EJB de sesión y la capa de dominio se integra en la de despliegue.
+
+<!-- TODO Diapo 107 -->
 
 ### Patrones de las capas de persistencia, negocio y presentación
 ## 4.4 CBSE: Desarrollo para y con reutilización
