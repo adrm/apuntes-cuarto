@@ -171,6 +171,19 @@ Transaction Script es más adecuado para clases con un comportamiento muy sencil
 <!-- TODO Diapo 107 -->
 
 ### Patrones de las capas de persistencia, negocio y presentación
-## 4.4 CBSE: Desarrollo para y con reutilización
+## 4.4 Component Based Software Engineering (CBSE): Desarrollo para y con reutilización
+
+### Desarrollo para reutilización
+Desarrollo para reutilización como desarrollo de componentes o servicios que se pueden reutilizar en otras aplicaciones, y puede implicar la generalización de componentes ya existentes.
+
+Un componente para reutilización debe reflejar abstracciones estables de dominio, ocultar la representación del estado, ser lo más independiente posible y, en caso de publicar excepciones, debe hacerlo a través de la interfaz de componente.
+
+Hay un equilibrio entre reutilización y facilidad de uso, pues cuanto más general la interfaz, mayor capacidad de reutilización pero será más compleja y por tanto más difícil de usar.
+
+<!-- TODO diapositiva 4 -->
+
+### Desarrollo con reutilización
+Desarrollo con reutilización como desarrollo de nuevas aplicaciones basadas en componentes y servicios existentes.
+
 ## 4.5 Diseño basado en componentes
 ## 4.6 Despliegue de componentes

@@ -78,9 +78,110 @@ El Session Bean puede ser invocado a través de una interfaz local, remota a tra
 
 Para definir una interfaz como remota, se define la interfaz anotada con `@Remote`, y se define la clase `@Stateless` o `@Stateful` que implementa dicha interfaz.
 
-<!-- Diapo 49 -->
+#### Interfaz local
+En una invocación local, el cliente reside en la misma instancia que el Session Bean. El contenedor web hace una llamada local al contenedor EJB 3, ambos dentro de un contenedor Java EE en una sola JVM.
+
+La interfaz local es la interfaz por defecto. El cliente local puede ser un componente web u otro EJB. Para definir un Session Bean con interfaz local, hay que definir la interfaz anotada con `@Local` y definir la clase `@Stateless` o `@Stateful` que implementa la interfaz.
+
 ### Stateless y stateful session beans
-### Message driven beans
+El estado de un objeto se compone de los valores de sus variables de instancia. Los valores de las variables representan el estado de una única sesion cliente/Bean. El estado de la interacción del cliente con el Bean es llamado **estado conversacional**, y tiene dos modos: stateful y stateless.
+
+#### Stateless Session Bean
+Un Stateless Session Bean no mantiene el estado conversacional con el cliente. Cuando el cliente invoca métodos del Stateless Bean, las variables de instancia pueden contener un estado específico del cliente durante la invocación, y si el método finaliza, el estado para el cliente específico se pierde.
+
+Los Stateless Beans ofrecen mejor escalabilidad para aplicaciones con gran cantidad de clientes. Pueden servir para implementar un web service.
+
+El contenedor tiene un pool de instancias compartidas por los clientes. Cuando un cliente invoca un método se le asigna una instancia, y al terminar la instancia vuelve al pool.
+
+El ciclo de vida de un Stateless Bean es iniciado por el cliente, que obtiene una referencia al Session Bean (`@PostConstruct` callback) y éste pasa a estado Ready. Al destruirlo (`@PreDestroy` callback) pasa a Does not exist.
+
+Los callbacks son métodos del Bean que no están expuestos en la interfaz y reflejan una transición del ciclo de vida de un Bean. Estos métodos se marcan con las correspondientes anotaciones.
+
+#### Stateful Session Bean
+En este caso, el estado se mantiene durante la sesión del cliente con el Bean. La instancia se reserva para el cliente y cada una almacena la información del cliente. La sesión finaliza si el cliente elimina el bean llamando al método `@Remove` o si finaliza la sesión por timeout.
+
+En una sesión, el cliente hace llamadas consecutivas a métodos de un mismo Bean, similar a una transacción con una base de datos.
+
+Su ciclo de vida comienza pasando a estado Ready cuando se inyecta como dependencia, y se dispara el callback `@PostConstruct`. De ahí se puede pasar a Passive disparándose los callbacks `@PrePassive`, y se puede volver a Ready disparando los callbacks `@PostActivate`. De cualquiera de esos dos estados se puede pasar a Does not exist ejecutando el método `@Remove` o por timeout. El estado pasivo implica que el Bean queda eliminado temporalmente y guardado en la memoria secundaria.
+
+### JNDI e inyección de dependencias
+Con Java Naming Direct Interface, es responsabilidad del cliente localizar y obtener la referencia a un objeto, componente o recurso. Con EJB 3 y la inyeccción de dependencia, el contenedor localiza un objeto basándose en la declaración del cliente.
+
+JNDI es un servicio de nombres que permite a un componente localizar otros componentes o recursos como por ejemplo bases de datos via JDBC. El objeto remoto se registra y el cliente hace lookup en el registro para después invocar los métodos en el objeto remoto.
+
+JNDI permite que las apliaciones acceda a múltiples servicios de nombres y de directorios como NDS, DNS, NIS, JDBC, etc. permitiendo acceder a cualquier objeto Java, recurso o sistemas legados.
+
+Para localizar un recurso, hay que definir explícitamente la búsqueda con JNDI (lookup):
+
+```
+Context context = new InitialContext();
+//JDBC
+DataSource dataSource = (DataSource) context.lookup
+	("java:comp/env/jdbc/ActionBazaarDS");
+Connection connection = dataSource.getConnection();
+Statement statement = connection.createStatement();
+//Bean
+PlaceBid placeBid = (PlaceBid)context.lookup
+	("java:comp/env/ejb/PlaceBid");
+```
+
+Un cliente de aplicación JEE puede referirse a un EJB con la anotación `@EJB`. El contenedor EJB inyecta en cada objeto los EJB según las anotaciones que incluya.
+
+```
+import javax.ejb.EJB;
+
+public class PlaceBidServlet extends HttpServlet {
+
+	@EJB
+	private PlaceBid placeBid;
+	public void service(HttpServletRequest request,
+	HttpServletResponse response) throws ServletException, IOException {
+		...
+	}
+	...
+}
+```
+
+### 3.2.2 Message-driven beans
+Los Session Beans son síncronos, con lo que puede haber bloqueos y esperas. Los Session Beans están acoplados con el servidor, deben conocerlo y dependen de él. Además, no están pensados para múltiples clientes y servidores puesto que cada llamada tiene una instancia de un Bean.
+
+Con mensajes, podemos tener procesamiento sin bloquear la interfaz de usuario. Los mensajes se envían sin conocer el receptor. Aunque el servidor se caiga, se garantiza la entrega. Puede haber múltiples clientes y servidores en cada llamada.
+
+Entre cliente y servidor se interpone un middleware MOM (Message-oriented middleware) de mensajería. El estándar es Java Message Service (JMS), que es un estándar de mensajería para evitar usar APIs propietarias similar a JDBC. Hay dos modelos:
+
+- Publish/subscribe, donde los productores añaden mensajes a un "tema" del que leen varios consumidores suscritos.
+- Punto a punto, donde varios productores pueden enviar mensajes a una cola por cada consumidor.
+
+```
+// 1: localizar la factoría de conexiones con el contexto
+TopicConnectionFactory factory =
+	(TopicConnectionFactory) ctx.lookup(“jms/TopicConnectionFactory”);
+
+// 2: la factoría de conexiones crea la conexión JMS
+TopicConnection connection = factory.createTopicConnection();
+
+// 3: la conexión crea la sesión
+TopicSession Session =
+	connection.createTopicSession(false,Session.AUTO_ACKNOWLEDGE);
+
+// 4: localizar destino
+Topic topic = (Topic) ctx.lookup(“jms/Topic”);
+
+// 5: crear el emisor de mensajes
+TopicPublisher publisher = session.createPublisher(topic);
+
+// 6: crear y publicar un mensaje
+TextMessage msg = session.createTextMessage();
+msg.setText(“mensaje de prueba”);
+publisher.send(msg);
+```
+
+Para usar JMS con Session Beans basta con añadir una clase Java que reciba los mensajes y los reenvíe a los Beans ya existentes. Es posible, pero requiere escribir el código del listener, puede que haya que escribir código multihilo, la clase auxiliar no se beneficia de los servicios del contenedor EJB, y la clase auxiliar no es reutilizable puesto que depende de los detalles de JMS.
+
+Un Message-driven Bean es un componente EJB especial que puede recibir mensajes JMS. Es invocado por el contenedor EJB cuando llega un mensaje en el destino. Está desacoplado del productor de mensajes. No tiene estado ni interfaz local o remota. Los mensajes no se le enían usando el estilo orientado a objetos clásico, sino que se implementan métodos listener genéricos para el mensaje entregado. Los métodos listener no devuelven valores de retorno ni lanzan excepciones para el cliente.
+
+<!-- TODO Diapositiva 79 -->
+
 ## Persistencia: JPA y entities
 A partir de la versión 3, se recomienda usar la API de persistencia estándar de Java en lugar de EJB de tipo entity.
 
@@ -95,7 +196,9 @@ Una aplicación EJB debe contener:
 Se empaquetan en un archivo .jar, son portables y pueden ser empaquetados a su vez en un archivo .ear, o junto con archivos web en un .war.
 
 ### Despliegue con anotaciones
-En EJB 3 se usan anotaciones para indicar las características del EJB: @Stateless, @Stateful, @MessageDriven, @Entity... Así se simplifica la definición del EJB. También se usan anotaciones como @PostConstruct, @PreDestroy, @PostActivate o @PreActivate para definir los callbacks del ciclo de vida.
+En EJB 3 se usan anotaciones para indicar las características del EJB: `@Stateless`, `@Stateful`, `@MessageDriven`, `@Entity`... Así se simplifica la definición del EJB. También se usan anotaciones como `@PostConstruct`, `@PreDestroy`, `@PostActivate` o `@PreActivate` para definir los callbacks del ciclo de vida.
+
+EJB 3 tambien permite utilizar descriptores XML. Con ellos, se puede cambiar la configuración sin tocar el código original.
 
 
 
