@@ -1,56 +1,4 @@
-## Gestión de recursos
-### Introducción
-A lo largo del desarrollo de un proyecto se precisan distintos tipos de recursos. La idea es proporcionar pautas para la selección y adscripción de los recursos al proyecto a lo largo del tiempo. La forma de reservar los recursos puede implicar la existencia de restricciones sobre las tareas programadas y por lo tanto puede incidir en la planificación temporal considerada. Por tanto, una de las tareas del responsable del proyecto será buscar la concordancia entre las tareas planificadas y los recursos disponibles en cada momento.
-
-Productos resultantes: caracterización de actividades, de recursos y del coste.
-
-### Tipos de recursos
-Según Pressman, los recursos pueden dividirse en:
-
-- Personal (número, capacidad, ubicación)
-- Software (componentes OTS, nuevo componentes, componentes probados, componentes de experiencia parcial)
-- Entorno (herramienta software, hardware, recursos de red)
-
-Cada recurso debe especificar: descripción, informe de disponibilidad, fecha de necesidad y tiempo durante el que se necesitará. En caso de RRHH, especificar las habilidades técnicas que requiere el recurso.
-
-Hughes y Cotterell dividen los recursos en:
-
-- Trabajo: Miembros del equipo de desarrollo, garantía de calidad, etc.
-- Equipamiento: Material informático e infraestructura física para su funcionamiento, así como mobiliario.
-- Materiales: Consumibles de informática, papel, etc.
-- Espacio: En una organización existente, ya está disponible. Hay que contar con posible personal adicional.
-- Servicios: Algunos proyectos requieren servicios especiales, como un sistema WAN u otros.
-- Tiempo: Uno de los recursos principales que, a veces, está preestablecido.
-- Dinero: Recurso secundario usado para comprar otros recursos.
-
-### Planificación de los recursos
-Es útil poder ver únicamente las tareas que hay asignadas a cada recurso para comunicar a los participantes el uso de un recurso compartido, verificar que se usan de forma equilibrada o verificar que no se pretende usar ningún recurso más de lo posible. Para esto se usan el diagrama de Gantt y el de cargas.
-
-A la hora de asignar recursos a tareas hay que tener en cuenta:
-
-- Disponibilidad. Tiene que haber personas adecuadas para no alargar el proyecto.
-- Criticidad. Asignar recursos con más experiencia a actividades del camino crítico puede ayudar a reducir la duración del proyecto o disminuir el riesgo de alargamiento.
-- Riesgo. Es importante identificar tareas que plantean más riesgos y qué factores influyen en ello para asignar personal.
-- Entrenamiento. La organización se beneficia asignando personas inexpertas en tareas no críticas donde, con la holgura, podrán ir formándose.
-- Formación de equipo. La selección debe tener en cuenta las cualidades considerando las características del proyecto y que las personas deben trabajar conjuntamente.
-
-Se producen conflictos sobre recursos cuando el mismo recurso se precisa en más de un lugar al mismo tiempo. Se pueden resolver retrasando una de las actividades (aprovechando la holgura o retrasando la finalización del proyecto), moviendo un recurso desde una actividad no crítica, proporcionando recursos adicionales (aumenta el coste), dividiendo la actividad en dos para facilitar la asignación o permitiendo una sobrecarga de trabajo (también supone mayor coste).
-
-Es conveniente priorizar las tareas de forma que la asignación de los recursos se haga siguiendo un orden racional predeterminado. Existen varias formas de proporcionar prioridades a los recursos:
-
-- Prioridad por holgura total: Las tareas con menor holgura tienen la mayor prioridad a la hora de asignar recursos.
-- Prioridad por lista ordenada: Las actividades que se realizan al mismo tiempo se ordenan según un criterio sencillo. Según Burman sería:
-        - Actividad crítica más corta.
-        - Actividad crítica.
-        - Actividad no crítica más corta.
-        - Actividad no crítica con menor holgura.
-        - Actividad no crítica.
-
-Se necesita maximizar el porcentaje de utilización de los recursos, es decir, reducir periodos vacíos entre tareas. Hay que balancear costes frente a anticipar la fecha de finalización. También es necesario permitir contingencias.
-
-La planificación de recursos puede crear nuevas dependencias entre actividades incidiendo en los caminos críticos. Por ello, es mejor no añadir dependencias a la red de actividades para reflejar las restricciones de recursos. La restricción puede desaparecer durante el proyecto pero el enlace permanece.
-
-## Gestión de personas ([PDF](originales/PGP_trab_grupo_1516.pdf))
+## Gestión de personas y organización de grupos ([PDF](originales/PGP_trab_grupo_1516.pdf))
 En general la gestión de personas y la organización de equipos de trabajo son temas que tienen incidencia en todas las etapas de la planifiación y ejecución de proyectos, pero hay algunas cuestiones que conviene tener en cuenta:
 
 - Algunos proyectos pueden incidir sobre la salud y seguridad durante la realización del mismo.
@@ -59,24 +7,29 @@ En general la gestión de personas y la organización de equipos de trabajo son 
 - Muchos riesgos para el éxito del proyecto están relacionados con la gestión del personal.
 - Las cualidades de los individuos deben ser tenidas en cuenta a la hora de asignar personas a las actividades.
 
-El desarrollo de un equipo de proyecto, según el PMBOK, mejora las competencias e interacciones de los miembros del equipo a fin de mejorar el rendimiento del proyecto. Se busca mejorar las habilidades de los miembros del equipo a fin de aumentar su capacidad de completar las actividades del proyecto y mejorar la cohesión entre los miembros del equipo buscando aumento de la productivdad a través de mayor trabajo en equipo.
+### Gestión de personas y organización de grupos en el PMBOK
+El desarrollo de un equipo de proyecto, según el PMBOK, mejora las competencias e interacciones de los miembros del equipo a fin de mejorar el rendimiento del proyecto. Se busca mejorar las habilidades de los miembros del equipo a fin de aumentar su capacidad de completar las actividades del proyecto, y mejorar la cohesión entre los miembros del equipo buscando aumento de la productivdad a través de mayor trabajo en equipo.
 
 Un trabajo en equipo efectivo puede ser la ayuda mutua cuando la carga del trabajo no es equilibrada, una mejor comunicación interpersonal o compartir información y recursos. Los esfuerzos para el desarrollo del equipo son más beneficiosos cuando se realizan en las fases tempranas, pero deberían tener lugar durante todo el proyecto.
 
+### Comportamiento organizativo
 Frederick Taylor intenta analizar la forma más productiva de realizar tareas manuales con el objetivo de seleccionar la persona más adecuada para realizar el trabajo, instruir a dicha persona en los mejores métodos y proporcionar incentivos salariales a los mejores trabajadores.
 
 En desarrollo de software, el desarrollo de métodos estructurados o el uso de herramientas CASE son un ejemplo de énfasis en mejores prácticas.
 
 Douglas McGregor plantea dos teorías contrapuestas sobre la relación de los trabajadores con el trabajo. La teoría X dice que los trabajadores solo actúan mediante amenazas y la teoría Y se basa en que la gente quiere y necesita trabajar.
 
+### Planificación de recursos en el PMBOK
 El PMBOK considera el plan de gestión de personal como una de las salidas de la planificación de recursos. Este plan contempla aspectos como adquisición de personal, horarios, criterios de liberación, necesidades formativas, reconocimientos y recompensas, cumplimiento de regulaciones y otras normas y seguridad si fuera aplicable.
 
+### Trabajo en grupo
 Aunque se suele considerar la ingeniería informática como un trabajo en solitario, la mayor parte trabajan en pequeños grupos, y una gran parte del tiempo de trabajo se dedica a interacciones con otros compañeros, superiores, clientes, etc.
 
 No es suficiente reunir a varias personas para formar un grupo. Un grupo se debe enfrentar a obstáculos y debe permitir el debate sano cuando hay conflictos. El grupo debe buscar la consecución de un objetivo común y debe tener relaciones armoniosas entre sus miembros. De esa forma, un grupo transforma las energías individuales en energía de grupo.
 
 La estructura del grupo puede ser muy dispar pero es recomendable que sea flexible, aunque es necesario que haya una única persona que sea el contacto con el exterior.
 
+### Características de los grupos
 Cinco etapas básicas del desarrollo de un equipo según Tuckman y Jensen:
 
 1. Formación. Los miembros se llegan a conocer e intentan fijar las pautas de comportamiento.
@@ -87,7 +40,7 @@ Cinco etapas básicas del desarrollo de un equipo según Tuckman y Jensen:
 
 No suele funcionar juntar a la mejor gente. Se precisa un balance de roles con habilidades y roles de gestión.
 
-Problemas habituales:
+### Problemas habituales
 
 - Liderazgo no efectivo.
 - Fracaso a la hora de comprometese o cooperar.
@@ -97,10 +50,12 @@ Problemas habituales:
 - Función de reptado, peloteo.
 - Evaluación inefícaz entre colegas.
 
+### Motivación de las personas
 La satisfacción en el trabajo se puede mejorar aumentando las posibilidades de logros, reconocimiento, responsabilidad y avance en la carrera. Mejorar en supervisión, salario y condiciones laborarles puede reducir la falta de satisfacción en el trabajo.
 
 Se puede mantener la motivación proporcionando oportunidades para que los miembros estén al corriente, indicando la importancia y valor del grupo, haciendo que la gente se sienta importante, clarificando objetivos, identificando el progreso y reconociendo los logros.
 
+### Tareas
 Hay que considerar qué tareas deben realizarse en grupo y cuáles pueden ser tareas individuales. Según Hughes y Cotterell, las tareas en grupo se pueden categorizar de esta manera:
 
 - Tareas aditivas. El trabajo de cada participante se añade para conseguir el resultado final, siendo las personas intercambiables. Existe el riesgo de que unos contribuyan más que otros.
@@ -116,13 +71,14 @@ A la hora de asignar tareas a las personas del equipo se puede establecer este o
 4. La persona puede ser entrenada y formada para hacer el trabajo.
 5. La persona no puede hacer el trabajo.
 
-Competencias clave (AEIPRO) por niveles:
+### Competencias clave (AEIPRO) por niveles
 
 - A. Ha dirigido con éxito la gestión del trabajo en equipo para programas o carteras importantes de una organización o unidad de una organización.
 - B. Ha dirigido con éxito situaciones de trabajo en equipo de proyectos complejos.
 - C. Ha dirigido con éxito situaciones de trabajo en equipo de proyectos de complejidad limitada.
 - D. Tiene el conocimiento requerido en relación con la dirección del trabajo en equipo de proyectos y puede aplicarlo.
 
+### Consideraciones a tener en cuenta
 Para conseguir una participación y comunicación óptimas, cada miembro del grupo debe:
 
 - Participar tanto como emisor como receptor.
@@ -173,5 +129,3 @@ En función del grado de compromiso de un miembro con relación al objetivo com�
 
 ### Autoevaluación
 Cada miembro del grupo puede preguntarse si participa, si la comunicación fue buena (buena atmósfera, sin agresividad, todo el mundo pudo hablar), si las reuniones estaban bien preparadas y organizadas, las intervenciones han sido coordinadas, se ha fomentado la comunicación entre miembors, se han alcanzado los objetivos, se han respetado las duraciones previstas, se ha cerrado la reunión eficazmente... Además, puede hacer un balance personal expresado a través de proposiciones y comentarios.
-
-## Riesgos en desarrollo de software
