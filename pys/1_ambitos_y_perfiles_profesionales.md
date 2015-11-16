@@ -30,6 +30,13 @@ Parece razonable que la Ingeniería Informática, al igual que otras profesiones
 
 Como en otras ingenierías, habría que regular proyectos que impliquen riesgo para las personas o un enorme impacto económico, evitando una regulación muy restrictiva que afecte a la competitividad.
 
+La informática no es del todo una ingeniería. El software es un producto lógico distinto a cualquier producto manufacturado. Sus procesos de elaboración, construcción y calidad no son transportables a otras ingenierías. Los límites del conocimiento entre las distintas escalas profesionales no están bien establecidos.
+
+## Leyes liberalizadoras
+Directiva Bolkestein (123/2006/CE), directiva europea para la liberalización de servicios, definiendo el establecimiento y circulación de proveedores de servicios.
+
+En España se aplica a través de la Ley Ómnibus (25/2009) sobre los colegios profesionales que elimina la colegiación obligatoria y el visado profesional.
+
 ## La informática como...
 Artesanía: lo que se hace tiene un sello personal, distinto de los demás. Técnicas individualizadas por prueba y error.
 
