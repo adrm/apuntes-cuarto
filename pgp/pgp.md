@@ -1,10 +1,5 @@
-## Holguras en CPM y PERT
-
-
 ## Gestión de recursos
-
 ### Introducción
-
 A lo largo del desarrollo de un proyecto se precisan distintos tipos de recursos. La idea es proporcionar pautas para la selección y adscripción de los recursos al proyecto a lo largo del tiempo. La forma de reservar los recursos puede implicar la existencia de restricciones sobre las tareas programadas y por lo tanto puede incidir en la planificación temporal considerada. Por tanto, una de las tareas del responsable del proyecto será buscar la concordancia entre las tareas planificadas y los recursos disponibles en cada momento.
 
 Productos resultantes: caracterización de actividades, de recursos y del coste.
@@ -54,7 +49,6 @@ Es conveniente priorizar las tareas de forma que la asignación de los recursos 
 Se necesita maximizar el porcentaje de utilización de los recursos, es decir, reducir periodos vacíos entre tareas. Hay que balancear costes frente a anticipar la fecha de finalización. También es necesario permitir contingencias.
 
 La planificación de recursos puede crear nuevas dependencias entre actividades incidiendo en los caminos críticos. Por ello, es mejor no añadir dependencias a la red de actividades para reflejar las restricciones de recursos. La restricción puede desaparecer durante el proyecto pero el enlace permanece.
-
 
 ## Gestión de personas ([PDF](originales/PGP_trab_grupo_1516.pdf))
 En general la gestión de personas y la organización de equipos de trabajo son temas que tienen incidencia en todas las etapas de la planifiación y ejecución de proyectos, pero hay algunas cuestiones que conviene tener en cuenta:
@@ -179,6 +173,5 @@ En función del grado de compromiso de un miembro con relación al objetivo com�
 
 ### Autoevaluación
 Cada miembro del grupo puede preguntarse si participa, si la comunicación fue buena (buena atmósfera, sin agresividad, todo el mundo pudo hablar), si las reuniones estaban bien preparadas y organizadas, las intervenciones han sido coordinadas, se ha fomentado la comunicación entre miembors, se han alcanzado los objetivos, se han respetado las duraciones previstas, se ha cerrado la reunión eficazmente... Además, puede hacer un balance personal expresado a través de proposiciones y comentarios.
-
 
 ## Riesgos en desarrollo de software

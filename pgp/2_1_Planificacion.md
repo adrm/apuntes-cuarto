@@ -1,5 +1,5 @@
 # Tema 2
-## Planificación ([PDF](originales/PGP_plan_proye_1516_2.pdf))
+## Planificación ([PDF](originales/tema_2/PGP_plan_proye_1516_2.pdf))
 Gestión del tiempo de proyecto (Planificación): Incluye todos los procesos necesarios para que se pueda garantizar la finalización del proyecto en el tiempo estipulado:
 
 - Definición de actividades: Identificar las actividades que se deben realizar para obtener los productos resultantes del proyecto.
