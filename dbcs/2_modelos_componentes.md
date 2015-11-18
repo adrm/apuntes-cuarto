@@ -1,4 +1,3 @@
-
 # 2. Modelos básicos de componentes
 Cómo reutilizar el código binario: en OO, se usa encapsulamiento y herencia, pero no se pueden reutilizar objetos en otros lenguajes, incluso existen incompatibilidades entre objetos creados por el mismo lenguaje, ya sean binarias o de código fuente.
 

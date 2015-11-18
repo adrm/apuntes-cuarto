@@ -180,10 +180,34 @@ Un componente para reutilización debe reflejar abstracciones estables de domini
 
 Hay un equilibrio entre reutilización y facilidad de uso, pues cuanto más general la interfaz, mayor capacidad de reutilización pero será más compleja y por tanto más difícil de usar.
 
-<!-- TODO diapositiva 4 -->
+En este caso hay que realizar algunos cambios como los siguientes:
+
+- Retirar los métodos específicos de la aplicación.
+- Cambiar los nombres para hacerlos generales.
+- Agregar métodos para ampliar la cobertura.
+- Hacer un manejo de excepciones consistente.
+- Integrar los componentes requeridos para reducir las dependencias.
+- Agregar una interfaz de configuración para la adaptación de los componentes, como NetBeans y su paleta de JavaBeans.
+
+#### Sistemas legados como componentes
+Los sistemas existentes se pueden empaquetar como componentes para su reutilización. Esto requiere escribir un componente tipo *wrapper* (envoltorio) que implementa las interfaces para acceder al sistema anterior y para que éste acceda a otros servicios. Puede que esta sea una solución mucho menos costosa que una reescritura del sistema completo.
 
 ### Desarrollo con reutilización
 Desarrollo con reutilización como desarrollo de nuevas aplicaciones basadas en componentes y servicios existentes.
+
+El proceso habitual para el **desarrollo basado en componentes** es el siguiente:
+
+1. Esbozar los requisitos del sistema.
+2. Identificar los componentes candidatos.
+3. Modificar los requerimientos de acuerdo con los componentes descubiertos.
+4. Diseño arquitectónico.
+5. Identificar los componentes.
+	1. Búsqueda de componentes.
+	2. Selección de componentes.
+	3. Validación de componentes.
+6. Componentes para crear el sistema.
+
+El desarrollo basado en componentes se basa en encontrar e integrar componentes reutilizables. Para ello, es indispensable buscar un equilibrio enre los requisitos ideales y los servicios prestados por los componentes disponibles.
 
 ## 4.5 Diseño basado en componentes
 ## 4.6 Despliegue de componentes

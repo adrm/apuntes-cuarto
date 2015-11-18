@@ -12,6 +12,10 @@
 ## Diseño lógico o conceptual primero
 Hay que preguntarse cuestiones como, en el caso del sistema de gestión telefónica, si dos clientes pueden tener la misma línea, si una línea puede tener dos tarifas, si son necesarias más tablas y cuáles, etc.
 
-El diseño conceptual se realiza como diagrama ER (Entidad-Relación) con notación UML. Se describe cómo se estructuran los datos. Existen varias alternativas para un mismo escenario, y hay que decidir.
+El diseño conceptual se realiza como diagrama ER (Entidad-Relación) con notación UML. Describe cómo se estructuran los datos. Existen varias alternativas para un mismo escenario, y hay que decidir.
+
+Las **entidades** son objetos que engloban los datos de interés. Se describen como colecciones de entidades similares, mediante atributos y propiedades adicionales. Las instancias se ven como elementos de un conjunto.
+
+Los **atributos** y **claves** definen los datos para cada instancia. El **dominio** (opcional) es el conjunto posible de valores o la posibilidad de definición de tipos. La **clave** es el conjunto mínimo de atributos que identifica a cada entidad (valor mínimo sin repetición).
 
 <!-- Diapositiva 6 -->
