@@ -113,7 +113,7 @@ JNDI permite que las apliaciones acceda a múltiples servicios de nombres y de d
 
 Para localizar un recurso, hay que definir explícitamente la búsqueda con JNDI (lookup):
 
-```
+```java
 Context context = new InitialContext();
 //JDBC
 DataSource dataSource = (DataSource) context.lookup
@@ -127,7 +127,7 @@ PlaceBid placeBid = (PlaceBid)context.lookup
 
 Un cliente de aplicación JEE puede referirse a un EJB con la anotación `@EJB`. El contenedor EJB inyecta en cada objeto los EJB según las anotaciones que incluya.
 
-```
+```java
 import javax.ejb.EJB;
 
 public class PlaceBidServlet extends HttpServlet {
@@ -152,7 +152,7 @@ Entre cliente y servidor se interpone un middleware MOM (Message-oriented middle
 - Publish/subscribe, donde los productores añaden mensajes a un "tema" del que leen varios consumidores suscritos.
 - Punto a punto, donde varios productores pueden enviar mensajes a una cola por cada consumidor.
 
-```
+```java
 // 1: localizar la factoría de conexiones con el contexto
 TopicConnectionFactory factory =
 	(TopicConnectionFactory) ctx.lookup(“jms/TopicConnectionFactory”);
@@ -180,10 +180,96 @@ Para usar JMS con Session Beans basta con añadir una clase Java que reciba los 
 
 Un Message-driven Bean es un componente EJB especial que puede recibir mensajes JMS. Es invocado por el contenedor EJB cuando llega un mensaje en el destino. Está desacoplado del productor de mensajes. No tiene estado ni interfaz local o remota. Los mensajes no se le enían usando el estilo orientado a objetos clásico, sino que se implementan métodos listener genéricos para el mensaje entregado. Los métodos listener no devuelven valores de retorno ni lanzan excepciones para el cliente.
 
-<!-- TODO Diapositiva 79 -->
+El contenedor EJB consume los mensajes que llegan a un destino JMS según se especifique en el descriptor de despliegue.
 
-## Persistencia: JPA y entities
+La implementación consta de dos interfaces:
+
+```java
+public interface javax.jms.MessageListener {
+	public void onMessage(Message message);
+}
+public interface javax.ejb.MessageDrivenBean
+		extends javax.ejb.EnterpriseBean {
+	//...
+	public void setMessageDrivenContext(MessageDrivenContext ctx)
+			throws EJBException;
+}
+```
+
+Ejemplo de productor:
+
+```java
+@Stateful
+public class GestorPedidosBean implements GestorPedidos{
+
+	@Resource(name="jms/QueueConnectionFactory")
+	private ConnectionFactory connectionFactory;
+
+	@Resource(name="jms/ColaFacturacion")
+	private Destination colaFact;
+	//...
+	@Remove
+	public Long confirmarPedido() {
+		//...
+		facturar(pedido);
+	}
+
+	private facturar(Pedido pedido) {
+		try {
+			Connection connection = connectionFactory.createConnection();
+			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+			MessageProducer producer =session.createProducer(colaFact);
+			ObjectMessage message = session.createObjectMessage();
+			message.setObject(pedido);
+			producer.send(message);
+			producer.close();
+			session.close();
+			connection.close();
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
+```
+
+Ejemplo de consumidor MDB:
+
+```java
+@MessageDriven(activationConfig = {
+	@ActivationConfigProperty(propertyName="destinationName", propertyValue="jms/ColaFacturacion")
+})
+public class FacturacionMDB implements MessageListener {
+	//...
+	public void onMessage(Message message) {
+		try {
+			ObjectMessage objectMessage = (ObjectMessage) message;
+			Pedido pedido = (Pedido) objectMessage.getObject();
+		//...
+		} catch (Exception e) {
+			//...
+		}
+	}
+}
+```
+
+## 3.3 Persistencia: JPA y entities
 A partir de la versión 3, se recomienda usar la API de persistencia estándar de Java en lugar de EJB de tipo entity.
+
+### JPA: Java Persistence API
+Hay muchas opciones de ORM para hacer el mapping objeto-relacional, como Hibernate, IBatis, JDO... Estos proyectos se unifican con la JPA (Java Persistence API).
+
+JPA simplifica la persistencia gestionada por el contenedor. Tiene un enfoque en POJOs/JavaBeans. Permite, por tanto, usar estas entidades fuera del contenedor EJB en un contenedor web o directamente en Java SE. Soporta herencia, polimorfiso, metadatos y anotaciones para representar fielmente el modelo de dominio. Los metadatos y anotaciones también aportan información para realizar el mapeo objeto-relacional.
+
+De esta forma, se elimina la necesidad de crear objetos de transferencia de datos (DTO).
+
+### Entidades JPA (Entities)
+Una entity es una clase ligera, marcada con la anotación `@Entity` (no se usan interfaces), que gestiona los datos persistentes. Debe implementar `java.io.Serializable` puesto que las instancias se pasan por valor a una aplicación remota. A la entidad se le asigna una base de datos mediante anotaciones.
+
+También soporta a través de anotaciones mapeo de relaciones y herencia.
+
+Existe un EntityManager que gestiona el ciclo de vida de las instancias entidad, asociado con un contexto de persistencia. Una instancia de EntityManager gestiona un conjunto de entidades definido por una unidad de persistencia.
+
+<!-- TODO Diapositiva 93 -->
 
 ## Despliegue de aplicaciones JEE
 Una aplicación EJB debe contener:
@@ -199,8 +285,6 @@ Se empaquetan en un archivo .jar, son portables y pueden ser empaquetados a su v
 En EJB 3 se usan anotaciones para indicar las características del EJB: `@Stateless`, `@Stateful`, `@MessageDriven`, `@Entity`... Así se simplifica la definición del EJB. También se usan anotaciones como `@PostConstruct`, `@PreDestroy`, `@PostActivate` o `@PreActivate` para definir los callbacks del ciclo de vida.
 
 EJB 3 tambien permite utilizar descriptores XML. Con ellos, se puede cambiar la configuración sin tocar el código original.
-
-
 
 ## Modelo Vista Controlador
 La vista es un JSP/JSF, el controlador es un servlet/JSF y el modelo está formado por EJBs y JPA.
