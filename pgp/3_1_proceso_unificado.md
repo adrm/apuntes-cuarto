@@ -53,10 +53,6 @@ Los flujos de trabajo de apoyo o accesorios son:
 
 Los casos de uso van progresando a través de las fases. Al terminar la fase de inicio, la mayoría del modelo de negocio ha sido terminado y la mayoría de los casos de uso han sido identificados. Muy pocos se describen, se analizan, y mucho menos se implementan. Al terminar la fase de elaboración el modelo de negocio está terminado, la inmensa mayoría de casos de usos han sido identificados y muchos de ellos han sido descritos. Algunos de ellos han sido analizados y apenas ninguno ha sido diseñado, implementado y probado. Al terminar la fase de construcción, todos los casos de usos tienen que haber sido identificados, descritos, analizados, diseñados, implementados y probados.
 
-El ciclo de vida en el proceso unificado consta de cuatro fases:
-
-
-## Desarrollo iterativo e incremental
 Beneficios del desarrollo iterativo:
 
 - Se produce una mitigación, en las capas iniciales, de los riesgos más críticos (técnicos, requisitos, objetivos, facilidad de uso, etc.).
@@ -197,15 +193,68 @@ Algunos criterios de evaluación:
 El hito que marca el fin de esta fase es la obtención de un producto beta y la decisión sobre si ponerlo en ejecución sin mayores riesgos.
 
 ### Fase de transición
-<!-- TODO Diapo 51 (25 de 36) -->
 Objetivos principales:
 
--
+- Conseguir que el usuario sea capaz de mantener el producto.
+- Conseguir la aceptación por el usuario (stakeholder) de que lo entregado es completo y consistente con el criterio de evaluación fijado en la visión inicial del proyecto.
+- Conseguir un producto final tan rápido y eficiente respecto al coste como práctico.
 
 Actividades esenciales:
 
--
+- Sincronización e integración de los incrementos de construcción concurrentes en líneas base de entrega consistente.
+- Realizar una ingeniería específica de entrega (producción y empaquetamiento comercial, plan de formación del personal, etc.).
+- Valoración de las líneas base de entrega frente a la visión global y los criterios de aceptación en el conjunto de requisitos.
 
 Algunos criterios de evaluación:
 
--
+- ¿El usuario está satisfecho?
+- ¿La utilización de recursos actual es aceptable frente a la planificada?
+
+### Arquitectura
+Visualizar, especificar, construir y documentar un sistema software precisa de una visión del sistema desde distintos puntos de vista.
+
+Cada actor implicado en el proceso mira al sistema desde una perspectiva diferente a lo largo de la vida del proyecto. La arquitectura del sistema es uno de los productos más importantes que se pueden utilizar para gestionar estos puntos de vista y, por tanto, para controlar el desarrollo del sistema a través de su ciclo de vida.
+
+Una arquitectura del sistema abarca el conjunto de decisiones importantes sobre:
+
+- la organización del sistema software,
+- la selección de los elementos estructurales y sus interfaces,
+- su comportamiento, especificado como colaboración entre los distintos componentes,
+- la composición de estos elementos (estructurales y de comportamiento) en subsistemas cada vez más grandes,
+- el estilo arquitectónico que guía las organizaciones.
+
+Hay cinco vistas con sus respectivos diagramas que las representan:
+
+- Vista de usuario, con diagramas de casos de uso. Los casos de uso especifican la función, la arquitectura y la forma. Debe existir un balance entre casos de uso y arquitectura. Esta vista es central a las otras cuatro.
+- Vista estructural o de diseño, con diagramas de clases y objetos. Representa clases, interfaces, colaboraciones.
+- Vista de implementación, con diagramas de componentes. Representa componentes.
+- Vista de comportamiento o de proceso, con diagramas de secuencia, de colaboración, de estados y de actividad. Representa clases activas.
+- Vista del entorno o de lanzamiento, con diagramas de despliegue. Representa nodos.
+
+## Desarrollo iterativo e incremental
+Un proceso basado en casos de uso implica ajustarse a las necesidades reales del usuario. Que esté centrado en la arquitectura quiere decir que el trabajo de desarrollo se centra en obtener un patrón que dirigirá la construcción del sistema en las primeras fases. La mejor forma de conseguir equilibrar casos de uso y arquitectura, que es como equilibrar forma y función, es el desarrollo iterativo e incremental. De esta forma se plantea una estrategia de desarrollo para productos software basada en pequeños pasos manejables: se planifica poco, se especifica, diseña e implementa un poco, se integra, prueba y ejecuta un poco en cada iteración.
+
+Si en cada paso el resultado es satisfactorio, se avanza. Además esto nos permite ajustar los objetivos concretos en cada paso. Cada iteración tiene todo lo que debe tener un proyecto de software: planificación, desarrollo de una serie de flujos y preparación para la entrega. Pero una iteración no es algo totalmente independiente, sino que es una etapa dentro de un proyecto.
+
+Cada iteración permite avanzar en la comprensión de cuestiones relativas al proyecto. Por ejemplo las primeras nos ayudan a comprender los riesgos, determinar la viabilidad, etc.
+
+En resumen, no hay un proceso universal. El proceso unificado está diseñado para ser flexible y extensible, permitiendo una variedad de estrategias de ciclos de vida, seleccionando qué artefactos producir, definiendo actividades y trabajadores, y considerando los conceptos de los modelos.
+
+Un white paper de Rational en 2011 considera que RUP facilita las siguientes buenas prácticas para desarrollo de software:
+
+1. Desarrollo de software iterativo.
+2. Gestión de los requisitos.
+3. Uso de arquitecturas basadas en componentes.
+4. Modelado visual de software.
+5. Verificación de la calidad del software.
+6. Control de cambios del software.
+
+Esto genera una serie de beneficios:
+
+- Reducción temprana de los errores.
+- Gestión de los cambios.
+- Mayor nivel de reutilización.
+- Evaluación y mejoras periódicas.
+- Mejor calidad final.
+
+El proceso unificado equilibra más el peso de cada una de las actividades del proyecto que procesos convencionales como waterfall.
