@@ -97,7 +97,6 @@ Capas de objetos de transferencia de datos (data transfer objects). Son estructu
 
 Capa de componentes arquitectónicos: componentes de terceros, utilidades comunes, etc.
 
-### Diseño en capas
 ### Proceso de desarrollo: tareas de diseño
 Fases previas:
 
@@ -106,10 +105,16 @@ Fases previas:
 
 Capas y clases de diseño de cada componente (arqitectura estándar JEE): de cada clase del dominio se derivan varias, una por cada capa (...Manager, ..., ...DAO, ...DTO). Se utilizan interfaces, especialmente para los EJB. Los métodos derivan de las operaciones del dominio y se incorporan a todas o parte de las clases de diseño.
 
-<!-- TODO Pistas diapo 57 -->
+Algunas recomendaciones y consejos son:
+
+- Pedir y devolver estructuras de datos (DTO) en lugar de atributos individuales para aumentar el rendimiento.
+- Documentar cada clase del dominio como un bloque en lugar de dividirlo en sus tres o cuatro componentes (EJB, DAO, DTO, etc.).
+- Todos los atributos documentados tienen que tener getters y setters.
+- No es necesario detallar los modelos completos con UML, puesto que las herramientas lo hacen mejor.
+- Se puede automatizar el acceso a datos mediante JPA y simplificar las capas de dominio y DTO.
 
 ### Arquitectura de la red
-El arquitecto es responsable de asegurarse de que las aplicaciones cumplan con la infraestructura de seguridad de la empresa, de la escalabilidad (capacidad de la aplicación de manejar un número cada vez mayor de usuarios) y de la disponibilidad (una aplicación con alta disponibilidad es aquella que está siempre disponible para su uso y tiene un mínimo tiempo de inactividad) de las aplicaciones.
+El arquitecto es responsable de asegurarse de que las aplicaciones cumplan con la infraestructura de **seguridad** de la empresa, de la **escalabilidad** (capacidad de la aplicación de manejar un número cada vez mayor de usuarios) y de la **disponibilidad** (una aplicación con alta disponibilidad es aquella que está siempre disponible para su uso y tiene un mínimo tiempo de inactividad) de las aplicaciones.
 
 ### Seguridad
 En la mayoría de las empresas, la seguridad está centralizada y se trata como una cuestión de infraestructura. Por tanto, hay que aprovechar la infraestructura de seguridad tanto como sea posible, y hay ue auditar el uso de identificadores genéricos por problemas de acceso a la base de datos.
@@ -129,9 +134,9 @@ Es recomendable rellenar siempre todos los campos del DTO para evitar errores `N
 Hay dos variantes. Podemos usar DTOs personalizados que representan parte de un bean o agrupan varios beans, o bien podemos usar DTOs de dominio denominados "entities". Al usar patrón fachada, una clase de dominio no es accesible directamente por el cliente. Por esa razón, se hacen copias DTO de los objetos de dominio del servidor (entities). Los clientes pueden operar sobre copias locales mejorando el rendimiento de las lecturas y actualizaciones.
 
 ### 4.3.2 Patrones de la capa de acceso a datos
-Hay varias opciones. Se puede usar el patrón Active Record y eliminar la capa de acceso a datos pues la clase de dominio maneja directamente el acceso a datos.
+Hay varias opciones. Se puede usar el patrón Active Record (los métodos CRUD se incluyen en la clase) y eliminar la capa de acceso a datos pues la clase de dominio maneja directamente el acceso a datos.
 
-Sin embargo, conviene separar el acceso a datos en un paquete independiente. Lo más común es hacerlo a través del patrón DAO o del patrón Mapper.
+Sin embargo, conviene separar el acceso a datos en un paquete independiente. Lo más común es hacerlo a través del patrón DAO/EAO o del patrón Mapper.
 
 #### Patrón DAO
 Requiere un `DataSource` que representa una base de datos, XML, archivo, etc y un `ResultSet` que es la respuesta del `DataSource`. El DAO manipula el resultado para devolver un DTO serializable.
@@ -151,7 +156,7 @@ La interfaz del mapper nos proporciona los métodos CRUD, haciendo que la clase 
 
 ### 4.3.3 Patrones de la capa de negocio
 #### Despliegue: Patrón fachada de sesión
-Los EJB de sesión pueden ser utilizados desde distintos clientes (servlets, aplicaciones cliente servidor de escritorio, etc), reduciendo el acoplamiento. <!-- TODO Diapo 93 -->
+Los EJB de sesión pueden ser utilizados desde distintos clientes (servlets, aplicaciones cliente servidor de escritorio, etc), reduciendo el acoplamiento. Corresponde al controlador de fachada del modelo de análisis, con los métodos de los EJB de sesión correspondiendo con las operaciones de los diagramas de secuencia del sistema. Usar EJB de sesión sin estado (stateless) mejora el rendimiento.
 
 En la capa de despliegue se implementa el patrón fachada de sesión, que es la interfaz para los clientes que conecta con la capa de dominio.
 
@@ -164,15 +169,27 @@ Si necesito una transacción que involucra a varias clases, como la creación de
 
 En la capa de dominio se usan los patrones Domain Model o Transaction Script.
 
-Domain Model reparte el modelo de análisis entre la capa de despliegue (EJBs fachada de sesión) y la capa de dominio (clases del dominio). Es más adecuado para clases con un comportamiento complejo. Refleja directamente el modelo de análisis (las clases de análisis y los diagramas de secuencia).
+Domain Model reparte el modelo de análisis entre la capa de despliegue (EJBs fachada de sesión) y la capa de dominio (clases del dominio). Es más adecuado para clases con un comportamiento complejo. Refleja directamente el modelo de análisis (las clases de análisis y los diagramas de secuencia). En este caso, una clase `Usuario <<entity>>` en la capa DTO no tiene operaciones (solo getters y setters) ni puede autogestionar el acceso a datos, y las operaciones del modelo de análisis estarían en una clase `Usuario <<domain>>` dentro de la capa de dominio.
 
 Transaction Script es más adecuado para clases con un comportamiento muy sencillo. El comportamiento se traslada a los EJB de sesión y la capa de dominio se integra en la de despliegue.
 
-<!-- TODO Diapo 107 -->
+### 4.3.4 Patrones de la capa de presentación: MVC
+En la capa de presentación se usa MVC en alguna de sus variantes, con EJBs y servicios web como modelo, servlets como controlador, y JSP para la vista. Se usan las clases "Entity" como DTOs y también JavaBeans, para simplificar la presentación en los JSP.
 
-### Patrones de las capas de persistencia, negocio y presentación
+Al implementar, no se debe inyectar un EJB Stateful en un Servlet porque los servlets son compartidos.
+
+Para usar EJBs de sesión con estado en la aplicación web, hay que hacer una búsqueda JNDI haciendo `lookup()` y almacenar la instancia EJB devuelta en `HttpSession`. De esta manera, el mismo usuario utiliza la misma instancia del EJB en llamadas consecutivas y ésta queda bloqueada para esa sesión, evitando que otras sesiones puedan adquirirla o borrarla.
+
+Para inyectar un EJB en una clase, ésta tiene que ser una clase Servlet anotada con `@EJB` y la referencia al EJB. Si se necesita el EJB en otra clase auxiliar, hay que hacer después el lookup desde dicha clase auxiliar.
+
+Si se usa más de un servidor, hay que definir interfaces remotas. Esto afecta al diseño del acceso a datos porque perdemos la referencia directa a la instancia, no tenemos acceso directo a las clases entity, y el rendimiento disminuye.
+
+#### Sincronización en JPA y JEE
+La entity pasa por distintos estados según su sincronización con la persistencia. En `managed`, el cambio que se haya realizado sobre la entity ha sido grabado. En `detached`, los cambios no se guardan y hay que hacer un `merge()` o `refresh()`.
+
+![Estados de una Entity](img/estadosEntity.png)
+
 ## 4.4 Component Based Software Engineering (CBSE): Desarrollo para y con reutilización
-
 ### Desarrollo para reutilización
 Desarrollo para reutilización como desarrollo de componentes o servicios que se pueden reutilizar en otras aplicaciones, y puede implicar la generalización de componentes ya existentes.
 
