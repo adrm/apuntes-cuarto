@@ -226,5 +226,54 @@ El proceso habitual para el **desarrollo basado en componentes** es el siguiente
 
 El desarrollo basado en componentes se basa en encontrar e integrar componentes reutilizables. Para ello, es indispensable buscar un equilibrio enre los requisitos ideales y los servicios prestados por los componentes disponibles.
 
+### 4.4.1 Composición y adaptación
+La **composición** es el proceso de ensamblaje de componentes para crear un sistema. Involucra la integración de los componentes entre sí y con la infraestructura de componentes. Normalmente hay que escribir código pegamento que integre los componentes.
+
+Se puede hacer una composición **secuencial** si se quieren componer las interfaces de cada componente; una composición **jerárquica** si un componente usa servicios de otro directamente conectándose a él; o una composición **aditiva** si las interfaces de varios componentes se unen para crear un nuevo componente que expone interfaces que combinan las interfaces de los componentes internos.
+
+Puede que las interfaces sean incompatibles por tener mismas operaciones pero distintos parámetros, por tener nombres de operaciones distintos, o porque faltan algunas operaciones. Para solventarlo, se usa como código pegamento el patrón "adapter"
+
+Hay que estudiar bien la semántica y sintaxis de las interfaces para entender bien qué hacen y prevenir posibles efectos secundarios, asegurando que los componentes funcionarán como esperamos en todo caso. Si añadimos OCL a la interfaz, podemos eliminar estas ambigüedades.
+
 ## 4.5 Diseño basado en componentes
+Las actividades de diseño desde un enfoque top-down son las siguientes:
+
+1. Identificar las interfaces, que reflejan las operaciones del sistema. Hay que utilizar los requisitos funcionales para identificar responsabilidades de alto nivel a partir de los casos de uso. Las interfaces agrupan conjuntos de operaciones relacionadas alrededor de la información que manejan o los servicios que ofrecen.
+2. Asignar responsabilidades a los componentes, es decir, ver qué interfaces implementarán. Evaluamos los componentes identificados contra los criterios de diseño deseables, preveyendo interfaces requeridas para conectar componentes alternativos. Mirar bien la herencia e interfaces, estudiando cada asociación por si tiene que ser a otra clase o puede ser a una interfaz, así como los mensajes enviados. Se buscan grupos de operaciones repetidas que puedan ser útiles en otros lugares para poder desarrollarlas como componente independiente. También se mira si se dispone de algún componente o se puede adquirir que pueda ser integrado en el sistema.
+3. Diseñar en detalle las interfaces. Definir las operaciones ofrecidas o requeridas por cada interfaz de cada componente, indicando parámetros de entrada y salida, pre y post condiciones, efectos de cada operación, naturaleza de la interfaz (asíncrono, RPC, WebService...)... Se puede usar UML+OCL, lenguajes de programación o IDLs.
+4. Verificar los requisitos funcionales. Hacer el seguimiento de cada requisito utilizando la estructura funcional.
+5. Comparar contraescenarios. Verificar casos de uso analizando la estructura funcional propuesta, junto con los participantes, a través de los casos de uso.
+6. Analizar interacciones. Analizar la estructura propuesta en busca de interacciones excesivas (demasiado acoplamiento).
+7. Analizar la flexibilidad del sistema. Plantear escenarios "what if" (¿qué pasaría si...?).
+
+Algunos errores frecuentes:
+
+- Mala definición de interfaces o de responsabilidades.
+- Componentes de tipo utilidad modelados como componentes funcionales.
+- Nivel inapropiado de detalle.
+- Número elevado de dependencias.
+- "God component" o "Manager": 50% de las responsabilidades en menos del 25% de los componentes.
+
+Lista de control:
+
+- ¿El modelo tiene un número razonable de componentes?
+- ¿Todos los componentes tienen nombre, responsabilidades claras e interfaces claramente definidas?
+- ¿Todas las interacciones entre los componentes ocurren a través de interfaces y conectores entre ellas?
+- ¿Los componentes tienen una alta cohesión?
+- ¿Los componentes muestran un bajo acoplamiento?
+- ¿Se ha validado la estructura propuesta contra los requisitos funcionales?
+- ¿Ha considerado cómo se porta la arquitectura en escenarios hipotéticos de cambio?
+
 ## 4.6 Despliegue de componentes
+Los componentes se realizan con artefactos físicos que los implementan. El modelo de despliegue describe dónde se encuentran físicamente, es decir, describe cómo se distribuye la funcionalidad en nodos físicos, representando la traducción de la arquitectura de software a la arquitectura del sistema físico. Los nodos tienen relaciones que representan los métodos de comunicación entre ellos, por ejemplo http, iiop, netbios...
+
+Un **artefacto** representa software como un .jar, .class o .exe, es decir, un elemento concreto como un archivo que puede ser desplegado en los nodos. En los nodos se despliegan instancias de artefactos. Un artefacto puede representar más de un componente, por ejemplo, un .jar con varios EJBs.
+
+En el modelo se describen relaciones con los componentes que realiza cada artefacto y con otros artefactos.
+
+Para definir el tipo de los artefactos se usan estereotipos estándar de UML pero también se pueden usar perfiles específicos como por ejemplo el de Java.
+
+Los pasos a seguir para diseñar la arquitectura física son:
+
+1. Determinar nodos y conexiones.
+2. Despliegue de artefactos.
