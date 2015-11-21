@@ -334,7 +334,11 @@ Una aplicación EJB debe contener:
 - Clases "helper": clases java de utilidad requeridas por los EJB (cálculos, DTOs, etc)
 
 ### Despliegue: EAR, WAR y JAR
-Se empaquetan en un archivo .jar, son portables y pueden ser empaquetados a su vez en un archivo .ear, o junto con archivos web en un .war.
+Los EJB e empaquetan en un archivo .jar, son portables y pueden ser empaquetados a su vez en un archivo .ear, o junto con archivos web en un .war.
+
+Para distribuir EJBs, se usan paquetes denominados EJB-JAR, que son similares a los WAR que modularizan el desarrollo de aplicaciones con JSPs/Servlets pero para EJBs. Los EJB-JAR pueden incluir EJBs de distintos tipos y facilitan el despliegue de éstos en cualquier servidor de aplicaciones compatible JEE.
+
+Una aplicación empresarial se empaqueta en un fichero .ear que está compuesto de la aplicación web Java empaquetada en WAR, los EJB distribuidos empaquetados en JAR, e información opcional de despliegue.
 
 ### Despliegue con anotaciones
 En EJB 3 se usan anotaciones para indicar las características del EJB: `@Stateless`, `@Stateful`, `@MessageDriven`, `@Entity`... Así se simplifica la definición del EJB. También se usan anotaciones como `@PostConstruct`, `@PreDestroy`, `@PostActivate` o `@PreActivate` para definir los callbacks del ciclo de vida.
@@ -370,4 +374,24 @@ JSF está formado por una serie de componentes:
 Los **facelets** permiten definir una plantilla para un portal y emplearla en todas sus páginas.
 
 ## Microsoft DCOM, COM+ y .NET Remoting
-## Corba Component Model (CCM)
+DCOM define componentes remotos bajo el entorno Microsoft que se comunican por RPC con un servidor remoto.
+
+COM+ es la evolución, y se puede ejecutar con balanceo de carga en granjas de componentes. Usa MSMQ que proporciona mensajería asíncrona entre aplicaciones con componentes en cola (Queued Components). Introduce un mecanismo de eventos denominado COM+ Events, y proporciona herramientas para generar proxies (interfaces con el servidor) del lado del cliente más fácilmente.
+
+Esto es usado en la empresa en aplicaciones usadas por muchos tipos de personas de la organización, ya sean en la intranet o en Internet. Tiene soporte para seguridad, y proporciona acceso a datos y comunicación a través de redes no fiables. Promueve modelo de tres capas: presentación en el cliente, lógica de negocio en el servidor de aplicaciones, y acceso a datos en los servidores de bases de datos.
+
+DCOM/COM+ fue uno de los mayores competidores de CORBA, y se especulaba que una de esas dos tecnologías serían el modelo de servicios sobre Internet. Era difícil conseguir que las conexiones funcionaran a través de cortafuegos y sobre máquinas inseguras o desconocidas. Actualmente, HTTP + navegadores web han ganado la partida para aplicaciones empresariales, a través de tecnologías como ASP y .NET o JSP y JEE.
+
+.NET Remoting sustituye a DCOM para crear aplicaciones distribuidas sobre Windows. Proporciona una arquitectura orientada a objetos para ello, a través del espacio de nombres `System.Runtime.Remoting`. Una clase es remota cuando puede ser usada por clientes en otro dominio de aplicación, ya sea en el mismo proceso, en otro, o incluso en otras  máquinas. Para construirla hay que hacer que derive de `System.MarshalByRefObject`.
+
+.NET Remoting es flexible y permite personalizar fácilmente la aplicación. También soporta estándares como SOAP o HTTP y TCP en lugar de usar mecanismos propietarios. Proporciona servicios y canales de comunicación que transmiten mensajes entre aplicaciones remotas, y formateadores que codifican y decodifican los mensajes que se transmiten por los canales.
+
+Establece canales TCP que transmiten en binario y son adecuados para un mayor rendimiento, o canales HTTP que transmiten mensajes SOAP y son adecuados cuando hay que favorecer la interoperabilidad.
+
+.NET destaca por ser multilenguaje, por ser conceptualmente más avanzado (permite acceso a memoria, atributos, llamadas síncronas/asíncronas u observables...), por soportar múltiples canales de transporte (HTTP o TCP) y múltiples formatos (SOAP o binario), por facilitar el cambio de presentación en web y GUI, por tener una interfaz entre base de datos y capa de negocio más avanzada y con más rendimiento, y por establecer AppDomains que son compartimentos de código que permiten ejecutar una aplicación con varios niveles en un solo proceso.
+
+JEE destaca por su madurez, con 3 años de ventaja sobre todo en capa de negocio, por ser intrínsecamente multiplataforma, porque cuenta con implementaciones de múltiples proveedores, por tener un modelo de componentes distribuidos (EJB) más avanzado, por la Java Connector Architecture (JCA), y porque "no es de Microsoft".
+
+## 3.7 Corba Component Model (CCM)
+
+> Consultar esquemas en los apuntes originales.
