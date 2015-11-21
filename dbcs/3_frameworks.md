@@ -269,9 +269,64 @@ También soporta a través de anotaciones mapeo de relaciones y herencia.
 
 Existe un EntityManager que gestiona el ciclo de vida de las instancias entidad, asociado con un contexto de persistencia. Una instancia de EntityManager gestiona un conjunto de entidades definido por una unidad de persistencia.
 
-<!-- TODO Diapositiva 93 -->
+Hay dos contextos de persistencia. Las transacciones JTA se usan en servidores de aplicaciones Java EE. Las transacciones RESOURCE_LOCAL se usan en aplicaciones cliente/servidor. Esto se indica en el XML que define la unidad de persistencia.
+
+Cada instancia de tipo entidad se crea con new o se recupera con una búsqueda en la BD (`find()`). La entidad se inserta, actualiza o borra (`persist()`, `merge()`, `remove()`) a través de la instancia de `EntityManager`.
+
+Ejemplo de inserción:
+
+```java
+@PersistenceContext
+private EntityManager em; //injección del EntityManager
+//...
+public void crearUsuario(String nom, String ape) {
+	Usuario usuario = new Usuario();
+	usuario.setFirstName(nom);
+	usuario.setLastName(ape);
+	em.persist(usuario);
+
+	// Cuando el método devuelve el control, "usuario" está
+	// en estado “persistido” con los valores autogenerados
+}
+```
+
+#### Anotaciones básicas
+Las anotaciones para indicar relaciones son `@OneToOne`, `@OneToMany`, `@ManyToOne` y `@ManyToMany`. Pueden ser bidireccionales (`mappedBy`) u obligatorias (`optional="false"`). Los parámetros cascade (que se borran en cascada) y fetch (que indica cómo se recuperan de la BD) completan la información.
+
+<!-- TODO Diapositiva 100, ejemplos -->
+
+Las relaciones de herencia se indican con la anotación `@Inheritance(strategy=InheritanceType.SINGLE_TABLE)` (u otra estrategia). Si se usa single table, todas las instancias que heredan se guardan en la misma tabla, y por tanto se indica con `@DiscriminatorColumn` la columna que guardará un valor que diferencie a qué clase pertenece cada fila de la tabla. En las clases que heredan se usa la anotación `@DiscriminatorValue(value="A")` que indica el valor con el que se representan las instancias de cada una de estas clases en la tabla, para poder diferenciarlas.
+
+#### Queries
+Para realizar una query, se puede usar JPQL o SQL nativo. En JDBC y SQL los pasos son:
+
+1. Obtener conexión JDBC a la BD.
+2. Crear una sentencia SQL.
+3. Ejecutar la sentencia.
+4. Recuperar los resultados en formato registro.
+
+Mientras que con JPA y JPQL, los pasos son:
+
+1. Obtener una instancia de EntityManager.
+2. Crear una instancia de consulta.
+3. Ejecutar la consulta.
+4. Recuperar los resultados como objetos tipo "Entity".
+
+En las entities se suelen crear `@NamedQuery` que dan un nombre a una query SQL parametrizada, para separar la query de la implementación de la clase.
 
 ## Despliegue de aplicaciones JEE
+Hay dos tipos de aplicaciones web. Las simples, que funcionan con Java/JSP, y las más complejas que usan EJBs. En ambos casos se usan recursos comunes como JSP, servlets, html, imágenes, etc.
+
+Los **servlets** son clases escritas en Java que procesan peticiones y construyen respuestas. Tienen un ciclo de vida completo. Primero "init", que se ejecuta al cargarse por primera vez, después "doGet" y "doPost" cuando recibe peticiones, y "destroy" al finalizar. Cada servlet se ejecuta en un hilo. Sus atributos son "request", "response" y "session".
+
+**JSP** son documentos de texto con una plantilla de datos estática en un formato como HTML o XML, y elementos JSP (código Java) que determinan cómo la página construye el contenido dinámico. Se compila y se genera un servlet que maneja los mismos atributos.
+
+Una aplicación web está organizada en una estructura jerárquica de directorios, con un directorio privado `WEB-INF` y un directorio público. El directorio público puede contener ficheros jsp, html, imágenes y otros documentos estáticos. El privado contiene el descriptor de despliegue, las clases Java y otras librerías Java. La aplicación web se puede empaquetar como fichero WAR.
+
+El **descriptor de despliegue**, `WEB-INF/web.xml` es un documento XML en el que se dan de alta los servlets, parámetros del contexto, etiquetas TLD, filtros y otros detalles del despliegue.
+
+Un **archivo WAR** (Web Application Archive) es equivalente al JAR y permite empaquetar en una sola unidad aplicaciones web Java completas con los servlets y JSPs, contenido estático y otros recursos.
+
 Una aplicación EJB debe contener:
 
 - Componentes EJB.
@@ -297,7 +352,22 @@ Es una simplificación de la persistencia gestionada por contenedor. Tiene un en
 Esta forma de persistencia soporta modelos de dominio con herencias y polimorfismo. Guarda metadatos para el mapeo entre la representación de objeto y la relacional.
 
 ### Tecnologías de presentación: JSP y JSF
-JSF es una propuesta de Sun alternativa a JSP/Servlets.
+JSF (struts) (Java Server Faces) es una propuesta de Sun alternativa a JSP/Servlets. Con JSF la aplicación estaría formada por una vista con páginas JSF, controladores en EJB3 y un modelo a través de JPA.
+
+JSF es una API y una implementación de referencia con representaciones de componentes de UI y manejo de su estado, eventos, validaciones, navegación, etc. JSF también tiene una librería de etiquetas personalizadas de JSP para dibujar los componentes de UI en páginas JSP.
+
+Las peticiones Faces no son petición-respuesta, sino que tienen un ciclo de vida que depende del tipo de petición según si la petición y la respuesta son o no de tipo Faces, aunque lo normal es que ambas sí lo sean.
+
+JSF está formado por una serie de componentes:
+
+- Conjunto de clases UIComponent, que representan los componentes.
+- Modelo de renderizado, que da la forma de visualizar el componente.
+- Modelo de eventos, que indica cómo manejar los eventos lanzados.
+- Modelo de conversión, que conecta los conversores de datos al componente.
+- Modelo de validación, que da la forma de registrar validadores para el componente.
+- RichFaces e ICEFaces, que son librerías de etiquetas.
+
+Los **facelets** permiten definir una plantilla para un portal y emplearla en todas sus páginas.
 
 ## Microsoft DCOM, COM+ y .NET Remoting
 ## Corba Component Model (CCM)
