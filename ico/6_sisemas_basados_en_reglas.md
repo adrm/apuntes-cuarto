@@ -1,4 +1,4 @@
-# Representación de conocimiento: Sistemas Basados en Reglas (SBR)
+# Representación de conocimiento: Sistemas Basados en Reglas (SBR) ([PDF](originales/representacion_conocimiento/SBR - Completo.pdf))
 ## Introducción
 Los **sistemas basados en reglas** o **sistemas de producción** se caracterizan por utilizar una única estructura para representar el conocimiento: la **regla**.
 
@@ -14,7 +14,11 @@ El interés por este tipo de sistemas radica en que es un formalismo adecuado pa
 Es un acercamiento popular por su sencillez, ya que usa una única estructura, y por su eficiencia, pues sus mecanismos deductivos son computacionalmente más eficientes que los de la lógica.
 
 ## Componentes
-<!-- TODO -->
+- Base de conocimiento (BC, KB).
+	- Base de reglas (BR): conjunto de reglas de producción.
+	- Declaración de dominio: declaración de los elementos básicos que se referencian en hechos y reglas.
+- Memoria de trabajo (MT, WM). Conjunto de hechos. Información que se considera cierta.
+- Motor de inferencias (MI, IE). Genera nuevos hechos a partir de la memoria de trabajo usando la base de reglas.
 
 ## Lenguajes
 Los elementos básicos de la representación son los **hechos**, que representan información que se posee relevante a una instancia o problema concreto, y las **reglas**, que es el conocimiento sobre el dominio del problema que permite derivar hechos adicionales.
@@ -69,7 +73,19 @@ Las **condciones** se construyen con un predicado y sus argumentos: objeto, atri
 
 Expresa una comparación (según el predicado) entre la constante especificada y el valor asociado al atributo del objeto en la memoria de trabajo.
 
-<!-- TODO Diapo 26 -->
+Un predicado es una función booleana. Si tenemos el hecho `paciente.edad = 50`, el predicado `iguales(paciente, edad, 60)` evaluará a falso.
+
+El antecedente de una regla (`if ...`) se satisface (`then ...`) si dicho antecedente evalúa a cierto.
+
+### Semántica de los predicados
+La interpretación de los predicados en un sistema de producción es **operacional**.
+
+`iguales(o,a,c)` es cierto si existe algún hecho `o.a = c` en la memoria de trabajo. El comportamiento depende del motor de inferencias: si es hacia adelante, solo se consulta el contenido actual de memoria de trabajo; si es hacia atrás, puede forzar la búsqueda del hecho.
+
+A diferenica con la lógica, el predicado solo es cierto si se puede derivar el hecho necesario. <!-- TODO ¿Y cuál es la diferencia con la lógica? -->
+
+
+<!-- TODO Diapo 31 -->
 
 ## Inferencia en un sistema de producción
 ## Encadenamiento hacia adelante
