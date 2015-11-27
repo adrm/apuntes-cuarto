@@ -1,5 +1,5 @@
 # Representación de conocimiento: Sistemas Basados en Reglas (SBR) ([PDF](originales/representacion_conocimiento/SBR - Completo.pdf))
-## Introducción
+## 1. Introducción
 Los **sistemas basados en reglas** o **sistemas de producción** se caracterizan por utilizar una única estructura para representar el conocimiento: la **regla**.
 
 El esquema de la regla está compuesto por dos partes que se pueden denominar de distinta manera:
@@ -13,12 +13,14 @@ El interés por este tipo de sistemas radica en que es un formalismo adecuado pa
 
 Es un acercamiento popular por su sencillez, ya que usa una única estructura, y por su eficiencia, pues sus mecanismos deductivos son computacionalmente más eficientes que los de la lógica.
 
-## Componentes
-- Base de conocimiento (BC, KB).
+## 2. Componentes de un sistema de producción
+![Diagrama de los componentes de un sistema de producción](img/componentesSP.png)
+
+- Base de conocimiento (BC o KB).
 	- Base de reglas (BR): conjunto de reglas de producción.
 	- Declaración de dominio: declaración de los elementos básicos que se referencian en hechos y reglas.
-- Memoria de trabajo (MT, WM). Conjunto de hechos. Información que se considera cierta.
-- Motor de inferencias (MI, IE). Genera nuevos hechos a partir de la memoria de trabajo usando la base de reglas.
+- Memoria de trabajo (MT o WM). Conjunto de hechos. Información que se considera cierta.
+- Motor de inferencias (MI o IE). Genera nuevos hechos a partir de la memoria de trabajo usando la base de reglas.
 
 ## Lenguajes
 Los elementos básicos de la representación son los **hechos**, que representan información que se posee relevante a una instancia o problema concreto, y las **reglas**, que es el conocimiento sobre el dominio del problema que permite derivar hechos adicionales.
@@ -80,15 +82,34 @@ El antecedente de una regla (`if ...`) se satisface (`then ...`) si dicho antece
 ### Semántica de los predicados
 La interpretación de los predicados en un sistema de producción es **operacional**.
 
-`iguales(o,a,c)` es cierto si existe algún hecho `o.a = c` en la memoria de trabajo. El comportamiento depende del motor de inferencias: si es hacia adelante, solo se consulta el contenido actual de memoria de trabajo; si es hacia atrás, puede forzar la búsqueda del hecho.
+`iguales(o, a, c)` es cierto si existe algún hecho `o.a = c` en la memoria de trabajo. El comportamiento depende del motor de inferencias: si es hacia adelante, solo se consulta el contenido actual de memoria de trabajo; si es hacia atrás, puede forzar la búsqueda del hecho.
 
-A diferenica con la lógica, el predicado solo es cierto si se puede derivar el hecho necesario. <!-- TODO ¿Y cuál es la diferencia con la lógica? -->
+A diferencia con la lógica, el predicado solo es cierto si se puede derivar el hecho necesario. <!-- TODO ¿Y cuál es la diferencia con la lógica? -->
 
+`noiguales(o, a, c)`. Si es una negación hacia adelante, suele ser una variante limitada de la suposición de mundo cerrado. Es decir, es cierto si no existe `o.a = c` en la memoria de trabajo cuando se evalúa el predicado. Si es negación hacia atrás, suele ser negación por fallo. Es decir, si se ha buscado y ha fracasado, éxito; y si no se ha buscado, fuerza la búsqueda y si ésta fracasa, éxito.
 
-<!-- TODO Diapo 31 -->
+<!-- TODO Diapo 32 -->
 
-## Inferencia en un sistema de producción
-## Encadenamiento hacia adelante
+#### Conclusiones
+#### Acción básica: añadir
+#### Acción eliminar
+####
+
+## 4. Inferencia en un sistema de producción
+La inferencia en un sistema de producción es, esencialmente, seleccionar reglas cuyo antecedente satisface y realizar su acción. Usan la diferencia entre reglas y hechos: los hechos se gestionan globalmente en la memoria de trabajo
+
+### Estrategias de resolución de conflictos
+
+Algunas estrategias son:
+
+- Refracción: Cada regla solo se puede disparar una vez con los mismos elementos de la memoria de trabajo. Hay que tener en cuenta que si un elemento sale de la memoria de trabajo y vuelve a entrar, se consdera un elemento nuevo.
+- Recencia: Se selecciona la regla que satisfaga con los hechos más recientemente añadidos a la memoria de trabajo. Faciliita (no garantiza) que las preguntas relacionadas entre sí se hagan juntas.
+- Especificidad:
+- Prioridad:
+- Orden:
+- Todas:
+
+## 5. Encadenamiento hacia adelante
 ## Encadenamiento hacia atrás
 ## Lenguajes con variables
 ## Algoritmo de Rete
