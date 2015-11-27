@@ -45,7 +45,7 @@ No se puede instanciar un subsistema en tiempo de ejecución pero sí se pueden 
 
 Una **arquitectura física** está formada por subsistemas e interfaces, con los subsistemas organizados según el patrón arquitectónico de capas. Cada capa contiene subsistemas de diseño: capa de presentación, de dominio, de servicios, de utilidades, etc. Las dependencias entre capas se definen cuidadosamente, van en una sola dirección y siempre a través de interfaces.
 
-![Arquitectura en capas](arquitecturaCapas.png)
+![Arquitectura en capas](img/arquitecturaCapas.png)
 
 Es conveniente dividr el modelo que representa todo el dominio. Por ello, organizamos un paquete con los elementos comunes como subsistema y el resto de paquetes como subsistemas. <!-- TODO No está muy claro -->
 
