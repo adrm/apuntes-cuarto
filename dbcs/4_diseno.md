@@ -277,3 +277,7 @@ Los pasos a seguir para diseñar la arquitectura física son:
 
 1. Determinar nodos y conexiones.
 2. Despliegue de artefactos.
+
+Cuando se usa más de un servidor, hay que definir interfaces remotas. Eso influye en la forma de diseñar el acceso a datos, pues perdemos la referencia directa a la instancia y no hay acceso directo a las clases entity, habiendo que colocarlas en una biblioteca compartida.
+
+El rendimiento disminuye al usar interfaces remotas y con los EJB stateful.
