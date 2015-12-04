@@ -72,4 +72,49 @@ Punto de referencia o configuración de referencia en el proceso de desarrollo d
 
 Es una colección de versiones de elementos que han sido revisadas formalmente y conforman una versión de configuración. Marca hitos y sirve como una base para otros desarrollos. Solo se puede cambiar mediante un proceso formalizado de gestión de cambio. Una línea base más un conjunto de cambios crean nuevas líneas base. Una línea base es un entorno aislado en el que un desarrollador puede trabajar (editar, cambiar, compilar y probar) sin interferir con otros desarrolladores.
 
+Un **workspace** puede ser un directorio local bajo control de versiones o puede estar en un servidor. Las operaciones habituales sobre un workspace son importar (incluir recursos en el control de versiones en el almacén), actualizar (conseguir la última versión en la rama por defecto), checkout (volcar una versión del almacén en el espacio de trabajo) y checkin (consolidar los cambios en el almacén).
+
+Un **almacén o repositorio** almacena versiones. Es habitual centralizarlo en un sistema, denominando repositorio al almacén central. El repositorio permite ahorrar espacio evitando guardar duplicados comunes a varias versiones o configuraciones, y facilita la posibilidad de almcenar la evolución del sistema. No es lo mismo repositorio que línea base.
+
+La **base de datos de configuraciones** se utiliza para registrar cualquier información relevante relacionada con las configuraciones de software, no solo las versiones. Facilita el conocimiento sobre la evolución del cambio y el impacto del mismo. Debe responder preguntas como qué clientes disponen de una versión concreta del sistema software, infraestructura de hardware y software necesaria para una versión, cuántas versiones se han creado y cuándo, qué versiones podrían verse afectadas ante un cambio en un componente, cuántas peticiones de cambio se han hecho sobre una determinada versión, o cuántos fallos registrados existen sobre una versión. Esta base de datos se puede crear como un sistema separado, o bien integrada con el sistema de gestión de versiones de software y el de control sobre los documentos formales del proyecto.
+
+### Modelos de control de versiones
+El problema del trabajo colaborativo es que dos personas pueden leer una versión, modificarla de forma separada, y que en el repositorio la última persona sobreescriba la versión de la primera sin darse cuenta.
+
+Para solucionarlo hay varios modelos. En el pesimista, se bloquea un fichero concreto para una persona hasta que termina de editarlo. En el optimista, se detecta si se intenta actualizar el repositorio desde una versión antigua, se hace una mezcla de las diferencias y se genera una nueva versión para evitar sobreescribir.
+
+### GCS como actividad de garantía de calidad
+La GCS es una actividad de garantía de calidad que se aplica en todas las fases del proceso de ingeniería de software.
+
+Algunos beneficios son:
+
+- Mejora la protección del producto.
+- Mejora la visibilidad del producto.
+- Mejora el control del producto.
+- Mejora la comunicación del equipo.
+- Mejora la confianza del usuario.
+- Disminuye el "rework".
+- Disminuye la confusión.
+- Disminuye el riesgo del proyecto.
+
+Algunas actividades son:
+
+- Identificación de la configuración.
+- Control de cambios en la configuración.
+- Generación de informes de estado.
+- Auditoría de la configuración.
+
+Y algunos autores añaden:
+
+- Gestión de releases.
+- Planificación de la gestión de configuraciones.
+
+### Aspectos a contemplar en el plan de gestión de configuraciones según Métrica 3
+- Identificación de todos los productos que deben ser controlados, su clasificación y relaciones entre ellos, así como el criterio o norma de identificación.
+- Ubicación y localización de los productos.
+- Definición del ámbito y alcance del control de la configuración describiendo los procesos incluidos en él.
+- Definición de las reglas de versionado de los productos y los criterios de actuación para cada caso, teniendo en cuenta el motivo por el cual se realiza el cambio de versión.
+- Definición del ciclo de estados para cada tipo de producto y los criterios de trazabilidad entre los mismos.
+- Descripción de funciones y responsabilidades.
+- Identificación de la información necesaria de control para auditoría.
 <!-- TODO Diapo 13/44 y reorganizar todo -->
