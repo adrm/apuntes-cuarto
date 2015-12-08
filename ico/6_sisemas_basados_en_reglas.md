@@ -34,6 +34,7 @@ El universo se conceptualiza en tripletes objeto, atributo y valor. El objeto re
 Se puede dar un conunto definido de objetos (**declaración de objetos**) y una **declaración de atributos** (DA) que puede ser univaluada o multivaluada según si ese atributo puede tener más de un valor a la vez, y tipada o no tipada según si los valores que puede tomar son los que forman parte de un conjunto definido.
 
 		| Univaluada		| Multivaluada
+---------------	| -------------------	| -------------------
 Tipada		| $O_i . a_j^s:\tau$	| $O_i . a_j^m:2^\tau$
 No tipada	| $O_i . a_j^s$		| $O_i . a_j^m$
 
@@ -67,7 +68,7 @@ Ejemplo: $H = \lbrace paciente-1.sexo = varón, paciente-1.edad=25, paciente-1.s
 
 
 ### Reglas en objeto-atributo-valor
-<!-- En la diapo 23 está la sintaxis BNF -->
+![Sintaxis BNF](img/bnf.png)
 
 Una regla en lenguaje natural podría ser:
 
@@ -108,13 +109,46 @@ A diferencia con la lógica, el predicado solo es cierto si se puede derivar el 
 
 <!-- TODO Diapo 32 -->
 
-#### Conclusiones
-#### Acción básica: añadir
-#### Acción eliminar
-####
+### Conclusiones
+Tenemos una secuencia de acciones que pueden modificar la memoria de trabajo. Solo se ejecutan si el antecedente de la regla se satisface. Disparar una regla es realizar las acciones de la conclusión.
+
+### Acción básica: añadir
+Se representa como `añadir(o, a, c)`. Si los atributos son univaluados, tras realizar la acción, la memoria de trabajo contiene `o.a=c` y ningún otro hecho para `o.a`. Si los atributos son multivaluados, se crea el hecho `o.a={c}` si no existía para `o.a`, y si ya existía, `c` se añade como uno de los valores de `o.a`.
+
+### Acción eliminar
+Se representa como `eliminar(o, a, c)`. Esta acción no está disponible en un lenguaje lógico. Elimina el hecho de la memoria de trabajo, o el valor si es un atributo multivaluado y hay más de un valor.
 
 ## 4. Inferencia en un sistema de producción
-La inferencia en un sistema de producción es, esencialmente, seleccionar reglas cuyo antecedente satisface y realizar su acción. Usan la diferencia entre reglas y hechos: los hechos se gestionan globalmente en la memoria de trabajo
+La inferencia en un sistema de producción es, esencialmente, seleccionar reglas cuyo antecedente satisface y realizar su acción. Usan la diferencia entre reglas y hechos: los hechos se gestionan globalmente en la memoria de trabajo (son hechos iniciales que representan conocimiento primitivo), y las reglas se utilizan para derivar nuevos hechos (conocimiento derivado). La inferencia es un proceso de búsqueda que primero examina los hechos y después las reglas.
+
+El concepto de pregunta se sustituye por el de **meta**, es decir, se pregunta por el valor del atributo de un objeto. La declaración de metas es igual que la de atributos pero se añade un subíndice `g`. No es imprescindible declarar la meta si el sistema dispara todas las reglas posibles.
+
+### Espacio de búsqueda: hipergrafos o grafos y/o
+Un hipergrafo es la generalización del concepto de grafo usando hiperarcos o k-conectores. Nos interesan los hipergrafos dirigidos. Un 1-conector sería un arco de un grafo dirigido convencional, mientras que un k-conector con $k > 1$ generaliza el concepto de arco definiéndose como un arco ($n_0$, $n_1$, $n_2$, ... $n_{k-1}$) donde todos los nodos excepto el primero apuntan al primero.
+
+Los hipergrafos se usan para representar el espacio de búsqueda. Al representar una regla, la disyunción se representa con hiperarcos distintos, mientras que la conjunción se representa con un hiperarco que apunta a la misma meta.
+
+### Métodos básicos de inferencia
+#### Control de la búsqueda
+La búsqueda se controla según la dirección de búsqueda (encadenamiento hacia atrás o hacia adelante), el régimen (tentativo o irrevocable, normalmente adelante es irrevocable y hacia atrás es tentativo), si la búsqueda es primero en anchura o en profundidad, las estrategias de resolución de conflictos, o el orden de evaluación de las premisas.
+
+#### Encadenamiento hacia adelante
+Las reglas se interpretan de forma directa. Es decir, si se cumple el antecedente, se añade el consecuente a la memoria de trabajo.
+
+Se parte del conjunto de hechos iniciales, se generan nuevos hechos disparando reglas y se para cuando se alcanza la meta o no hay reglas activadas.
+
+Es útil si se dispone de suficientes datos inicialmente, no hay una meta clara, o se adapta bien a la naturaleza de la tarea.
+
+El régimen de control es irrevocable, los algoritmos de búsqueda son simples y no generan explícitamente grafos de búsqueda. El motor de inferencias itera sobre el ciclo básico reconocimiento-acción.
+
+<!-- Diapo 56 -->
+
+#### Encadenamiento hacia atrás
+Se entiende a la inversa: para obtener la meta, hay que obtener primero el antecedente de la regla cuyo consecuente es la meta.
+
+Se parte del conjunto de metas, se intenta disparar reglas que concluyan en la meta convirtiendo sus antecedentes en nuevas submetas, y se para cuando se alcanza la meta o no hay reglas activadas.
+
+Sirve si se dispone de pocos datos inicialmente, si se puede plantear razonablemente una meta o si la tarea se ajusta por su naturaleza.
 
 ### Estrategias de resolución de conflictos
 
