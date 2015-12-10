@@ -1,4 +1,4 @@
-# Representación del conocimiento: Introducción
+# Representación del conocimiento: Introducción ([PDF](originales/representacion_conocimiento/IntroduccionRepresentacionConocimiento.pdf))
 ## Sistemas basados en conocimiento
 Son sistemas con una representación explícita y simbólica del conocimiento para resolver un problema. Además, el comportamiento del sistema debe ser consecuencia del contenido de la base del conocimiento. Si usan conocimiento experto, se denominan sistemas expertos.
 
@@ -12,7 +12,7 @@ Otros componentes habituales son un editor de conocimiento o un módulo de expli
 ![Arquitectura de un sistema basado en conocimiento](img/arquitecturaSBC.png)
 
 ## Tipos de conocimiento
-Se dividen según criterios o dimensiones de análisis en biológico, límites de aplicación, niveles o contenidos.
+Se pueden analizar según varios puntos de vista: biológico, límites de aplicación, niveles o contenidos.
 
 ### Biológico
 
@@ -44,7 +44,7 @@ Un ejemplo es la diagnosis de enfermedades pulmonares:
 #### Independiente del dominio
 Componentes del conocimiento que tienen que ver con la representación, uso y modificación del conocimiento con independencia del contenido del mismo. Es aplicable a clases de problemas.
 
-Podría resumirse en que si no hay suficientes datos para establecer un diagnóstico, sigue acumulando datos para llegar a una solución.
+Un ejemplo sería que si no hay suficientes datos para establecer un diagnóstico, sigue acumulando datos para llegar a una solución.
 
 ### Niveles
 Reune conocimiento del dominio como objetos y relaciones de un dominio particular, junto con metaconocimiento (conocimiento sobre el conocimiento) que permite aplicar de modo efectivo el conocimiento a la resolución de problemas, reconocer las limitaciones del conocimiento o explicar a un observador externo el proceso de solución de un problema.
@@ -53,7 +53,7 @@ Reune conocimiento del dominio como objetos y relaciones de un dominio particula
 - Si con los síntomas disponibles son posibles varios diagnósticos, examinar primero los menos costosos de comprobar.
 - Si el paciente es inmunodepresivo, investigar primero infecciones de lugares no estériles.
 
-#### Contenido (Clancey, 85)
+### Contenido (Clancey, 85)
 - Heurístico: meras asociaciones entre hechos y conclusiones.
 - Estratégico: conocimiento sobre los pasos a seguir para solucionar un problema.
 - Estructural: información sobre la estructura del dominio, como jerarquías (taxonomías, parte-de) o componentes e interconexiones.
@@ -65,7 +65,7 @@ Históricamente encontramos representaciones declarativas ("sabe qué") y repres
 - Declarativa: el conocimiento está compuesto por un conjunto de secuencias más procedimientos que las manipulan.
 - Operacional: conjunto de procedimientos que permiten resolver el problema.
 
-En la prática: espectro continuo <!-- TODO ¿? -->
+En la prática: espectro continuo.
 
 ## Lenguajes de representación de conocimiento
 Todo lenguaje de representación del conocimiento (LRC) debe proporcionar:
@@ -82,7 +82,7 @@ Las principales aproximaciones son:
 
 Es deseable que el lenguaje proporcione representación y gestión de la incertidumbre.
 
-# Representación del conocimiento: Lógica y representación del conocimiento
+# Representación del conocimiento: Lógica y representación del conocimiento ([PDF](originales/representacion_conocimiento/LogicaRepresentacionConocimientoCompleto.pdf))
 ## Papel de la lógica en la representación del conocimiento
 Intuitivamente, la lógica es atractiva como LRC por tener una sintaxis bien definida, una semántica precisa y mecanismos formales de deducción. Sin embargo, presenta dificultades como el problema de la cualificación, la dinámica, la incertidumbre y las creencias. <!-- TODO No me quedan claras las dificultades -->
 
