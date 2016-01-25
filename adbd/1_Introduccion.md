@@ -16,7 +16,7 @@ La gestión de datos involucra: almacenamiento, extracción, modificación, borr
 
 Puede usarse un **modelo relacional en el que los datos se describen como tablas relacionadas**. Hay más modelos, cada uno con sus ventajas e inconvenientes.
 
-Existe una excesiva orientación hacia el almacenamiento. <!-- ¿Qué quiere decir con esto? -->
+Existe una excesiva orientación hacia el almacenamiento de los datos sin estructurarlos, lo que puede ser contraproducente a largo plazo.
 
 ## 1.4. Almacenamiento vs BD
 

@@ -74,11 +74,11 @@ Es conveniente priorizar las tareas de forma que la asignación de los recursos 
 
 - Prioridad por holgura total: Las tareas con menor holgura tienen la mayor prioridad a la hora de asignar recursos.
 - Prioridad por lista ordenada: Las actividades que se realizan al mismo tiempo se ordenan según un criterio sencillo. Según Burman sería:
-        - Actividad crítica más corta.
-        - Actividad crítica.
-        - Actividad no crítica más corta.
-        - Actividad no crítica con menor holgura.
-        - Actividad no crítica.
+    - Actividad crítica más corta.
+    - Actividad crítica.
+    - Actividad no crítica más corta.
+    - Actividad no crítica con menor holgura.
+    - Actividad no crítica.
 
 Se necesita maximizar el porcentaje de utilización de los recursos, es decir, reducir periodos vacíos entre tareas. Hay que balancear costes frente a anticipar la fecha de finalización. También es necesario permitir contingencias.
 

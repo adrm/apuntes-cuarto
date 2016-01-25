@@ -1,25 +1,32 @@
 FLAGS=--toc --smart --epub-stylesheet=../epub.css
 BASE=cd $@ && pandoc $(addprefix ../, $(wildcard $^)) -o
-EPUB=$(BASE) epub/$@.epub $(FLAGS)
-PDF=$(BASE) epub/$@.pdf $(FLAGS)
 
-epub: pgp ico adbd ars dbcs pys ssee
+epub: 
+	EXT=epub
+	$(MAKE) todas
 
-pgp: pgp/*.md; $(EPUB)
+pdf:
+	EXT=pdf
+	$(MAKE) todas
 
-ico: ico/*.md; $(EPUB)
+todas: pgp ico adbd ars dbcs pys ssee
 
-adbd: adbd/*.md; $(EPUB)
+pgp: pgp/*.$(EXT); 
+	$(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
 
-ars: ars/*.md; $(EPUB)
+ico: ico/*.$(EXT); $(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
 
-dbcs: dbcs/*.md; $(EPUB)
+adbd: adbd/*.$(EXT); $(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
 
-pys: pys/*.md; $(EPUB)
+ars: ars/*.$(EXT); $(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
 
-ssee: ssee/*.md; $(EPUB)
+dbcs: dbcs/*.$(EXT); $(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
+
+pys: pys/*.$(EXT); $(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
+
+ssee: ssee/*.$(EXT); $(BASE) $(EXT)/$@.$(EXT) $(FLAGS)
 
 clean:
 	find . -name \*.epub -type f -delete
 
-.PHONY: epub clean
+.PHONY: epub clean pdf todas

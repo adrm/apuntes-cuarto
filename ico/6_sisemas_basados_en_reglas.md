@@ -1,4 +1,4 @@
-# Representación de conocimiento: Sistemas Basados en Reglas (SBR) ([PDF](originales/representacion_conocimiento/SBR - Completo.pdf))
+# Representación de conocimiento: Sistemas Basados en Reglas (SBR) ([PDF](originales/representacion_conocimiento/SBR_Completo.pdf))
 ## 1. Introducción
 Los **sistemas basados en reglas** o **sistemas de producción** se caracterizan por utilizar una única estructura para representar el conocimiento: la **regla**.
 
@@ -33,10 +33,10 @@ El universo se conceptualiza en tripletes objeto, atributo y valor. El objeto re
 ### Declaración de dominio
 Se puede dar un conunto definido de objetos (**declaración de objetos**) y una **declaración de atributos** (DA) que puede ser univaluada o multivaluada según si ese atributo puede tener más de un valor a la vez, y tipada o no tipada según si los valores que puede tomar son los que forman parte de un conjunto definido.
 
-		| Univaluada		| Multivaluada
----------------	| -------------------	| -------------------
-Tipada		| $O_i . a_j^s:\tau$	| $O_i . a_j^m:2^\tau$
-No tipada	| $O_i . a_j^s$		| $O_i . a_j^m$
+Univaluada		| Multivaluada |  /
+ -------------------	| ------------------- | --------------
+ $O_i . a_j^s:\tau$	| $O_i . a_j^m:2^\tau$ | Tipada
+$O_i . a_j^s$		| $O_i . a_j^m$ | No tipada
 
 A partir de la declaración de objetos (O) y de la declaración de atributos (DA), la **declaración de dominio** es $DD = O \cup DA$
 
@@ -139,9 +139,9 @@ Se parte del conjunto de hechos iniciales, se generan nuevos hechos disparando r
 
 Es útil si se dispone de suficientes datos inicialmente, no hay una meta clara, o se adapta bien a la naturaleza de la tarea.
 
-El régimen de control es irrevocable, los algoritmos de búsqueda son simples y no generan explícitamente grafos de búsqueda. El motor de inferencias itera sobre el ciclo básico reconocimiento-acción.
+El régimen de control es irrevocable, los algoritmos de búsqueda son simples y no generan explícitamente grafos de búsqueda. El motor de inferencias itera sobre el ciclo básico reconocimiento-acción. Se ejerce un control adicional a través de las estrategias de resolución de conflictos y el orden de las premisas.
 
-<!-- Diapo 56 -->
+El ciclo básico reconocimiento-acción comienza con un filtrado que selecciona todas las reglas activadas, es decir, aquellas cuyo antecedente se satisface según las reglas de la memoria de trabajo. Después se resuelven conflictos en las reglas activadas con alguna estrategia de resolución de conflictos. Por último, se disparan las reglas del conjunto resultante de la resolución de conflictos, realizando su acción.
 
 #### Encadenamiento hacia atrás
 Se entiende a la inversa: para obtener la meta, hay que obtener primero el antecedente de la regla cuyo consecuente es la meta.
@@ -150,18 +150,81 @@ Se parte del conjunto de metas, se intenta disparar reglas que concluyan en la m
 
 Sirve si se dispone de pocos datos inicialmente, si se puede plantear razonablemente una meta o si la tarea se ajusta por su naturaleza.
 
+Modelo básico encadenamiento hacia atrás <!-- Diapo 69 -->
+
+En el caso del encadenamiento hacia atrás, el ciclo básico reconocimiento-acción parte de un filtrado que selecciona las reglas cuyo consecuente permite obtener la meta actual, que no tienen por qué estar activadas. Después, mediante las estrategias de resolución de conflictos decididas, se selecciona un subconjunto de las reglas filtradas. Por último, se desencadenan las reglas reemplazando la meta actual por las submetas obtenidas de las condiciones de las reglas y se disparan las reglas cuyo antecedente se satisface, realizando su acción.
+
 ### Estrategias de resolución de conflictos
+Las estrategias de resolución de conflictos son criterios adicionales para decidir qué regla o reglas de las activadas se dispararán. Es habitual aplicar secuencialmente varios criterios hasta obtener una única regla.
 
-Algunas estrategias son:
+Algunas estrategias de resolución de conflictos son:
 
-- Refracción: Cada regla solo se puede disparar una vez con los mismos elementos de la memoria de trabajo. Hay que tener en cuenta que si un elemento sale de la memoria de trabajo y vuelve a entrar, se consdera un elemento nuevo.
-- Recencia: Se selecciona la regla que satisfaga con los hechos más recientemente añadidos a la memoria de trabajo. Faciliita (no garantiza) que las preguntas relacionadas entre sí se hagan juntas.
-- Especificidad:
-- Prioridad:
-- Orden:
-- Todas:
+- Refracción: Cada regla solo se puede disparar una vez con los mismos elementos de la memoria de trabajo. En el caso de encadenamiento hacia atrás, se desencadenan en lugar de dispararse.
+- Recencia: Se selecciona la regla que se satisfaga con los hechos más recientemente añadidos a la memoria de trabajo.
+- Especificidad: Se selecciona la regla que contenga más premisas.
+- Prioridad: Se selecciona la regla con máxima prioridad, que se fija manualmente.
+- Orden: Se selecciona la primera regla según el orden en la base.
+- Todas: Se disparan todas las reglas activadas.
+
+La estrategia de refracción es necesaria para evitar ciclos.
+
+La estrategia de prioridad se suele usar para agrupar reglas por tareas. No es recomendable utilizar demasiados niveles de prioridad.
+
+La estrategia de orden es más bien un criterio para obtener un comportamiento determinista.
+
+El disparo de reglas debe ser oportunista (en función del contenido de la memoria de trabajo) y no estar prefijado por el programador.
 
 ## 5. Encadenamiento hacia adelante
 ## Encadenamiento hacia atrás
 ## Lenguajes con variables
+Las variables extienden el poder de representación de los lenguajes de reglas. Las reglas con variables permiten representar conocimiento general. La semántica de las variables es similar a la de la LPO (Lógica de Primer Orden).
+
+Estos lenguajes extienden el formalismo Objeto-Atributo-Valor, y usan patrones simbólicos.
+
+Un patrón simbólico es una secuencia de constantes y/o variables. Los hechos son patrones de constantes, y las reglas admiten patrones con variables. Aunque esto no está limitado a la estructura O-A-V, sigue siendo la conceptualización más recomendable.
+
+### Ligadura de variables
+Las variables de los patrones se pueden reemplazar por constantes.
+
+Una ligadura es una constante, $d$, que reemplaza a una variable.
+
+Una variable ligada es una variable para la que existe una ligadura, $?x=d$.
+
+Una sustitución es reemplazar una variable por su ligadura, en su alcance.
+
+El alcance de una ligadura es: si la variable es muda, la ocurrencia de la variable; si no es muda, la regla en la que ocurre el patrón.
+
+### Equiparación de patrones
+Se denomina equiparación, confrontación o _pattern matching_. Si $p$ es un patrón y $h$ un hecho, se dice que el patrón $p$ y el hecho $h$ se equiparan si y solo si existen ligaduras para las variables que ocurren en $p$ tales que al sustituir las variables por sus ligaduras, $p$ y $h$ son sintácticamente iguales.
+
+En clips, ? es una variable anónima que no se liga.
+
+Los patrones, con o sin variables, pueden formar parte de las reglas de producción.
+
+### Semántica
+#### Predicados
+- `iguales<patrón>` es cierto si `<patrón>` confronta con algún hecho de la memoria de trabajo.
+- `noiguales<patrón>` es cierto si `<patrón>` no confronta con ningún hecho de la memoria de trabajo.
+- `mayorque<patrón>`/`menorque<patron>` es cierto si todas las variables están ligadas y al sustituir todas las variables se obtiene una secuencia de números estríctamente decreciente/creciente.
+
+#### Acciones
+- `añadir<patrón>` sustitye todas las variables y añade el hecho resultante si todas las variables están ligadas.
+- `eliminar<patrón>` sustituye todas las variables y elimina el hecho resultante de la memoria de trabajo.
+
+### Particularización de regla
+Una particularización de una regla es un par formado por la regla y el conjunto minimal de hechos de la memoria de trabajo que satisface su antecedente.
+
+La regla particularizada es la que se obtiene a partir de la regla al sustituir las variables por las ligaduras que hacen que los patrones de la regla confronten con los hechos del conjunto minimal.
+
+Generalmente hay múltiples conjuntos que satisfacen el antecedente y por tanto, varias particularizaciones.
+
+Con esta definición, podemos decir que la estrategia de resolución de conflictos "refracción" indica que no se dispare dos veces la misma particularización de una regla.
+
 ## Algoritmo de Rete
+Equiparación de reglas y hechos.
+
+Aproximación naive: en cada ciclo, comparar antecedente de las reglas con hechos en memoria de trabajo. Esta estrategia es ineficiente debido a que el conjunto de reglas es estable, la memoria de trabajo cambia pero normalmente el porcentaje de cambio por ciclo es pequeño. Además, la mayoría de patrones que se satisfacen en un ciclo también lo hacen en el siguiente.
+
+La alternativa es un algoritmo que recuerde activaciones entre ciclos, actualizando patrones que confronten con los hechos que han cambiado.
+
+El algoritmo de Rete representa las reglas como datos en la denominada red de Rete. El compilador crea esta red a partir de las reglas. La red de Rete se puede asimilar a una máquina de estados que consume modificaciones de hechos. La red recuerda estados anteriores.

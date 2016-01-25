@@ -118,7 +118,6 @@ Para lograr la autoorganización, los equipos deben reuinr tres características
 - Deben tener capacidad de autoenriquecimiento, favorecida pro la multidisciplinaridad y la aportación de soluciones valiosas complementarias.
 
 ### Algunas prácticas SCRUM
-
 - Los clientes son parte del equipo de desarrollo.
 - SCRUM tiene frecuentes entregables intermedios funcionales, lo que permite al cliente trabajar con el software antes y cambiar los requisitos de acuerdo con las necesidades.
 - Se desarrollan planes de riesgos y mitigación frecuentes por parte del equipo de desarrollo. La mitigación de riesgos, la monitorización y la gestión de riesgos se lleva a cabo en todas las etapas y con compromiso.
@@ -128,7 +127,6 @@ Para lograr la autoorganización, los equipos deben reuinr tres características
 - Los problemas no se han de barrer bajo la alfombra, puesto que nadie es penalizado por reconocer o describir un problema imprevisto.
 
 ### Relaciones entre métodos ágiles y proceso unificado
-
 - Participación activa de los stakeholders.
 - Aplicar estándares de modelado.
 - Aplicar patrones cuidadosamente.
@@ -151,7 +149,6 @@ Para lograr la autoorganización, los equipos deben reuinr tres características
 - Utilizar herramientas sencillas.
 
 ### Condiciones para pasar de grupo de emprendedores a empresa establecida
-
 - Repetitividad de resultados: al hacer que la calidad del resultado sea consecuencia del proceso, desarrollar nuevas aplicaciones aplicando el mismo proceso garantiza la homgeneidad de los resultados.
 - Escalabilidad: también consecuenica de la repetitividad, independientemente del tamaño u objetivos del equipo.
 - Mejora continua: al aplicar metaprocesos que miden y analizan los resultados se obtiene la información necesaria para aplicar mejoras de forma contiuna a la eficiencia y calidad de los procesos base y, por tanto, de los resultados.

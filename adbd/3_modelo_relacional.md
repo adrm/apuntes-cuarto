@@ -13,7 +13,7 @@ El estándar SQL ha ido evolucionando. Son reseñables SQL-92, que supuso una im
 ## Definiciones
 Una base de datos relacional está compuesta de relaciones.
 
-Una relación está compuesta de dos partes. Por un lado, un esquema que define el nombre de la relación y el nombre y tipo de cada columna (atributo, campo). Por otro lado, instancias que corresponden con valores de la tabla (registro, tupla) con todas las tuplas distintas<!-- TODO ¿Todas las tuplas distintas?-->.
+Una relación está compuesta de dos partes. Por un lado, un esquema que define el nombre de la relación y el nombre y tipo de cada columna (atributo, campo). Por otro lado, instancias que corresponden con valores de la tabla (registro, tupla) con todas las tuplas distintas.
 
 ## Creación de relaciones
 Hay que crear la relación (tabla) con sus atributos, especificando los tipos para cada campo. El tipado se impone por el DBMS al añadir o modificar tuplas.
@@ -38,14 +38,14 @@ CREATE TABLE Matricula (
 )
 ```
 
-## Destrucción y modificación
+## Destrucción y modificación de tablas
 La destrucción de una relación implica su borrado del esquema y el borrado de todas su tuplas.
 
 ```sql
 DROP TABLE Estudiante
 ```
 
-La modificación de un esquema se puede hacer añadiendo, borrando o modificando campos. Para campos añadidos, todas las tuplas son extendidas con valor ```null``` en ese campo.
+La modificación de un esquema se puede hacer añadiendo, borrando o modificando campos. Para campos añadidos, todas las tuplas son extendidas con valor `null` en ese campo.
 
 ```sql
 ALTER TABLE Estudiante
@@ -73,20 +73,18 @@ UPDATE Estudiante E SET E.edad=E.edad+1 WHERE E.nia=5557
 ```
 
 ## Restricciones de integridad
-Las restricciones de integridad son condiciones de validez que tienen que cumplirse para cualquier instancia de la base de datos. Se especifican al definir el esquema y el DBMS las comprueba cuando se modifican las relaciones.
+Las restricciones de integridad (RI) son condiciones de validez que tienen que cumplirse para cualquier instancia de la base de datos. Se especifican al definir el esquema y el DBMS las comprueba cuando se modifican las relaciones.
 
-Una **instancia legal** es aquella que satisface todas las restricciones de integridad (RI).
+Una **instancia legal** es aquella que satisface todas las restricciones de integridad.
 
-En las RI se usa la semántica del mundo real descrito. Dominio, clave primaria, clave foránea. También se soportan otras más generales. <!--TODO No entiendo este párrafo -->
+En las RI se usa la semántica del mundo real descrito. Hay restricciones de dominio (tipos), clave primaria, clave foránea... También se soportan otras más generales.
 
 ## Claves primarias y candidatas
-Una clave (candidata) <!-- TODO ¿Diferencias entre clave primaria y candidata? ¿Qué es una clave candidata? -->es una identificación única de cada tupla por medio de un subconjunto mínimo de campos.
+Una clave (candidata) identifica unívocamente cada tupla por medio de un subconjunto mínimo de campos. Hay que elegir entre una de las claves candidatas la que será la clave primaria, y el resto son claves alternativas.
 
-Las claves primarias fuerzan ciertas condiciones. No existen dos tuplas con los mismos valores en todos los campos de la clave (a tener en cuenta para valores ```null```), y ningún subconjunto de la clave puede ser un identificador único.
+Las claves primarias fuerzan ciertas condiciones. No existen dos tuplas con los mismos valores en todos los campos de la clave (a tener en cuenta para valores `null`), y ningún subconjunto de la clave puede ser un identificador único.
 
-Una candidata debe ser elegida como clave primaria. <!--TODO Expandir un poco aquí -->
-
-Las claves candidatas se especifican con ```UNIQUE```, y la que es elegida como primaria, con ```PRIMARY KEY```.
+Las claves candidatas se especifican con `UNIQUE`, y la que es elegida como primaria, con `PRIMARY KEY`.
 
 ```sql
 CREATE TABLE Matricula (
@@ -124,21 +122,21 @@ CREATE TABLE Matricula (
 )
 ```
 
-Una clave foránea puede hacer referencia a la misma relación en la que se encuentra. El ```null``` cumple la restricción de clave foránea pero no la de clave primaria.
+Una clave foránea puede hacer referencia a la misma relación en la que se encuentra. El `null` cumple la restricción de clave foránea pero no la de clave primaria (no puede ser clave primaria, pero sí puede servir para indicar una relación de clave foránea que no se ha dado aún).
 
 ## Cumplimiento de la integridad referencial
 Para cumplir la integridad referencial, hay que decidir qué hacer en cada caso cuando ésta pueda incumplirse.
 
-En inserción con una referencia no existente, se realiza ```NO ACTION```, es decir, se rechaza la inserción de la nueva tupla si tiene una referencia en una clave foránea que referencia a una tupla que no existe.
+En inserción con una referencia no existente, se realiza `NO ACTION`, es decir, se rechaza la inserción de la nueva tupla si tiene una referencia en una clave foránea que referencia a una tupla que no existe.
 
 En el borrado de una tupla referenciada hay varias opciones:
 
-- ```NO ACTION```: Acción por defecto. Rechaza el borrado de la tupla referenciada si tiene referencias. (No se borra el estudiante hasta que no tenga matrículas que le hagan referencia)
-- ```CASCADE```: Se borra la tupla referenciada y todas aquellas que le referencian (se borra el estudiante y todas sus matrículas).
-- ```SET DEFAULT```: Se asignan las referencias a la tupla que se borra a una clave por defecto (al borrar el estudiante, sus matrículas pasan a referenciar un ```nia``` por defecto).
-- ```SET NULL``` (en SQL)<!--TODO ¿Esto quiere decir que está en el estándar pero no en MySQL? -->: Al borrar la tupla referenciada, las referencias apuntan a ```null```. Puede dar conflictos si la referencia (la clave foránea) se usa dentro de la clave primaria.
+- `NO ACTION`: Acción por defecto. Rechaza el borrado de la tupla referenciada si tiene referencias. (No se borra el estudiante hasta que no tenga matrículas que le hagan referencia)
+- `CASCADE`: Se borra la tupla referenciada y todas aquellas que le referencian (se borra el estudiante y todas sus matrículas).
+- `SET DEFAULT`: Se asignan las referencias a la tupla que se borra a una clave por defecto (al borrar el estudiante, sus matrículas pasan a referenciar un `nia` por defecto).
+- `SET NULL` (en SQL)<!--TODO ¿Esto quiere decir que está en el estándar pero no en MySQL? -->: Al borrar la tupla referenciada, las referencias apuntan a `null`. Puede dar conflictos si la referencia (la clave foránea) se usa dentro de la clave primaria.
 
-En la actualización de la clave primaria se actúa igual. <!-- TODO Igual que qué, que en el borrado de tupla referenciada? -->
+En la actualización de la clave primaria se actúa igual que en el borrado de una tupla referenciada.
 
 ```sql
 CREATE TABLE Matricula (
@@ -155,7 +153,7 @@ CREATE TABLE Matricula (
 La acción 'cascade' se propaga en cascada por las siguientes realciones que referencian a la tupla borrada o actualizada.
 
 ## Otras restricciones
-Restricciones de columna, que pueden ser ```NOT NULL```, que evita que se asignen nulos a la columna, o ```CHECK```, que especifica una condición de integridad.
+Restricciones de columna, que pueden ser `NOT NULL`, que evita que se asignen nulos a la columna, o `CHECK`, que especifica una condición de integridad.
 
 ```sql
 CREATE TABLE Estudiante (
@@ -173,12 +171,12 @@ CREATE TABLE Estudiante (
 Otras restricciones son las aserciones y disipadores, que se verán más adelante.
 
 ## Diseño lógico: ER -> Relacional
-ERD
+ERD (Diagrama Entidad-Relación)
 
-ER
+ER (Entidad-Relación)
 
 SQL
-<!-- Diapositiva 16: Aclarar esto -->
+<!-- TODO Diapositiva 16: Aclarar esto -->
 
 ## Tipos de relación -> tablas
 Si la relación es `1-1`, comprobamos si se pueden poner en términos de una única entidad.
@@ -191,3 +189,24 @@ Si la relación es `*-*`, habría que representar la relación como una nueva en
 Si la relación tiene `0` en algún extremo supone que pueden existir nulos.
 
 ## Entidades débiles
+Se da cuando una entidad se identifica con campos de otra entidad, y dicha relación es obligatoria. En otras palabras, se da cuando hay una clave foránea no nula que forma parte de la clave primaria.
+
+## Jerarquías ISA
+<!-- TODO ¿? Diapo 22, 23, 24 y 25 -->
+Es una guía de elección, pero puede haber otros factores (cantidad de nulos, relaciones, consultas / combinación de tablas).
+
+Tablas para las sublclases: diferencias entre ellas; todas en una tabla daría lugar a nulos y restricciones. Diferencia con la superclase; puede haber tablas para cada combinación superclase/subclase.
+
+Tabla para la superclase: Si tiene asociaciones `1:*`; las tablas que incluyen las claves foráneas deben apuntar a una única tabla.
+
+## Vistas y seguridad
+Una vista es una tabla que no almacena tuplas ya que estas se obtienen a partir de una definición sobre tablas base. Permite restructurar el esquema lógico base e implementar políticas de acceso restringido a los datos.
+
+Por ejemplo, la siguiente vista evitaría que se vean más datos de los necesarios (nia y nota media) de los estudiantes, y se restringe a que solo se vean los alumnos que cumplan la condición.
+
+```sql
+CREATE VIEW EstudianteMH (nia,notam)
+	AS SELECT E.nia,E.notam
+		FROM Estudiantes E
+		WHERE E.notam >= 9.0
+```
