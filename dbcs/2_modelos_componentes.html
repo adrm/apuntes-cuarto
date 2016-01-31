@@ -1,0 +1,829 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Modelos de componentes | Apuntes de 4º de Ingeniería Informática</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../dbcs/3_frameworks.html" />
+    
+    
+    <link rel="prev" href="../dbcs/1_introduccion.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.2"
+        data-chapter-title="Modelos de componentes"
+        data-filepath="dbcs/2_modelos_componentes.md"
+        data-basepath=".."
+        data-revision="Sun Jan 31 2016 13:40:15 GMT+0100 (CET)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Administración y diseño de bases de datos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="adbd/1_Introduccion.html">
+            
+                
+                    <a href="../adbd/1_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="adbd/2_modelado_datos.html">
+            
+                
+                    <a href="../adbd/2_modelado_datos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Modelado de datos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="adbd/3_modelo_relacional.html">
+            
+                
+                    <a href="../adbd/3_modelo_relacional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Modelo relacional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="adbd/4_lenguajes_relacionales.html">
+            
+                
+                    <a href="../adbd/4_lenguajes_relacionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Lenguajes relacionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="adbd/5_SQL.html">
+            
+                
+                    <a href="../adbd/5_SQL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        SQL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="adbd/6_normalizacion.html">
+            
+                
+                    <a href="../adbd/6_normalizacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Normalización
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="adbd/7_administracion_bd.html">
+            
+                
+                    <a href="../adbd/7_administracion_bd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Administración de bases de datos
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ars/ars.html">
+            
+                
+                    <a href="../ars/ars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Arquitectura de redes y servicios
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Desarrollo basado en componentes y servicios</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dbcs/1_introduccion.html">
+            
+                
+                    <a href="../dbcs/1_introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="dbcs/2_modelos_componentes.html">
+            
+                
+                    <a href="../dbcs/2_modelos_componentes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Modelos de componentes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dbcs/3_frameworks.html">
+            
+                
+                    <a href="../dbcs/3_frameworks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Frameworks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dbcs/4_diseno.html">
+            
+                
+                    <a href="../dbcs/4_diseno.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Diseño
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="dbcs/5_servicio_web.html">
+            
+            <span><b>3.5.</b> Servicios web</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Ingeniería del conocimiento</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ico/0_Introduccion.html">
+            
+                
+                    <a href="../ico/0_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ico/1_logica_proposicional.html">
+            
+                
+                    <a href="../ico/1_logica_proposicional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Lógica proposicional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ico/2_logica_predicados.html">
+            
+                
+                    <a href="../ico/2_logica_predicados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Lógica de predicados
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ico/3_estrategias_resolucion.html">
+            
+                
+                    <a href="../ico/3_estrategias_resolucion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Estrategias de resolución
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ico/4_programacion_logica.html">
+            
+                
+                    <a href="../ico/4_programacion_logica.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Programación lógica
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ico/5_representacion_conocimiento.html">
+            
+                
+                    <a href="../ico/5_representacion_conocimiento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Representación del conocimiento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ico/6_sistemas_basados_en_reglas.html">
+            
+            <span><b>4.7.</b> Sistemas basados en reglas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ico/7_metodos_estructurados.html">
+            
+                
+                    <a href="../ico/7_metodos_estructurados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Métodos estructurados
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> Planificación y gestión de proyectos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="pgp/1.html">
+            
+                
+                    <a href="../pgp/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pgp/2_1_Planificacion.html">
+            
+                
+                    <a href="../pgp/2_1_Planificacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Planificación
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="pgp/2_2_PERT_CPM.html">
+            
+                
+                    <a href="../pgp/2_2_PERT_CPM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PERT y CPM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="pgp/2_3_gestion_recursos.html">
+            
+                
+                    <a href="../pgp/2_3_gestion_recursos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Gestión de recursos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="pgp/2_4_gestion_personas.html">
+            
+                
+                    <a href="../pgp/2_4_gestion_personas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Gestión de personas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="pgp/2_5_gestion_riesgos.html">
+            
+                
+                    <a href="../pgp/2_5_gestion_riesgos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Gestión de riesgos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="pgp/3_1_proceso_unificado.html">
+            
+                
+                    <a href="../pgp/3_1_proceso_unificado.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Proceso unificado
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="pgp/3_2_plan_de_proceso.html">
+            
+                
+                    <a href="../pgp/3_2_plan_de_proceso.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        Plan de proceso
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="pgp/3_3_SCRUM.html">
+            
+                
+                    <a href="../pgp/3_3_SCRUM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        SCRUM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="pgp/4_gestion_configuraciones.html">
+            
+                
+                    <a href="../pgp/4_gestion_configuraciones.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        Gestión de configuraciones
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> Profesión y sociedad</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="pys/1_ambitos_y_perfiles_profesionales.html">
+            
+                
+                    <a href="../pys/1_ambitos_y_perfiles_profesionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ámbitos y perfiles profesionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="pys/2_formacion_complementaria.html">
+            
+                
+                    <a href="../pys/2_formacion_complementaria.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Formación complementaria
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ssee/ssee.html">
+            
+                
+                    <a href="../ssee/ssee.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Sistemas embebidos
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Apuntes de 4º de Ingeniería Informática</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="2-modelos-b&#xE1;sicos-de-componentes">2. Modelos b&#xE1;sicos de componentes</h1>
+<p>C&#xF3;mo reutilizar el c&#xF3;digo binario: en OO, se usa encapsulamiento y herencia, pero no se pueden reutilizar objetos en otros lenguajes, incluso existen incompatibilidades entre objetos creados por el mismo lenguaje, ya sean binarias o de c&#xF3;digo fuente.</p>
+<p>Estos problemas se resuelven con el modelo de componentes. Un modelo de componentes es una especificaci&#xF3;n en la que se define entre otros: estructura del componente, comunicaci&#xF3;n entre ellos y manipulaci&#xF3;n por los entornos de desarrollo.</p>
+<h2 id="21-com-y-com">2.1 COM y COM+</h2>
+<p>OLE (Object Linking and Embedding) fue precursor de COM. OLE 2.0 da origen a COM y ActiveX. Despu&#xE9;s, DCOM y COM+.</p>
+<p>Estructura de COM: Se separa la interfaz de la implementaci&#xF3;n. Se da una interfaz p&#xFA;blica como tabla de m&#xE9;todos o clases.</p>
+<p>Para utilizar un cierto componente, solo es preciso recuperar un puntero a alguna de sus interfaces. Un objeto COM tiene que implementar siempre la interfaz IUnknown para controlar el ciclo de vida y la resoluci&#xF3;n de interfaces.</p>
+<p>Un componente COM no existe de forma aislada, se integra en servidores COM. Hay dos clases de servidores: DLL (mismo espacio de direcciones del cliente) y EXE (se ejecuta otro programa con el cual se debe comunicar el cliente mediante IPC local o RPC remoto). Adem&#xE1;s de alojar y ejecutar los componentes realizan otras funciones como el registro de componentes.</p>
+<p>Para COM se usa MIDL (Microsoft IDL): Solo soporta herencia simple, todo m&#xE9;todo retorna HRESULT (que indica error o no). El precompilador MIDL toma un archivo .idl y genera una biblioteca de tipos, archivos de cabecera, m&#xF3;dulos de c&#xF3;digo, etc.</p>
+<p>Los nombres de clases e interfaces son elementos con &#xE1;mbito reducido. Se utilizan identificadores GUID de 128 bits. CLSID (Class Identifier) si identifican componentes o IID (Interface Identifier) si identifican interfaces.</p>
+<p>Para poner en marcha un componente en DLL: <code>system32&gt; regsvr32 C:\comp\pDLL.dll</code></p>
+<p>Funciones b&#xE1;sicas: se invoca <code>CoInitialize()</code> y luego <code>CoCreateInstance()</code> facilitando el CLSID. La asociaci&#xF3;n de CLSID y servidor est&#xE1; en el Registro de Windows. Si el servidor es una DLL, usa la clave <code>InprocServer32</code>. Tambi&#xE9;n puede ser <code>LocalServer32</code> o <code>RemoteServer32</code>.</p>
+<p>Al guardarse la ubicaci&#xF3;n de los componentes en el registro de windows, solo puede haber una versi&#xF3;n de cada componente. Si varias aplicaciones requieren versiones distintas, no pueden satisfacerse todos los requisitos: <strong>DLL Hell</strong>.</p>
+<p>Windows XP introduce un nuevo modo de registro. Las aplicaciones que necesiten componentes COM almacenan toda la informaci&#xF3;n del registro en un directorio propio en lugar del registro global, pero no se puede hacer para EXE, COM o servidores como MDAC, MSXML, DirectX o Internet Explorer.</p>
+<p>En COM+ se da un entorno de ejecuci&#xF3;n y un conjunto de servicios que proporciona el SO. Se intenta simplificar la creaci&#xF3;n y uso de los componentes, permitiendo una mejor interoperabilidad entre componentes. Abstrae mucho c&#xF3;digo que ten&#xED;an que implementar todos los COM como contador de referencias, c&#xF3;digo para crear e inicializar el componente, etc y da una implementaci&#xF3;n por defecto.</p>
+<h2 id="22-net">2.2 .NET</h2>
+<p>Framework compuesto de:</p>
+<ul>
+<li>M&#xE1;quina virtual (CLR: Common Language Runtime) multilenguaje.</li>
+<li>Herramienta de desarrollo r&#xE1;pido (RAD) de aplicaciones de escritorio y web.</li>
+<li>Conjunto de bibliotecas y frameworks para acceso a BD/XML, interfaces de usuario, etc.</li>
+<li>Plataforma de soporte componentes y servicios Web. Soporta el despliegue de m&#xFA;ltiples versiones del mismo componente sin conflicto alguno, simplificando la creaci&#xF3;n y despliegue de componentes. Servicios fiables y escalables para componentes. Permite la coexistencia y colaboraci&#xF3;n de .NET y COM.</li>
+</ul>
+<p>.NET est&#xE1; construido con componentes. Cada espacio de nombres est&#xE1; incorporado en un componente. La interoperabilidad entre componentes (DLL) es m&#xE1;s f&#xE1;cil que con COM.</p>
+<p>.NET vs COM: No hay interfaz base IUnknown, todos los componentes derivan de la clase System.Object. No hay necesidad de IDL, las definiciones est&#xE1;n en el c&#xF3;digo fuente, el compilador incrusta las definiciones de tipos en los metadatos del ensamblado. Las dependencias se guardan durante la compilaci&#xF3;n en el manifiesto del ensamblado. No hay recuento de referencias, .NET incorpora mecanismo de recolecci&#xF3;n de basura. La identificaci&#xF3;n no se basa en GUID, sino por el espacio de nombres. Cuando un ensamblado se comparte, debe contener un nombre seguro (firma digital generada usando clave de cifrado, que garantiza la autenticidad de los componentes).</p>
+<p>Ensamblados: Colecci&#xF3;n de tipos y recursos creados para funcionar en conjunto y formar una unidad l&#xF3;gica de funcionalidad. Unidad fundamental de implementaci&#xF3;n, control de versiones, reutilizaci&#xF3;n, &#xE1;mbitos de activaci&#xF3;n y permisos de seguridad. Los ensamblados proporcionan al CLR la informaci&#xF3;n necesaria para conocer las implementaciones de cada tipo. En ejecuci&#xF3;n, un tipo no existe fuera del contexto de un ensamblado.</p>
+<p>Los ensamblados son componentes autodescriptivos que no dependen de las entradas del registro. El compilador a&#xF1;ade informaci&#xF3;n adicional en todos los ensamblados (metadatos).</p>
+<p>Para desplegar de forma p&#xFA;blica, al compilar se firma el c&#xF3;digo.</p>
+<p>Componentes .NET: .NET Framework proporciona la interfaz IComponent y la clase base Component para facilitar la creaci&#xF3;n de componentes (visuales). Las clases descendientes UserControl y Control facilitan la creaci&#xF3;n de estos componentes visuales. Cualquier clase que implemente la interfaz IComponent es un componente.</p>
+<h2 id="23-javabeans">2.3. JavaBeans</h2>
+<p>Componentes Java reutilizables que pueden ser manipulados por herramientas de desarrollo. Java necesitaba simplificar la creaci&#xF3;n de las interfaces de usuario. Dise&#xF1;ados para interaccionar en dos contextos: composici&#xF3;n en la herramienta de creaci&#xF3;n, y en tiempo de ejecuci&#xF3;n en el entorno.</p>
+<p>Interfaz de un JavaBean: Cuatro tipo de puertos: M&#xE9;todos, propiedades, eventos lanzados y eventos recibidos (listeners).</p>
+<p>Implementaci&#xF3;n: Suelen implementarse con una clase Java pero hay implementaciones m&#xE1;s sofisticadas que envuelven un sistema legado o involucran varias clases.</p>
+<p>Caracter&#xED;sticas de los JavaBeans:</p>
+<ul>
+<li>Soportan introspecci&#xF3;n</li>
+<li>Propiedades personalizables</li>
+<li>Se comunican mediante eventos</li>
+<li>Tienen persistencia en su estado</li>
+<li>Promueven la reusabilidad y la portabilidad</li>
+</ul>
+<p>Introspecci&#xF3;n: Las herramientas de desarrollo descubren y modifican las propiedades de un JavaBean mediante introspecci&#xF3;n a trav&#xE9;s de la clase Introspector usando java.lang.reflect.</p>
+<p>Usa convenciones de nombre para setters y getters.</p>
+<p>Se pueden modificar las propiedades del JavaBean con editores o con una clase opcional auxiliar BeanInfo que a&#xF1;ade info, un icono, etc.</p>
+<p>Comunicaci&#xF3;n mediante eventos: Mecanismo de notificaciones entre una fuente y listeneres. Las herramientas de desarrollo examinan un JavaBean para determinar que eventos env&#xED;a y cu&#xE1;les recibe. La notificaci&#xF3;n del cambio se realiza a trav&#xE9;s de un evento PropertyChangeEvent. Los objetos que deseen ser notificados del cambio en una propiedad limitada deber&#xE1;n registrarse como observadores.</p>
+<p>Persistencia: Permite a los JavaBeans guardar su estado, y restaurarlo posteriormente. Utilizan la serializaci&#xF3;n de objetos Java.</p>
+<p>Creaci&#xF3;n: Crear un maifiesto indicando que es un Java-Bean. Crear JAR con todas las clases y el manifiesto. Importar JAR a la paleta de Beans.</p>
+<p>JavaBean es el modelo en MVC. Lanza eventos en MVC activo. El modelo 2 de JSP usa MVC pasivo, donde el controlador (servlet) instancia el modelo (JavaBean) para pas&#xE1;rselo a la vista (JSP, que fabrica la respuesta).</p>
+<h2 id="24-componentes-en-android">2.4. Componentes en Android</h2>
+<p>Intents como forma de comunicaci&#xF3;n y 4 tipos de componentes b&#xE1;sicos:</p>
+<ul>
+<li>Activity: Suele ser una pantalla. Una aplicaci&#xF3;n suele constar de varias.</li>
+<li>Service: Proceso en segundo plano sin UI. Reproductor de m&#xFA;sica, descarga de la red...</li>
+<li>Broadcast Receiver: Componente que responde a Intents broadcast. Por ejemplo, llamadas, sms, avisos de bater&#xED;a baja...</li>
+<li>ContentProvider: Componente que permite a las aplicaciones compartir informaci&#xF3;n. Hace los datos disponibles para el resto de aplicaciones del sistema.</li>
+</ul>
+<p>Un intent es un objeto (mensaje simple) que representa una intenci&#xF3;n de hacer algo. Consiste en la acci&#xF3;n que se quiere realizar y la informaci&#xF3;n necesaria para operar sobre ella (qu&#xE9; se quiere hacer y sobre qu&#xE9; entidad).</p>
+<p>Un componente puede tener un conjunto de filtros intent declarado en su manifiesto. Cada uno de ellos declara una capacidad que implementa (mapas con geo, NFC...)</p>
+<h2 id="25-el-problema-de-la-heterogeneidad">2.5. El problema de la heterogeneidad</h2>
+<p>DLL est&#xE1; en el mismo proceso as&#xED; que es muy r&#xE1;pido. EXE est&#xE1; en la misma m&#xE1;quina pero distinto proceso, no es tan r&#xE1;pido. En ese caso se comunican a trav&#xE9;s de Windows. Ambas alternativas se pueden crear a partir del mismo c&#xF3;digo.</p>
+<p>Se busca la interoperabilidad:</p>
+<ul>
+<li>Transparencia de lenguajes: interoperabilidad de programas en la misma plataforma con distintos lenguajes.</li>
+<li>Transparencia de ubicaci&#xF3;n: interoperabilidad de los programas en distintas m&#xE1;quinas con mismo lenguaje.</li>
+<li>Heterogeneidad general: cualquier ubicaci&#xF3;n y cualquier lenguaje.</li>
+</ul>
+<p>Para ello hay que tener en cuenta llamadas (procedimientos, mensajes...), paso de par&#xE1;metros (por valor, referencia...), tipos y representaci&#xF3;n de datos (valores, referencias, matrices, clases...) y caracter&#xED;sticas del entorno de ejecuci&#xF3;n (gesti&#xF3;n de memoria, recolecci&#xF3;n de basura).</p>
+<p>Microsoft soluciona la transparencia de lenguajes con .NET y CLR usando est&#xE1;ndar CORBA:</p>
+<ul>
+<li>Llamadas est&#xE1;ndar RPC.</li>
+<li>Paso de par&#xE1;metros usando un lenguaje est&#xE1;ndar si se usa .NET o CORBA para cada lenguaje.</li>
+<li>Tipos y representaci&#xF3;n de datos: Sistema de tipos de .NET o traducci&#xF3;n de CORBA para cdad lenguaje. Representaci&#xF3;n en lenguajes est&#xE1;ndar o formatos de intercambio (XML).</li>
+<li>Entorno en tiempo de ejecuci&#xF3;n proporcionado por la implementaci&#xF3;n de CORBA, .NET...</li>
+</ul>
+<p>Para la transparencia de ubicaci&#xF3;n se usa una variante del patr&#xF3;n Proxy: DCOM (Distributed COM) y COM+. En sistemas distribuidos hay que hacer marshalling.</p>
+<h2 id="26-sistemas-distribuidos-y-middleware">2.6. Sistemas distribuidos y middleware</h2>
+<p>Arquitecturas de un sistema distribuido:</p>
+<ul>
+<li>Maestro-esclavo: sistemas de control y tiempo real.</li>
+<li>Peer to peer.</li>
+<li>Cliente-servidor de dos o m&#xE1;s capas: Servidor centralizado.</li>
+<li>Basada en componentes distribuidos: Cuando se necesitan combinar recursos de diferentes sistemas y bases de datos.</li>
+<li>Basada en servicios: Utiliza la web para conectar distintos sistemas, incluso de empresas distintas.</li>
+</ul>
+<p>Cliente servidor de tres capas: persistencia &lt;-&gt; l&#xF3;gica de negocio (con middleware) &lt;-&gt; cliente</p>
+<p>Middleware es el software que gestiona y apoya los diferentes componentes de un sistema distribuido, est&#xE1; en el centro del sistema. P.ej: se pide una web desde un navegador, el middleware determina la ubicaci&#xF3;n y env&#xED;a una petici&#xF3;n a esa p&#xE1;gina; el servidor interpreta la petici&#xF3;n, env&#xED;a la p&#xE1;gina al middleware y la env&#xED;a como respuesta al navegador.</p>
+<p>Tipos de middleware:</p>
+<ul>
+<li>Controladores de comunicaci&#xF3;n</li>
+<li>Convertidores de datos</li>
+<li>Monitores de transacciones</li>
+<li>Gestores de mensajes: Cola entrante de mensajes, gesti&#xF3;n de mensajes, colas salientes.</li>
+<li>Gestores de objetos distribuidos</li>
+</ul>
+<p>En CORBA (Arquitectura de objetos distribuidos) no hay distinci&#xF3;n entre clientes y servidores.</p>
+<p>Arquitecturas orientadas a servicios web: giran en torno al concepto de los servicios prestados externamente (web). Intervienen distintas organizaciones. Enlaza de forma natural con el cloud computing.</p>
+<p>Arquitecturas orientadas a servicios (SOA): Registro de servicios donde los proveedores registran sus servicios para que los clientes accedan a ellos.</p>
+<h2 id="27-cloud-computing-y-saas">2.7. Cloud Computing y SaaS</h2>
+<p>Cloud Computing es usar un software o hardware remoto ofrecido como servicio. SaaS es una de las posibilidades. Es el paso del sector secundario al terciario. Explota las econom&#xED;as de escala.</p>
+<p>Al usar clusters, es mucho m&#xE1;s escalable, econ&#xF3;mico y redundante que los servidores normales. Con pocos operadores se pueden administrar miles de servidores.</p>
+<ul>
+<li>IaaS: Hardware virtualizado en red. Networking, balanceo de carga, acceso a la red... Se paga por el HW que se necesita en cada momento. Supone ahorro.</li>
+<li>PaaS: A&#xF1;ade alg&#xFA;n software como bases de datos o plataformas de desarrollo restando flexibilidad.</li>
+<li>SaaS: Software en un host remoto accedido a trav&#xE9;s de internet. Pago por uso o con publicidad, etc. Infraestructura local m&#xED;nima. Siempre actualizado. MS Office 365, juegos, FB, etc.</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../dbcs/1_introduccion.html" class="navigation navigation-prev " aria-label="Previous page: Introducción"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../dbcs/3_frameworks.html" class="navigation navigation-next " aria-label="Next page: Frameworks"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

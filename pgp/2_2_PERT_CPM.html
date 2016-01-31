@@ -1,0 +1,835 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>PERT y CPM | Apuntes de 4º de Ingeniería Informática</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../pgp/2_3_gestion_recursos.html" />
+    
+    
+    <link rel="prev" href="../pgp/2_1_Planificacion.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="5.3"
+        data-chapter-title="PERT y CPM"
+        data-filepath="pgp/2_2_PERT_CPM.md"
+        data-basepath=".."
+        data-revision="Sun Jan 31 2016 13:40:15 GMT+0100 (CET)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Administración y diseño de bases de datos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="adbd/1_Introduccion.html">
+            
+                
+                    <a href="../adbd/1_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="adbd/2_modelado_datos.html">
+            
+                
+                    <a href="../adbd/2_modelado_datos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Modelado de datos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="adbd/3_modelo_relacional.html">
+            
+                
+                    <a href="../adbd/3_modelo_relacional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Modelo relacional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="adbd/4_lenguajes_relacionales.html">
+            
+                
+                    <a href="../adbd/4_lenguajes_relacionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Lenguajes relacionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="adbd/5_SQL.html">
+            
+                
+                    <a href="../adbd/5_SQL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        SQL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="adbd/6_normalizacion.html">
+            
+                
+                    <a href="../adbd/6_normalizacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Normalización
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="adbd/7_administracion_bd.html">
+            
+                
+                    <a href="../adbd/7_administracion_bd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Administración de bases de datos
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ars/ars.html">
+            
+                
+                    <a href="../ars/ars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Arquitectura de redes y servicios
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Desarrollo basado en componentes y servicios</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dbcs/1_introduccion.html">
+            
+                
+                    <a href="../dbcs/1_introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="dbcs/2_modelos_componentes.html">
+            
+                
+                    <a href="../dbcs/2_modelos_componentes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Modelos de componentes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dbcs/3_frameworks.html">
+            
+                
+                    <a href="../dbcs/3_frameworks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Frameworks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dbcs/4_diseno.html">
+            
+                
+                    <a href="../dbcs/4_diseno.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Diseño
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="dbcs/5_servicio_web.html">
+            
+            <span><b>3.5.</b> Servicios web</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Ingeniería del conocimiento</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ico/0_Introduccion.html">
+            
+                
+                    <a href="../ico/0_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ico/1_logica_proposicional.html">
+            
+                
+                    <a href="../ico/1_logica_proposicional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Lógica proposicional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ico/2_logica_predicados.html">
+            
+                
+                    <a href="../ico/2_logica_predicados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Lógica de predicados
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ico/3_estrategias_resolucion.html">
+            
+                
+                    <a href="../ico/3_estrategias_resolucion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Estrategias de resolución
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ico/4_programacion_logica.html">
+            
+                
+                    <a href="../ico/4_programacion_logica.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Programación lógica
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ico/5_representacion_conocimiento.html">
+            
+                
+                    <a href="../ico/5_representacion_conocimiento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Representación del conocimiento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ico/6_sistemas_basados_en_reglas.html">
+            
+            <span><b>4.7.</b> Sistemas basados en reglas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ico/7_metodos_estructurados.html">
+            
+                
+                    <a href="../ico/7_metodos_estructurados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Métodos estructurados
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> Planificación y gestión de proyectos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="pgp/1.html">
+            
+                
+                    <a href="../pgp/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pgp/2_1_Planificacion.html">
+            
+                
+                    <a href="../pgp/2_1_Planificacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Planificación
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="pgp/2_2_PERT_CPM.html">
+            
+                
+                    <a href="../pgp/2_2_PERT_CPM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PERT y CPM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="pgp/2_3_gestion_recursos.html">
+            
+                
+                    <a href="../pgp/2_3_gestion_recursos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Gestión de recursos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="pgp/2_4_gestion_personas.html">
+            
+                
+                    <a href="../pgp/2_4_gestion_personas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Gestión de personas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="pgp/2_5_gestion_riesgos.html">
+            
+                
+                    <a href="../pgp/2_5_gestion_riesgos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Gestión de riesgos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="pgp/3_1_proceso_unificado.html">
+            
+                
+                    <a href="../pgp/3_1_proceso_unificado.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Proceso unificado
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="pgp/3_2_plan_de_proceso.html">
+            
+                
+                    <a href="../pgp/3_2_plan_de_proceso.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        Plan de proceso
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="pgp/3_3_SCRUM.html">
+            
+                
+                    <a href="../pgp/3_3_SCRUM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        SCRUM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="pgp/4_gestion_configuraciones.html">
+            
+                
+                    <a href="../pgp/4_gestion_configuraciones.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        Gestión de configuraciones
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> Profesión y sociedad</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="pys/1_ambitos_y_perfiles_profesionales.html">
+            
+                
+                    <a href="../pys/1_ambitos_y_perfiles_profesionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ámbitos y perfiles profesionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="pys/2_formacion_complementaria.html">
+            
+                
+                    <a href="../pys/2_formacion_complementaria.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Formación complementaria
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ssee/ssee.html">
+            
+                
+                    <a href="../ssee/ssee.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Sistemas embebidos
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Apuntes de 4º de Ingeniería Informática</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="ideas-sobre-pert-y-cpm-pdf">Ideas sobre PERT y CPM (<a href="originales/PGP_PERT_CPM_1516.pdf">PDF</a>)</h2>
+<ul>
+<li>PERT: Program Evaluator and Review Technique.</li>
+<li>CPM: Critical Path Method.</li>
+</ul>
+<p>Facilitan la planificaci&#xF3;n de proyectos en los que est&#xE9;n implicadas muchas actividades. Ambas fuerzan al gestor del proyecto a planificar con un cierto nivel de detalle. CPM a&#xF1;ade el tema de gesti&#xF3;n de recursos y costes. Ambas t&#xE9;cnicas facilitan la respuesta a preguntas como:</p>
+<ul>
+<li>&#xBF;Cu&#xE1;ndo finalizar&#xE1; el proyecto?</li>
+<li>&#xBF;Cu&#xE1;les son las actividades cr&#xED;ticas (las que retrasar&#xED;an el proyecto si alguna de ellas se retrasa)?</li>
+<li>&#xBF;Cu&#xE1;les son las actividades no cr&#xED;ticas (las que se pueden retrasar algo sin que haya incidencia en el proyecto)?</li>
+<li>&#xBF;Cu&#xE1;nto se pueden retrasar las actividades sin retrasar significativamente el proyecto?</li>
+<li>&#xBF;C&#xF3;mo se pueden concentrar los recursos para acelerar la finalizaci&#xF3;n del proyecto?</li>
+</ul>
+<p>Por tanto, permiten:</p>
+<ul>
+<li>detectar cuellos de botella,</li>
+<li>cumplir plazos de entrega con mayor probabilidad,</li>
+<li>evaluar los efectos de los cambios en el desarrollo del proyecto.</li>
+</ul>
+<h3 id="pasos-a-realizar">Pasos a realizar</h3>
+<ol>
+<li>Definir el proyecto y todas sus actividades significativas.</li>
+<li>Determinar las relaciones de precedencia entre dichas actividades.</li>
+<li>Estimar el tiempo necesario para finalizar cada actividad.</li>
+<li>Dibujar una red que conecte todas las actividades y las etiquete con las estimaciones de tiempo.</li>
+<li>Calcular el camino cr&#xED;tico a trav&#xE9;s de la red.</li>
+<li>Utilizar la red para planificar, temporizar, monitorizar y controlar el proyecto.</li>
+</ol>
+<h3 id="ficha-de-especificaci&#xF3;n-de-tarea">Ficha de especificaci&#xF3;n de tarea</h3>
+<p>Contendr&#xE1; los siguientes datos:</p>
+<ul>
+<li>N&#xFA;mero.</li>
+<li>Nombre.</li>
+<li>Descripci&#xF3;n.</li>
+<li>Esfuerzo estimado.</li>
+<li>Personas.</li>
+<li>Recursos.</li>
+<li>Duraci&#xF3;n.</li>
+<li>Entregables.</li>
+<li>Predecesoras.</li>
+</ul>
+<h3 id="caracter&#xED;sticas-de-la-red">Caracter&#xED;sticas de la red:</h3>
+<p>Los <strong>nodos</strong> representan eventos (comienzo o fin de una o varias actividades). Los <strong>arcos</strong> representan actividades. Un <strong>camino</strong> es una secuencia de actividades conectadas desde el nodo de comienzo hasta el de finalizaci&#xF3;n.</p>
+<p>Dos nodos no pueden estar directamente conectados por m&#xE1;s de un arco. Cada actividad se representa con un &#xFA;nico arco.</p>
+<p>Se pueden usar <strong>actividades ficticias</strong> para establecer una relaci&#xF3;n de precedencia. Es una actividad sin duraci&#xF3;n. Debe usarse para no violar las propiedades definidas anteriormente.</p>
+<p>Tambi&#xE9;n se pueden representar las tareas en el nodo (el nodo es un cuadrado) o en la flecha que une los nodos (el nodo es un c&#xED;rculo).</p>
+<p>La duraci&#xF3;n del proyecto ser&#xE1; la longitud del camino m&#xE1;s largo o <strong>camino cr&#xED;tico</strong>. Las <strong>actividades cr&#xED;ticas</strong> son las que forman el camino cr&#xED;tico.</p>
+<h3 id="tiempo-m&#xE1;s-pronto-posible-para-un-evento">Tiempo m&#xE1;s pronto posible para un evento.</h3>
+<p>$E_j$ es el instante en el que se producir&#xE1; el evento (Evento, no tarea) $j$ si todas las actividades precedentes han comenzado tan pronto como sea posible.</p>
+<ul>
+<li>Pasada hacia adelante: Se calcula $E_j$ para cada evento $j$ comenzando en el primer nodo y avanzando hasta el evento final.</li>
+<li>Regla del tiempo m&#xE1;s pronto posible: $E<em>j$ es el <strong>m&#xE1;ximo</strong> de las sumas $E_i + t</em>{ij}$ para cada evento inmediatamente precedente $i$ e interviniendo en la actividad $ij$.</li>
+</ul>
+<h3 id="tiempo-m&#xE1;s-tarde-permisible">Tiempo m&#xE1;s tarde permisible.</h3>
+<p>$L_i$ es el tiempo m&#xE1;s tarde en el que se puede comenzar el evento $i$ sin que se produzca un retardo en el proyecto.</p>
+<ul>
+<li>Pasada hacia atr&#xE1;s: Se calcula $L_i$ para cada evento $i$ comenzando por el &#xFA;ltimo nodo y movi&#xE9;ndose hacia atr&#xE1;s.</li>
+<li>Regla del tiempo m&#xE1;s tarde permisible: $L<em>i$ es el <strong>m&#xED;nimo</strong> de las diferencias $L_j - t</em>{ij}$ entre cada evento inmediatamente siguiente y la actividad $ij$</li>
+</ul>
+<h3 id="holgura-para-una-actividad">Holgura para una actividad</h3>
+<p>Ventana de tiempo en la que puede comenzar dicha actividad.</p>
+<p>$ES$: Tiempo m&#xE1;s pronto posible para la actividad. Longitud del recorrido m&#xE1;s largo desde el nodo de inicio hasta el comienzo de la actividad.</p>
+<p>$LS$: Tiempo m&#xE1;s tarde que puede empezar una actividad sin retrasar el proyecto.</p>
+<p>Holgura de la actividad $ij = LS - ES = (L<em>j - t</em>{ij}) - E_i$.</p>
+<p>Una <strong>Actividad cr&#xED;tica</strong> es la que tiene holgura 0. El camino cr&#xED;tico est&#xE1; formado por todas las actividades cr&#xED;ticas. Si una actividad cr&#xED;tica se retrasa, se retrasar&#xE1; todo el proyecto.</p>
+<h3 id="datos-usados-en-pert-y-cpm">Datos usados en PERT y CPM</h3>
+<ul>
+<li>Early Start</li>
+<li>Early Finish</li>
+<li>Latest Start</li>
+<li>Latest Finish</li>
+</ul>
+<p>La duraci&#xF3;n representa el tiempo necesario para llevar a cabo la actividad en el momento de planificar o  el tiempo restante cuando se hacen replanificaciones.</p>
+<h3 id="posibles-dependencias-entre-tareas">Posibles dependencias entre tareas</h3>
+<ul>
+<li>La tarea B no puede empezar hasta que la tarea A termine: Finish-to-start (FS).</li>
+<li>La tarea B no puede empezar hasta que la tarea A empiece: Start-to-start (Ss).</li>
+<li>La tarea B no puede terminar hasta que la tarea B termine: Finish-to-finish (FF).</li>
+<li>La tarea B no puede terminar hasta que la tarea A termine: Start-to-finish (SF).</li>
+</ul>
+<h3 id="ventajas-de-pert">Ventajas de PERT</h3>
+<ul>
+<li>Fuerza a gestionar el plan.</li>
+<li>Permite observar las interrelaciones entre actividades e identifica el camino cr&#xED;tico.</li>
+<li>Expone el paralelismo que se puede dar en las actividades, lo que ayuda a la hora de exponer recursos.</li>
+<li>Permite la planificaci&#xF3;n temporal y simulaci&#xF3;n de planificaciones alternativas.</li>
+<li>Permite al gestor del proyecto realizar el seguimiento y control del mismo.</li>
+</ul>
+<h2 id="holguras-en-cpm-y-pert-pdf">Holguras en CPM y PERT (<a href="originales/tema_2/float_CPM_nuevo.pdf">PDF</a>)</h2>
+<p>Tanto PERT como CPM son m&#xE9;todos que incorporan incertidumbre en la gesti&#xF3;n de proyectos y dan las probabilidades de finalizar las etapas del proyecto en tiempos l&#xED;mite especificados y una estimaci&#xF3;n de la finalizaci&#xF3;n del proyecto.</p>
+<p>Sin embargo, CPM no incorpora incertidumbre en los tiempos de las tareas, y en su lugar supone que los tiempos de las actividades son propocionales a los recursos reservados para ellas, y que cambiando los recursos asignados cambia la duraci&#xF3;n de las tareas; lo que requiere m&#xE1;s experiencia sobre la relaci&#xF3;n entre los recursos y tiempos.</p>
+<h3 id="holguras-en-cpm">Holguras en CPM</h3>
+<p>En CPM las holguras se llaman <strong>flotantes</strong> (float) e indican el grado de libertad de la planificaci&#xF3;n bajo una variedad de condiciones, por ejemplo la disponibilidad de los recursos. Hay cuatro holguras:</p>
+<ol>
+<li>Holgura total.</li>
+<li>Holgura libre.</li>
+<li>Holgura independiente.</li>
+<li>Holgura de seguridad o programada.</li>
+</ol>
+<p>Para definir estas holguras, usamos las siguientes definiciones:</p>
+<ul>
+<li>Tiempo m&#xE1;s pronto posible ($ES_{ij}$) de una actividad: instante m&#xE1;s pronto posible que puede comenzar dicha actividad suponiendo que todas las anteriores han finalizado lo m&#xE1;s pronto posible.</li>
+<li>Tiempo m&#xE1;s tarde permisible ($LF{ij}$) de una actividad: instante m&#xE1;s tarde que puede finalizar una actividad sin retrasar el tiempo de finalizaci&#xF3;n de todo el proyecto.</li>
+</ul>
+<p>Tambi&#xE9;n hay otras dos definiciones para el tiempo m&#xE1;s pronto posible de finalizaci&#xF3;n ($EF<em>{ij}$) o m&#xE1;s tarde permisible de comienzo ($LS</em>{ij}$)</p>
+<p>El <strong>tiempo flotante total</strong> coincide con la holgura en PERT y es el tiempo que una actividad puede retrasarse sin que dicho retraso afecte a la duraci&#xF3;n total del proyecto. Se puede obtener de dos formas:</p>
+<ul>
+<li>$Ft<em>{ij} = LS</em>{ij} - ES_{ij}$</li>
+<li>$Ft<em>{ij} = LF</em>{ij} - EF_{ij}$</li>
+</ul>
+<p><img src="img/calculoHolgura.png" alt="C&#xE1;lculo de la holgura"></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../pgp/2_1_Planificacion.html" class="navigation navigation-prev " aria-label="Previous page: Planificación"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../pgp/2_3_gestion_recursos.html" class="navigation navigation-next " aria-label="Next page: Gestión de recursos"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

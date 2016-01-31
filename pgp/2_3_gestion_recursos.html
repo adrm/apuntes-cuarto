@@ -1,0 +1,799 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Gestión de recursos | Apuntes de 4º de Ingeniería Informática</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../pgp/2_4_gestion_personas.html" />
+    
+    
+    <link rel="prev" href="../pgp/2_2_PERT_CPM.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="5.4"
+        data-chapter-title="Gestión de recursos"
+        data-filepath="pgp/2_3_gestion_recursos.md"
+        data-basepath=".."
+        data-revision="Sun Jan 31 2016 13:40:15 GMT+0100 (CET)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Administración y diseño de bases de datos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="adbd/1_Introduccion.html">
+            
+                
+                    <a href="../adbd/1_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="adbd/2_modelado_datos.html">
+            
+                
+                    <a href="../adbd/2_modelado_datos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Modelado de datos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="adbd/3_modelo_relacional.html">
+            
+                
+                    <a href="../adbd/3_modelo_relacional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Modelo relacional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="adbd/4_lenguajes_relacionales.html">
+            
+                
+                    <a href="../adbd/4_lenguajes_relacionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Lenguajes relacionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="adbd/5_SQL.html">
+            
+                
+                    <a href="../adbd/5_SQL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        SQL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="adbd/6_normalizacion.html">
+            
+                
+                    <a href="../adbd/6_normalizacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Normalización
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="adbd/7_administracion_bd.html">
+            
+                
+                    <a href="../adbd/7_administracion_bd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Administración de bases de datos
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ars/ars.html">
+            
+                
+                    <a href="../ars/ars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Arquitectura de redes y servicios
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Desarrollo basado en componentes y servicios</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dbcs/1_introduccion.html">
+            
+                
+                    <a href="../dbcs/1_introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="dbcs/2_modelos_componentes.html">
+            
+                
+                    <a href="../dbcs/2_modelos_componentes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Modelos de componentes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dbcs/3_frameworks.html">
+            
+                
+                    <a href="../dbcs/3_frameworks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Frameworks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dbcs/4_diseno.html">
+            
+                
+                    <a href="../dbcs/4_diseno.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Diseño
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="dbcs/5_servicio_web.html">
+            
+            <span><b>3.5.</b> Servicios web</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Ingeniería del conocimiento</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ico/0_Introduccion.html">
+            
+                
+                    <a href="../ico/0_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ico/1_logica_proposicional.html">
+            
+                
+                    <a href="../ico/1_logica_proposicional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Lógica proposicional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ico/2_logica_predicados.html">
+            
+                
+                    <a href="../ico/2_logica_predicados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Lógica de predicados
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ico/3_estrategias_resolucion.html">
+            
+                
+                    <a href="../ico/3_estrategias_resolucion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Estrategias de resolución
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ico/4_programacion_logica.html">
+            
+                
+                    <a href="../ico/4_programacion_logica.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Programación lógica
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ico/5_representacion_conocimiento.html">
+            
+                
+                    <a href="../ico/5_representacion_conocimiento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Representación del conocimiento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ico/6_sistemas_basados_en_reglas.html">
+            
+            <span><b>4.7.</b> Sistemas basados en reglas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ico/7_metodos_estructurados.html">
+            
+                
+                    <a href="../ico/7_metodos_estructurados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Métodos estructurados
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> Planificación y gestión de proyectos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="pgp/1.html">
+            
+                
+                    <a href="../pgp/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pgp/2_1_Planificacion.html">
+            
+                
+                    <a href="../pgp/2_1_Planificacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Planificación
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="pgp/2_2_PERT_CPM.html">
+            
+                
+                    <a href="../pgp/2_2_PERT_CPM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PERT y CPM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.4" data-path="pgp/2_3_gestion_recursos.html">
+            
+                
+                    <a href="../pgp/2_3_gestion_recursos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Gestión de recursos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="pgp/2_4_gestion_personas.html">
+            
+                
+                    <a href="../pgp/2_4_gestion_personas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Gestión de personas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="pgp/2_5_gestion_riesgos.html">
+            
+                
+                    <a href="../pgp/2_5_gestion_riesgos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Gestión de riesgos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="pgp/3_1_proceso_unificado.html">
+            
+                
+                    <a href="../pgp/3_1_proceso_unificado.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Proceso unificado
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="pgp/3_2_plan_de_proceso.html">
+            
+                
+                    <a href="../pgp/3_2_plan_de_proceso.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        Plan de proceso
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="pgp/3_3_SCRUM.html">
+            
+                
+                    <a href="../pgp/3_3_SCRUM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        SCRUM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="pgp/4_gestion_configuraciones.html">
+            
+                
+                    <a href="../pgp/4_gestion_configuraciones.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        Gestión de configuraciones
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> Profesión y sociedad</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="pys/1_ambitos_y_perfiles_profesionales.html">
+            
+                
+                    <a href="../pys/1_ambitos_y_perfiles_profesionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ámbitos y perfiles profesionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="pys/2_formacion_complementaria.html">
+            
+                
+                    <a href="../pys/2_formacion_complementaria.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Formación complementaria
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ssee/ssee.html">
+            
+                
+                    <a href="../ssee/ssee.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Sistemas embebidos
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Apuntes de 4º de Ingeniería Informática</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="gesti&#xF3;n-de-recursos-pdf">Gesti&#xF3;n de recursos (<a href="originales/tema_2/PGP_plan_proye_recursos_1516.pdf">PDF</a>)</h2>
+<h3 id="introducci&#xF3;n">Introducci&#xF3;n</h3>
+<p>A lo largo del desarrollo de un proyecto se precisan distintos tipos de recursos. La idea es proporcionar pautas para la selecci&#xF3;n y adscripci&#xF3;n de los recursos al proyecto a lo largo del tiempo. La forma de reservar los recursos puede implicar la existencia de restricciones sobre las tareas programadas y por lo tanto puede incidir en la planificaci&#xF3;n temporal considerada. Por tanto, una de las tareas del responsable del proyecto ser&#xE1; buscar la concordancia entre las tareas planificadas y los recursos disponibles en cada momento.</p>
+<p>Productos resultantes: calendarizaci&#xF3;n de actividades, de recursos y del coste.</p>
+<h3 id="tipos-de-recursos">Tipos de recursos</h3>
+<p>Seg&#xFA;n Pressman, los recursos pueden dividirse en:</p>
+<ul>
+<li>Personal (n&#xFA;mero, capacidad, ubicaci&#xF3;n)</li>
+<li>Software (componentes OTS, nuevo componentes, componentes probados, componentes de experiencia parcial)</li>
+<li>Entorno (herramienta software, hardware, recursos de red)</li>
+</ul>
+<p>Cada recurso debe especificar: descripci&#xF3;n, informe de disponibilidad, fecha de necesidad y tiempo durante el que se necesitar&#xE1;. En caso de RRHH, especificar las habilidades t&#xE9;cnicas que requiere el recurso.</p>
+<p>Hughes y Cotterell dividen los recursos en:</p>
+<ul>
+<li>Trabajo: Miembros del equipo de desarrollo, garant&#xED;a de calidad, etc.</li>
+<li>Equipamiento: Material inform&#xE1;tico e infraestructura f&#xED;sica para su funcionamiento, as&#xED; como mobiliario.</li>
+<li>Materiales: Consumibles de inform&#xE1;tica, papel, etc.</li>
+<li>Espacio: En una organizaci&#xF3;n existente, ya est&#xE1; disponible. Hay que contar con posible personal adicional.</li>
+<li>Servicios: Algunos proyectos requieren servicios especiales, como un sistema WAN u otros.</li>
+<li>Tiempo: Uno de los recursos principales que, a veces, est&#xE1; preestablecido.</li>
+<li>Dinero: Recurso secundario usado para comprar otros recursos.</li>
+</ul>
+<h3 id="identificaci&#xF3;n-de-las-necesidades-de-recursos">Identificaci&#xF3;n de las necesidades de recursos</h3>
+<p>Aunque muchos recursos est&#xE1;n ligados a una actividad, hay otros que no pero son parte de la infraestructura del proyecto, ya sea f&#xED;sica, como espacio para nuevo personal, o de personal, como el esfuerzo de planificaci&#xF3;n y seguimiento que hace el responsable del proyecto, y por tanto tienen que reflejarse en el plan. Lo m&#xE1;s indicado es hacer una lista de necesidades de recursos lo antes posible.</p>
+<p>La estimaci&#xF3;n de recursos debe darse en d&#xED;as/persona, y para tareas cortas se pueden usar horas/personas aunque ser&#xED;a m&#xE1;s uniforme usar fracciones de d&#xED;as/persona.</p>
+<h3 id="rol-de-gestor-de-proyecto">Rol de gestor de proyecto</h3>
+<p>El gestor de proyecto es quien decide qui&#xE9;n hace qu&#xE9; y qui&#xE9;n decide qu&#xE9; a lo largo del proyecto. Para ello, hay que considerar el balance entre posibilidades de aprendizaje frente a restricciones temporales, considerado las habilidades espec&#xED;ficas necesarias para cada actividad. Este trabajo se facilita disponiendo de una especificaci&#xF3;n clara de los roles involucrados y un conocimiento del equipo.</p>
+<p>Para cada rol, el gestor de proyecto debe definir tres aspectos: su responsabilidad, especificando qu&#xE9; est&#xE1; obligado a hacer; su autoridad, que es el derecho que tiene a realizar, mandar y tomar decisiones; y su exigencia, que dice en qu&#xE9; medida este rol asumir&#xE1; la responsabilidad del &#xE9;xito o fracaso de la actividad.</p>
+<h3 id="fichas-de-recurso">Fichas de recurso</h3>
+<p>Se debe crear una ficha para cada recurso en que se especifiquen al menos las siguientes caracter&#xED;sticas:</p>
+<ul>
+<li>Descripci&#xF3;n del recurso.</li>
+<li>Informe sobre su disponibilidad.</li>
+<li>Fecha de comienzo en la que se precisa el recurso.</li>
+<li>Tiempo durante el que se precisa el recurso.</li>
+<li>En caso de recursos humanos, habilidades t&#xE9;cnicas que precisa el recurso para la tarea.</li>
+</ul>
+<h3 id="gesti&#xF3;n-de-recursos-humanos-en-el-pmbok">Gesti&#xF3;n de recursos humanos en el PMBOK</h3>
+<p>El PMBOK dedica un cap&#xED;tulo a la gesti&#xF3;n de recursos humanos, dividi&#xE9;ndolo en cuatro partes:</p>
+<ul>
+<li>9.1 Planificaci&#xF3;n de los recursos humanos: identificar y documentar los roles de proyecto, responsabilidades y relaciones de informe as&#xED; como crear el plan de gesti&#xF3;n del personal.</li>
+<li>9.2 Adquirir el equipo de proyecto: obtener los recursos humanos necesarios.</li>
+<li>9.3 Desarrollar el equipo del proyecto: mejorar las competencias y la interacci&#xF3;n de los miembros del equipo para lograr un mejor rendimiento.</li>
+<li>9.4 Gestionar el equipo del proyecto: hacer un seguimiento del rendimiento de los miembros del equipo, proporcionar retroalimentaci&#xF3;n, resolver pol&#xE9;micas y coordinar cambios a fin de mejorar el rendimiento del proyecto.</li>
+</ul>
+<p>En este caso el PMBOK se enfoca m&#xE1;s en aspectos relacionados con la gesti&#xF3;n de recursos humanos que con la planificaci&#xF3;n de los mismos.</p>
+<h3 id="cuadro-raci">Cuadro RACI</h3>
+<p>En el PMBOK se habla de una matriz de responsabilidades para el personal. Cada persona tiene una responsabilidad respecto a cada actividad. Estas responsabilidades pueden ser <em>Responsible</em> (Responsable), <em>Accountable</em> (Subordinado-responsable), <em>Consult</em> (Consultado) e <em>Inform</em> (Informado).</p>
+<h3 id="diagramas-de-planificaci&#xF3;n-de-recursos">Diagramas de planificaci&#xF3;n de recursos</h3>
+<p>Es &#xFA;til poder ver &#xFA;nicamente las tareas que hay asignadas a cada recurso para comunicar a los participantes el uso de un recurso compartido, verificar que se usan de forma equilibrada o verificar que no se pretende usar ning&#xFA;n recurso m&#xE1;s de lo posible. Para esto se usan el diagrama de Gantt y el de cargas.</p>
+<h3 id="asignaci&#xF3;n-de-recursos-a-tareas">Asignaci&#xF3;n de recursos a tareas</h3>
+<p>A la hora de asignar recursos a tareas hay que tener en cuenta:</p>
+<ul>
+<li>Disponibilidad. Tiene que haber personas adecuadas para no alargar el proyecto.</li>
+<li>Criticidad. Asignar recursos con m&#xE1;s experiencia a actividades del camino cr&#xED;tico puede ayudar a reducir la duraci&#xF3;n del proyecto o disminuir el riesgo de alargamiento.</li>
+<li>Riesgo. Es importante identificar tareas que plantean m&#xE1;s riesgos y qu&#xE9; factores influyen en ello para asignar personal.</li>
+<li>Entrenamiento. La organizaci&#xF3;n se beneficia asignando personas inexpertas en tareas no cr&#xED;ticas donde, con la holgura, podr&#xE1;n ir form&#xE1;ndose.</li>
+<li>Formaci&#xF3;n de equipo. La selecci&#xF3;n debe tener en cuenta las cualidades considerando las caracter&#xED;sticas del proyecto y que las personas deben trabajar conjuntamente.</li>
+</ul>
+<h3 id="conflictos-sobre-recursos">Conflictos sobre recursos</h3>
+<p>Se producen conflictos sobre recursos cuando el mismo recurso se precisa en m&#xE1;s de un lugar al mismo tiempo. Se pueden resolver retrasando una de las actividades (aprovechando la holgura o retrasando la finalizaci&#xF3;n del proyecto), moviendo un recurso desde una actividad no cr&#xED;tica, proporcionando recursos adicionales (aumenta el coste), dividiendo la actividad en dos para facilitar la asignaci&#xF3;n o permitiendo una sobrecarga de trabajo (tambi&#xE9;n supone mayor coste).</p>
+<p>Es conveniente priorizar las tareas de forma que la asignaci&#xF3;n de los recursos se haga siguiendo un orden racional predeterminado. Existen varias formas de proporcionar prioridades a los recursos:</p>
+<ul>
+<li>Prioridad por holgura total: Las tareas con menor holgura tienen la mayor prioridad a la hora de asignar recursos.</li>
+<li>Prioridad por lista ordenada: Las actividades que se realizan al mismo tiempo se ordenan seg&#xFA;n un criterio sencillo. Seg&#xFA;n Burman ser&#xED;a:<ul>
+<li>Actividad cr&#xED;tica m&#xE1;s corta.</li>
+<li>Actividad cr&#xED;tica.</li>
+<li>Actividad no cr&#xED;tica m&#xE1;s corta.</li>
+<li>Actividad no cr&#xED;tica con menor holgura.</li>
+<li>Actividad no cr&#xED;tica.</li>
+</ul>
+</li>
+</ul>
+<p>Se necesita maximizar el porcentaje de utilizaci&#xF3;n de los recursos, es decir, reducir periodos vac&#xED;os entre tareas. Hay que balancear costes frente a anticipar la fecha de finalizaci&#xF3;n. Tambi&#xE9;n es necesario permitir contingencias.</p>
+<p>La planificaci&#xF3;n de recursos puede crear nuevas dependencias entre actividades incidiendo en los caminos cr&#xED;ticos. Por ello, es mejor no a&#xF1;adir dependencias a la red de actividades para reflejar las restricciones de recursos. La restricci&#xF3;n puede desaparecer durante el proyecto pero el enlace permanece.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../pgp/2_2_PERT_CPM.html" class="navigation navigation-prev " aria-label="Previous page: PERT y CPM"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../pgp/2_4_gestion_personas.html" class="navigation navigation-next " aria-label="Next page: Gestión de personas"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

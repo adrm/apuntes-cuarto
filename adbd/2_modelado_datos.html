@@ -1,0 +1,757 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Modelado de datos | Apuntes de 4º de Ingeniería Informática</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../adbd/3_modelo_relacional.html" />
+    
+    
+    <link rel="prev" href="../adbd/1_Introduccion.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.2"
+        data-chapter-title="Modelado de datos"
+        data-filepath="adbd/2_modelado_datos.md"
+        data-basepath=".."
+        data-revision="Sun Jan 31 2016 13:40:15 GMT+0100 (CET)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Administración y diseño de bases de datos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="adbd/1_Introduccion.html">
+            
+                
+                    <a href="../adbd/1_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="adbd/2_modelado_datos.html">
+            
+                
+                    <a href="../adbd/2_modelado_datos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Modelado de datos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="adbd/3_modelo_relacional.html">
+            
+                
+                    <a href="../adbd/3_modelo_relacional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Modelo relacional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="adbd/4_lenguajes_relacionales.html">
+            
+                
+                    <a href="../adbd/4_lenguajes_relacionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Lenguajes relacionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="adbd/5_SQL.html">
+            
+                
+                    <a href="../adbd/5_SQL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        SQL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="adbd/6_normalizacion.html">
+            
+                
+                    <a href="../adbd/6_normalizacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Normalización
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="adbd/7_administracion_bd.html">
+            
+                
+                    <a href="../adbd/7_administracion_bd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Administración de bases de datos
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ars/ars.html">
+            
+                
+                    <a href="../ars/ars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Arquitectura de redes y servicios
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Desarrollo basado en componentes y servicios</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dbcs/1_introduccion.html">
+            
+                
+                    <a href="../dbcs/1_introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="dbcs/2_modelos_componentes.html">
+            
+                
+                    <a href="../dbcs/2_modelos_componentes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Modelos de componentes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dbcs/3_frameworks.html">
+            
+                
+                    <a href="../dbcs/3_frameworks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Frameworks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dbcs/4_diseno.html">
+            
+                
+                    <a href="../dbcs/4_diseno.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Diseño
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="dbcs/5_servicio_web.html">
+            
+            <span><b>3.5.</b> Servicios web</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Ingeniería del conocimiento</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ico/0_Introduccion.html">
+            
+                
+                    <a href="../ico/0_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ico/1_logica_proposicional.html">
+            
+                
+                    <a href="../ico/1_logica_proposicional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Lógica proposicional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ico/2_logica_predicados.html">
+            
+                
+                    <a href="../ico/2_logica_predicados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Lógica de predicados
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ico/3_estrategias_resolucion.html">
+            
+                
+                    <a href="../ico/3_estrategias_resolucion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Estrategias de resolución
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ico/4_programacion_logica.html">
+            
+                
+                    <a href="../ico/4_programacion_logica.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Programación lógica
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ico/5_representacion_conocimiento.html">
+            
+                
+                    <a href="../ico/5_representacion_conocimiento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Representación del conocimiento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ico/6_sistemas_basados_en_reglas.html">
+            
+            <span><b>4.7.</b> Sistemas basados en reglas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ico/7_metodos_estructurados.html">
+            
+                
+                    <a href="../ico/7_metodos_estructurados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Métodos estructurados
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> Planificación y gestión de proyectos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="pgp/1.html">
+            
+                
+                    <a href="../pgp/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pgp/2_1_Planificacion.html">
+            
+                
+                    <a href="../pgp/2_1_Planificacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Planificación
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="pgp/2_2_PERT_CPM.html">
+            
+                
+                    <a href="../pgp/2_2_PERT_CPM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PERT y CPM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="pgp/2_3_gestion_recursos.html">
+            
+                
+                    <a href="../pgp/2_3_gestion_recursos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Gestión de recursos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="pgp/2_4_gestion_personas.html">
+            
+                
+                    <a href="../pgp/2_4_gestion_personas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Gestión de personas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="pgp/2_5_gestion_riesgos.html">
+            
+                
+                    <a href="../pgp/2_5_gestion_riesgos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Gestión de riesgos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="pgp/3_1_proceso_unificado.html">
+            
+                
+                    <a href="../pgp/3_1_proceso_unificado.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Proceso unificado
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="pgp/3_2_plan_de_proceso.html">
+            
+                
+                    <a href="../pgp/3_2_plan_de_proceso.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        Plan de proceso
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="pgp/3_3_SCRUM.html">
+            
+                
+                    <a href="../pgp/3_3_SCRUM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        SCRUM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="pgp/4_gestion_configuraciones.html">
+            
+                
+                    <a href="../pgp/4_gestion_configuraciones.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        Gestión de configuraciones
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> Profesión y sociedad</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="pys/1_ambitos_y_perfiles_profesionales.html">
+            
+                
+                    <a href="../pys/1_ambitos_y_perfiles_profesionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ámbitos y perfiles profesionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="pys/2_formacion_complementaria.html">
+            
+                
+                    <a href="../pys/2_formacion_complementaria.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Formación complementaria
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ssee/ssee.html">
+            
+                
+                    <a href="../ssee/ssee.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Sistemas embebidos
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Apuntes de 4º de Ingeniería Informática</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="2-modelado-de-datos-introdcci&#xF3;n-al-dise&#xF1;o-de-bases-de-datos-pdf">2. Modelado de datos: Introdcci&#xF3;n al dise&#xF1;o de bases de datos (<a href="originales/02-modeladoDatos.pdf">PDF</a>)</h1>
+<h2 id="etapas-del-dise&#xF1;o">Etapas del dise&#xF1;o</h2>
+<p>&#xBF;Qu&#xE9; pasos se siguen en el dise&#xF1;o de bases de datos? Existen una serie de dise&#xF1;os que se realizan en un cierto orden.</p>
+<ol>
+<li>An&#xE1;lisis de requisitos: Comprender los datos a gestionar, elicitar las necesidades del cliente a trav&#xE9;s de reuniones, discusiones, documentaci&#xF3;n... Es una etapa clave que puede ser muy costosa.</li>
+<li>Dise&#xF1;o conceptual: Descripci&#xF3;n de alto nivel de los datos y sus restricciones. Modelo que representa, organiza y clarifica la informaci&#xF3;n. Normalmente, modelo Entidad-Relaci&#xF3;n. Es suficientemente preciso como para permitir su traducci&#xF3;n a un modelo espec&#xED;fico del SGBD.</li>
+<li>Dise&#xF1;o l&#xF3;gico: Esquema de la BD acorde al SGBD elegido. Traducci&#xF3;n del esquema ER a un esquema relacional.</li>
+<li>Refinamiento de los esquemas: Reestructuraci&#xF3;n para garantizar propiedades importantes (normalizaci&#xF3;n).</li>
+<li>Dise&#xF1;o f&#xED;sico: Mejora de rendimiento en base a cargas t&#xED;picas. Idealmente no supone un redise&#xF1;o de las etapas anteriores.</li>
+<li>Dise&#xF1;o de aplicaciones y seguridad: Procesos relacionados con las aplicaciones, como tareas y flujos de trabajo, y cuestiones de accesibilidad y seguridad.</li>
+</ol>
+<h2 id="dise&#xF1;o-l&#xF3;gico-o-conceptual-primero">Dise&#xF1;o l&#xF3;gico o conceptual primero</h2>
+<p>Hay que preguntarse cuestiones como, en el caso del sistema de gesti&#xF3;n telef&#xF3;nica, si dos clientes pueden tener la misma l&#xED;nea, si una l&#xED;nea puede tener dos tarifas, si son necesarias m&#xE1;s tablas y cu&#xE1;les, etc.</p>
+<p>El dise&#xF1;o conceptual se realiza como diagrama ER (Entidad-Relaci&#xF3;n) con notaci&#xF3;n UML. Describe c&#xF3;mo se estructuran los datos. Existen varias alternativas para un mismo escenario, y hay que decidir.</p>
+<p>Las <strong>entidades</strong> son objetos que engloban los datos de inter&#xE9;s. Se describen como colecciones de entidades similares, mediante atributos y propiedades adicionales. Las instancias se ven como elementos de un conjunto.</p>
+<p>Los <strong>atributos</strong> y <strong>claves</strong> definen los datos para cada instancia. El <strong>dominio</strong> (opcional) es el conjunto posible de valores o la posibilidad de definici&#xF3;n de tipos. La <strong>clave</strong> es el conjunto m&#xED;nimo de atributos que identifica a cada entidad (valor m&#xED;nimo sin repetici&#xF3;n).</p>
+<p>Las <strong>relaciones</strong> representan asociaciones entre dos o m&#xE1;s entidades, en funci&#xF3;n de su grado. Tambi&#xE9;n se puede ver como un conjunto de relaciones con instancias de dichas relaciones dependiendo de si hay que modelar tambi&#xE9;n la relaci&#xF3;n con unas propiedades.</p>
+<p>La <strong>cardinalidad</strong> es una multiplicidad simplificada a tres posibles valores: <code>1:1</code>, <code>1:*</code>, <code>*:*</code>. Se puede representar la opcionalidad poniendo el m&#xED;nimo a cero.</p>
+<p>Una relaci&#xF3;n puede ser <strong>recursiva</strong> si una instancia de una entidad se relaciona con otra instancia de la misma entidad.</p>
+<p>Una entidad es <strong>d&#xE9;bil, dependiente o subordinada</strong> si se identifica considerando la primary key de otra entidad denominada <strong>propietaria o dominante</strong>. Expresa una relaci&#xF3;n obligatoria y con dependencia en existencia.</p>
+<h3 id="trampas-de-conexi&#xF3;n">Trampas de conexi&#xF3;n</h3>
+<p>Relaciones que provocan ambig&#xFC;edades u ocultan informaci&#xF3;n.</p>
+<p>En el caso de <em>fan traps</em>, no podemos saber a qu&#xE9; secci&#xF3;n pertenece el empleado o cu&#xE1;les son los empleados de una secci&#xF3;n.</p>
+<p><img src="img/fanTrap.png" alt="Fan traps"></p>
+<p>En el caso de <em>chasm traps</em>, una relaci&#xF3;n opcional hace que perdamos la referencia a alguna entidad. En este caso, puede haber cuentas que no est&#xE9;n asociadas a ning&#xFA;n empleado y por tanto que no tengan sucursal.</p>
+<p><img src="img/chasmTrap.png" alt="Chasm traps"></p>
+<h3 id="generalizaci&#xF3;n-y-especializaci&#xF3;n-relaci&#xF3;n-isa">Generalizaci&#xF3;n y especializaci&#xF3;n (relaci&#xF3;n <em>is-a</em>)</h3>
+<p>Se pueden hacer entidades que tengan unas propiedades espec&#xED;ficas m&#xE1;s las comunes generales heredadas de otra entidad.</p>
+<h3 id="agregaci&#xF3;n">Agregaci&#xF3;n</h3>
+<p>Representa la composici&#xF3;n o agregaci&#xF3;n de partes en un todo. Funciona como una asociaci&#xF3;n con un significado adicional. Si la creaci&#xF3;n o destrucci&#xF3;n coinciden, es una composici&#xF3;n. La agregaci&#xF3;n se representa con un rombo vac&#xED;o en el &apos;todo&apos;, y la composici&#xF3;n con un rombo relleno.</p>
+<h3 id="elementos-del-modelado-er">Elementos del modelado ER</h3>
+<p>Hay que decidir si modelar un concepto como entidad, como atributo o como relaci&#xF3;n; identificar si una relaci&#xF3;n es binaria o ternaria; y ver cu&#xE1;ndo hay que usar la agregaci&#xF3;n.</p>
+<p>Para incluir restricciones en el modelo ER, los datos est&#xE1;n acompa&#xF1;ados de condiciones de validez. Algunas de estas restricciones no se pueden capturar en diagramas ER, as&#xED; que se incluyen en notas usando lenguajes de restricciones.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../adbd/1_Introduccion.html" class="navigation navigation-prev " aria-label="Previous page: Introducción"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../adbd/3_modelo_relacional.html" class="navigation navigation-next " aria-label="Next page: Modelo relacional"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

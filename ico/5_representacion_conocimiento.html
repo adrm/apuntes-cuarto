@@ -1,0 +1,845 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Representación del conocimiento | Apuntes de 4º de Ingeniería Informática</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ico/7_metodos_estructurados.html" />
+    
+    
+    <link rel="prev" href="../ico/4_programacion_logica.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.6"
+        data-chapter-title="Representación del conocimiento"
+        data-filepath="ico/5_representacion_conocimiento.md"
+        data-basepath=".."
+        data-revision="Sun Jan 31 2016 13:40:15 GMT+0100 (CET)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Administración y diseño de bases de datos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="adbd/1_Introduccion.html">
+            
+                
+                    <a href="../adbd/1_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="adbd/2_modelado_datos.html">
+            
+                
+                    <a href="../adbd/2_modelado_datos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Modelado de datos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="adbd/3_modelo_relacional.html">
+            
+                
+                    <a href="../adbd/3_modelo_relacional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Modelo relacional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="adbd/4_lenguajes_relacionales.html">
+            
+                
+                    <a href="../adbd/4_lenguajes_relacionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Lenguajes relacionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="adbd/5_SQL.html">
+            
+                
+                    <a href="../adbd/5_SQL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        SQL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="adbd/6_normalizacion.html">
+            
+                
+                    <a href="../adbd/6_normalizacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Normalización
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="adbd/7_administracion_bd.html">
+            
+                
+                    <a href="../adbd/7_administracion_bd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Administración de bases de datos
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ars/ars.html">
+            
+                
+                    <a href="../ars/ars.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Arquitectura de redes y servicios
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Desarrollo basado en componentes y servicios</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dbcs/1_introduccion.html">
+            
+                
+                    <a href="../dbcs/1_introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="dbcs/2_modelos_componentes.html">
+            
+                
+                    <a href="../dbcs/2_modelos_componentes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Modelos de componentes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dbcs/3_frameworks.html">
+            
+                
+                    <a href="../dbcs/3_frameworks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Frameworks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dbcs/4_diseno.html">
+            
+                
+                    <a href="../dbcs/4_diseno.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Diseño
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="dbcs/5_servicio_web.html">
+            
+            <span><b>3.5.</b> Servicios web</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Ingeniería del conocimiento</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ico/0_Introduccion.html">
+            
+                
+                    <a href="../ico/0_Introduccion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ico/1_logica_proposicional.html">
+            
+                
+                    <a href="../ico/1_logica_proposicional.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Lógica proposicional
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ico/2_logica_predicados.html">
+            
+                
+                    <a href="../ico/2_logica_predicados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Lógica de predicados
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ico/3_estrategias_resolucion.html">
+            
+                
+                    <a href="../ico/3_estrategias_resolucion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Estrategias de resolución
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ico/4_programacion_logica.html">
+            
+                
+                    <a href="../ico/4_programacion_logica.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Programación lógica
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.6" data-path="ico/5_representacion_conocimiento.html">
+            
+                
+                    <a href="../ico/5_representacion_conocimiento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Representación del conocimiento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ico/6_sistemas_basados_en_reglas.html">
+            
+            <span><b>4.7.</b> Sistemas basados en reglas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ico/7_metodos_estructurados.html">
+            
+                
+                    <a href="../ico/7_metodos_estructurados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Métodos estructurados
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> Planificación y gestión de proyectos</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="pgp/1.html">
+            
+                
+                    <a href="../pgp/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Introducción
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pgp/2_1_Planificacion.html">
+            
+                
+                    <a href="../pgp/2_1_Planificacion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Planificación
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="pgp/2_2_PERT_CPM.html">
+            
+                
+                    <a href="../pgp/2_2_PERT_CPM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        PERT y CPM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="pgp/2_3_gestion_recursos.html">
+            
+                
+                    <a href="../pgp/2_3_gestion_recursos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Gestión de recursos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="pgp/2_4_gestion_personas.html">
+            
+                
+                    <a href="../pgp/2_4_gestion_personas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Gestión de personas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="pgp/2_5_gestion_riesgos.html">
+            
+                
+                    <a href="../pgp/2_5_gestion_riesgos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Gestión de riesgos
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="pgp/3_1_proceso_unificado.html">
+            
+                
+                    <a href="../pgp/3_1_proceso_unificado.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Proceso unificado
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="pgp/3_2_plan_de_proceso.html">
+            
+                
+                    <a href="../pgp/3_2_plan_de_proceso.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        Plan de proceso
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="pgp/3_3_SCRUM.html">
+            
+                
+                    <a href="../pgp/3_3_SCRUM.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        SCRUM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="pgp/4_gestion_configuraciones.html">
+            
+                
+                    <a href="../pgp/4_gestion_configuraciones.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        Gestión de configuraciones
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> Profesión y sociedad</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="pys/1_ambitos_y_perfiles_profesionales.html">
+            
+                
+                    <a href="../pys/1_ambitos_y_perfiles_profesionales.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Ámbitos y perfiles profesionales
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="pys/2_formacion_complementaria.html">
+            
+                
+                    <a href="../pys/2_formacion_complementaria.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Formación complementaria
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ssee/ssee.html">
+            
+                
+                    <a href="../ssee/ssee.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Sistemas embebidos
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Apuntes de 4º de Ingeniería Informática</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="representaci&#xF3;n-del-conocimiento-introducci&#xF3;n-pdf">Representaci&#xF3;n del conocimiento: Introducci&#xF3;n (<a href="originales/representacion_conocimiento/IntroduccionRepresentacionConocimiento.pdf">PDF</a>)</h1>
+<h2 id="sistemas-basados-en-conocimiento">Sistemas basados en conocimiento</h2>
+<p>Son sistemas con una representaci&#xF3;n expl&#xED;cita y simb&#xF3;lica del conocimiento para resolver un problema. Adem&#xE1;s, el comportamiento del sistema debe ser consecuencia del contenido de la base del conocimiento. Si usan conocimiento experto, se denominan sistemas expertos.</p>
+<p>Un sistema basado en conocimiento es un sistema inform&#xE1;tico con, al menos, dos componentes estructurales:</p>
+<ul>
+<li>Base de conocimiento: representaci&#xF3;n expl&#xED;cita y natural del conocimiento del sistema.</li>
+<li>Motor de inferencias: componente de control responsable de utilizar el conocimiento para la soluci&#xF3;n del problema.</li>
+</ul>
+<p>Otros componentes habituales son un editor de conocimiento o un m&#xF3;dulo de explicaci&#xF3;n.</p>
+<p><img src="img/arquitecturaSBC.png" alt="Arquitectura de un sistema basado en conocimiento"></p>
+<h2 id="tipos-de-conocimiento">Tipos de conocimiento</h2>
+<p>Se pueden analizar seg&#xFA;n varios puntos de vista: biol&#xF3;gico, l&#xED;mites de aplicaci&#xF3;n, niveles o contenidos.</p>
+<h3 id="biol&#xF3;gico">Biol&#xF3;gico</h3>
+<ul>
+<li>Fisiol&#xF3;gico<ul>
+<li>Necesario para sobrevivir en el medio.</li>
+<li>Somatizado, sistema nervioso.</li>
+<li>Reaccionar a est&#xED;mulos, constantes vitales...</li>
+</ul>
+</li>
+<li>Automatismos<ul>
+<li>Consecuencia de la interacci&#xF3;n con el medio.</li>
+<li>Requiere aprendizaje.</li>
+<li>Comunicaci&#xF3;n, equilibrio, reflejos...</li>
+</ul>
+</li>
+<li>Cortical<ul>
+<li>Necesidad de comprender y explicar, curiosidad.</li>
+<li>Gran cantidad de aprendizaje y asimilaci&#xF3;n de experiencia pasada.</li>
+<li>Elemento caracter&#xED;stico: lenguaja hablado y escrito.</li>
+</ul>
+</li>
+</ul>
+<h3 id="l&#xED;mites-de-aplicaci&#xF3;n">L&#xED;mites de aplicaci&#xF3;n</h3>
+<h4 id="dependiente-del-dominio">Dependiente del dominio</h4>
+<p>Es el conocimiento necesario para resolver un problema concreto y no es extrapolable a otro tipo de problemas.</p>
+<p>Incluye datos, hechos, relaciones, criterios de decisi&#xF3;n...</p>
+<p>Un ejemplo es la diagnosis de enfermedades pulmonares:</p>
+<pre><code>- Datos: capacidad pulmonar total, capacidad vital forzada, volumen residual...
+- S&#xED;ntomas: obstrucci&#xF3;n moderada de las v&#xED;as respiratorias.
+- Diagn&#xF3;stico: asma.
+- Establece relaciones entre ellos.
+</code></pre><h4 id="independiente-del-dominio">Independiente del dominio</h4>
+<p>Componentes del conocimiento que tienen que ver con la representaci&#xF3;n, uso y modificaci&#xF3;n del conocimiento con independencia del contenido del mismo. Es aplicable a clases de problemas.</p>
+<p>Un ejemplo ser&#xED;a que si no hay suficientes datos para establecer un diagn&#xF3;stico, sigue acumulando datos para llegar a una soluci&#xF3;n.</p>
+<h3 id="niveles">Niveles</h3>
+<p>Reune conocimiento del dominio como objetos y relaciones de un dominio particular, junto con metaconocimiento (conocimiento sobre el conocimiento) que permite aplicar de modo efectivo el conocimiento a la resoluci&#xF3;n de problemas, reconocer las limitaciones del conocimiento o explicar a un observador externo el proceso de soluci&#xF3;n de un problema.</p>
+<h4 id="nivel1-estrat&#xE9;gico">Nivel-1: Estrat&#xE9;gico</h4>
+<ul>
+<li>Si con los s&#xED;ntomas disponibles son posibles varios diagn&#xF3;sticos, examinar primero los menos costosos de comprobar.</li>
+<li>Si el paciente es inmunodepresivo, investigar primero infecciones de lugares no est&#xE9;riles.</li>
+</ul>
+<h3 id="contenido-clancey-85">Contenido (Clancey, 85)</h3>
+<ul>
+<li>Heur&#xED;stico: meras asociaciones entre hechos y conclusiones.</li>
+<li>Estrat&#xE9;gico: conocimiento sobre los pasos a seguir para solucionar un problema.</li>
+<li>Estructural: informaci&#xF3;n sobre la estructura del dominio, como jerarqu&#xED;as (taxonom&#xED;as, parte-de) o componentes e interconexiones.</li>
+<li>Soporte: informaci&#xF3;n relevante para la comprensi&#xF3;n del conocimiento de un sistema, como teor&#xED;a subyaciente, modelos, referencias bibliogr&#xE1;ficas, justificaciones, autor, fecha, etc.</li>
+</ul>
+<h2 id="tipos-de-representaci&#xF3;n">Tipos de representaci&#xF3;n</h2>
+<p>Hist&#xF3;ricamente encontramos representaciones declarativas (&quot;sabe qu&#xE9;&quot;) y representaciones operacionales (&quot;sabe c&#xF3;mo&quot;).</p>
+<ul>
+<li>Declarativa: el conocimiento est&#xE1; compuesto por un conjunto de secuencias m&#xE1;s procedimientos que las manipulan.</li>
+<li>Operacional: conjunto de procedimientos que permiten resolver el problema.</li>
+</ul>
+<p>En la pr&#xE1;tica: espectro continuo.</p>
+<h2 id="lenguajes-de-representaci&#xF3;n-de-conocimiento">Lenguajes de representaci&#xF3;n de conocimiento</h2>
+<p>Todo lenguaje de representaci&#xF3;n del conocimiento (LRC) debe proporcionar:</p>
+<ul>
+<li>Lenguaje de representaci&#xF3;n con sintaxis y sem&#xE1;ntica precisa.</li>
+<li>Capacidad de inferencia.</li>
+</ul>
+<p>Las principales aproximaciones son:</p>
+<ul>
+<li>L&#xF3;gica simb&#xF3;lica.</li>
+<li>Sistemas de producci&#xF3;n.</li>
+<li>M&#xE9;todos estructurados como redes sem&#xE1;nticas y marcos.</li>
+<li>Actualmente la tendencia son las ontolog&#xED;as.</li>
+</ul>
+<p>Es deseable que el lenguaje proporcione representaci&#xF3;n y gesti&#xF3;n de la incertidumbre.</p>
+<h1 id="representaci&#xF3;n-del-conocimiento-l&#xF3;gica-y-representaci&#xF3;n-del-conocimiento-pdf">Representaci&#xF3;n del conocimiento: L&#xF3;gica y representaci&#xF3;n del conocimiento (<a href="originales/representacion_conocimiento/LogicaRepresentacionConocimientoCompleto.pdf">PDF</a>)</h1>
+<h2 id="papel-de-la-l&#xF3;gica-en-la-representaci&#xF3;n-del-conocimiento">Papel de la l&#xF3;gica en la representaci&#xF3;n del conocimiento</h2>
+<p>Intuitivamente, la l&#xF3;gica es atractiva como LRC por tener una sintaxis bien definida, una sem&#xE1;ntica precisa y mecanismos formales de deducci&#xF3;n. Sin embargo, presenta dificultades como el problema de la cualificaci&#xF3;n, la din&#xE1;mica, la incertidumbre y las creencias. <!-- TODO No me quedan claras las dificultades --></p>
+<h3 id="problema-de-la-cualificaci&#xF3;n">Problema de la cualificaci&#xF3;n</h3>
+<p>El problema de la cualificaci&#xF3;n se refiere a la limitaci&#xF3;n de las sentencias cuantificadas universalmente. La sentencia <code>&#x2200;x (Ave(x) &#x2283; Vuela(x))</code> es cierta en algunos dominios pero presenta numerosas excepciones. A&#xF1;adir estas excepciones (<code>&#x2200;x (Ave(x) &#x2227; &#xAC;Ping&#xFC;ino(x) &#x2283; Vuela(x))</code>) es una soluci&#xF3;n ad hoc que no es generalizable. Este problema no tiene soluci&#xF3;n en l&#xF3;gica cl&#xE1;sica como LPO.</p>
+<h3 id="debate-hist&#xF3;rico">Debate hist&#xF3;rico</h3>
+<p>Hist&#xF3;ricamente, hay una escuela &quot;logicista&quot; que defiende la inteligencia artificial como la aplicaci&#xF3;n de la l&#xF3;gica (Nilson, McCarthy) enfrentada a los que defienden la l&#xF3;gica como elemento de an&#xE1;lisis pero no de resoluci&#xF3;n de problemas, al menos los complejos (Misky, Newell).</p>
+<p>Cuena [99] defiende que la l&#xF3;gica permite formalizar y mecanizar el razonamiento deductivo, y que permite modelar el conocimiento de un agente con independencia de su implementaci&#xF3;n.</p>
+<h3 id="tendencia-actual">Tendencia actual</h3>
+<p>Se usa la l&#xF3;gica como lenguaje de modelado del conocimiento. Se ha desarrollado el concepto de <strong>ontolog&#xED;a</strong> en el &#xE1;mbito de la representaci&#xF3;n del conocimiento. Algunas definiciones de ontolog&#xED;a son:</p>
+<ul>
+<li>Sistema particular de categor&#xED;as sistematizando cierta visi&#xF3;n del mundo. [Guarino 98]</li>
+<li>Teor&#xED;a particular de la naturaleza del ser o de la existencia. [Rusell, Norvig 2010]</li>
+<li>Una ontolog&#xED;a es una especificaci&#xF3;n formal de una conceptualizaci&#xF3;n compartida. [Struder 98]</li>
+</ul>
+<p>Se usa la l&#xF3;gica para crer ontolog&#xED;as.</p>
+<h2 id="2-principios-de-ingenier&#xED;a-de-conocimiento-en-l&#xF3;gica-de-primer-orden">2. Principios de ingenier&#xED;a de conocimiento en l&#xF3;gica de primer orden</h2>
+<p>La ingenier&#xED;a del conocimiento es el proceso de construcci&#xF3;n de una base de conocimiento. Requiere adquirir el conocimiento, formalizarlo, representarlo e implementarlo.</p>
+<p>En un LPO, la formalizaci&#xF3;n proporciona la representaci&#xF3;n y la implementaci&#xF3;n.</p>
+<p>Un ingeniero del conocimiento es un profesional que desarrolla la base de conocimiento. Requiere conocer suficientemente el dominio, conocer los lenguajes de representaci&#xF3;n, conocer los mecanismos de inferencia y conocer los aspectos del dise&#xF1;o y la implementaci&#xF3;n.</p>
+<p>El requisito de conocer suficientemente el dominio es posible en dominios sencillos, pero generalmente requiere la colaboraci&#xF3;n de expertos del dominio y establecer un proceso de adquisici&#xF3;n.</p>
+<h4 id="proceso-de-ingenier&#xED;a-del-conocimiento-en-lpo">Proceso de ingenier&#xED;a del conocimiento en LPO</h4>
+<p>Est&#xE1; orientado al dominio y a la tarea (ontolog&#xED;a espec&#xED;fica del dominio y de la tarea).</p>
+<p>Es un proceso iterativo:</p>
+<ol>
+<li>Identificar la tarea.
+ Hay que identificar el rango de cuestiones que la base de conocimiento debe soportar. Por ejemplo, un asistente al diagn&#xF3;stico podr&#xED;a responder preguntas como &quot;&#xBF;qu&#xE9; bombillas lucen?&quot; o &quot;&#xBF;qu&#xE9; interruptor est&#xE1; estropeado?&quot;. Hay que identificar tambi&#xE9;n los tipos de hechos disponibles para describir instancias espec&#xED;ficas del problema. En el asistente al diagn&#xF3;stico tenemos componentes, conexiones, tensi&#xF3;n en los cables...</li>
+<li>Reunir el conocimiento relevante.
+ Puede que el ingeniero del conocimiento sea experto del dominio, pero por lo general hay que trabajar con un experto en un proceso de adquisici&#xF3;n del conocimiento. Hay que obtener una descripci&#xF3;n informal que permita entender c&#xF3;mo funciona el dominio y apreciar el alcance de la base de conocimiento para hacerse una idea de qu&#xE9; elementos hay que representar. La dificultad de este paso aumenta con la complejidad del dominio de aplicaci&#xF3;n.</li>
+<li>Elaborar un vocabulario de nombres de predicados, funciones y constantes (a veces err&#xF3;neamente denominado ontolog&#xED;a).
+ Este vocabulario especifica qu&#xE9; individuos y relaciones existen, pero no sus propiedades e interrelaciones, aunque es fundamental para describirlas posteriormente. En el ejemplo, las bombillas se representan con constantes <code>L1</code> y <code>L2</code> y las conexiones con el predicado <code>Connected/2</code>.</li>
+<li>Codificar el conocimiento general del dominio.
+ Hay que elaborar los axiomas del dominio, que proporcionan las propiedades de los elementos de la ontolog&#xED;a (en otras palabras, proporciona el significado de los s&#xED;mbolos de la ontolog&#xED;a). En el ejemplo del asistente de diagn&#xF3;stico, se especifica el funcionamiento de las bombillas con el axioma <code>&#x2200;x [(Light(x) &#x2227; OK(x)) &#x2283; (Live(x) &#x2283; Lit(x))]</code> y el funcionamiento de las conexiones con <code>&#x2200;x &#x2200;y [(Connected(x,y) &#x2227; Live(y)) &#x2283; Live(x)]</code>.</li>
+<li>Codificar una descripci&#xF3;n de una instancia espec&#xED;fica del problema.
+ Si la ontolog&#xED;a es adecuada, se limita a proporcionar un conjunto de sentencias at&#xF3;micas sobre instancias de conceptos. Juegan un papel similar a los datos de entrada de un programa tradicional pero en este caso, por ejemplo, los proporcionan los sensores de un agente. En el ejemplo del asistente al diagn&#xF3;stico ser&#xED;a <code>up(s3). live(outside). ok(l1).</code>.</li>
+<li>Plantear preguntas al procedimiento de inferencia y obtener respuestas.
+ El procedimiento de inferencia usa los axiomas y hechos espec&#xED;ficos del problema para derivar hechos que nos interesan. Siguiendo el ejemplo, algunas preguntas pueden ser <code>&#x2203;x Lit(x)</code>, <code>&#x2203;x Live(x)</code> o <code>&#x2203;x &#x2203;y Connected(x,y)</code>.</li>
+<li>Depurar la base de conocimiento. <!-- TODO Diapo 18 -->
+</li>
+</ol>
+<h2 id="ejemplo-de-desarrollo-de-una-ontolog&#xED;a-espec&#xED;fica-y-base-de-conocimiento-en-el-dominio-de-los-circuitos-digitales">Ejemplo de desarrollo de una ontolog&#xED;a espec&#xED;fica y base de conocimiento en el dominio de los circuitos digitales</h2>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ico/4_programacion_logica.html" class="navigation navigation-prev " aria-label="Previous page: Programación lógica"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ico/7_metodos_estructurados.html" class="navigation navigation-next " aria-label="Next page: Métodos estructurados"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
