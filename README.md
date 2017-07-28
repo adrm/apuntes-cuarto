@@ -12,4 +12,4 @@ Si quieres algo más sencillo, también puedes usar `gollum`, un programa en Rub
 ## Cómo generar los .epub
 No hay más que ejecutar `make` en la raíz del repositorio. Necesitas tener instalado `pandoc`. Prueba a instalar dicho paquete con el gestor de paquetes de la distribución que estés usando. Para generar PDFs tienes que tener instalado `pdflatex` (aún no soportado a través del Makefile).
 
-## El índice está en [Home.md](/Home)
+## El índice está en [Home.md](/Home.md)
